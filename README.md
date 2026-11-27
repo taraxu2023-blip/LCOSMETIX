@@ -58,14 +58,14 @@ non-Vercel Node.js hosting and release verification. See
 | About Us | `/about` |
 
 The four primary navigation links go directly to their pages; the logo returns
-home. The responsive Menu dialog exposes the same destinations. Single-Dose
-Technology holds the five-layer structure, operating principles, formula
-compatibility, patent-document enquiry and sample request. The Product Innovations page holds
-the 13 collections / 23 development concepts; BOBII presents product customization,
+home. The responsive Menu dialog exposes the same destinations. Product Innovations
+holds the 13 collections / 23 development concepts, formula compatibility and sample
+request. Its compact topic links lead to OEM services/process and BOBII structure/patents.
+BOBII presents product customization,
 the five-layer exploded structure, material descriptions and eight patent certificates
-with an accessible enlargement dialog. Operating principles,
-development services, the cooperation process and project specifications are omitted
-from BOBII; their existing sections on Product Innovations and OEM remain available.
+with an accessible enlargement dialog. Development services, the cooperation process
+and project specifications are available on OEM. The removed operating-principles
+section is no longer linked from either product page.
 
 Content lives in `src/data/`, navigation in `src/lib/navigation.ts`, pages in
 `src/app/`, reusable UI in `src/components/` and assets in `public/assets/`.

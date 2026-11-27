@@ -9,13 +9,13 @@
 | --- | --- |
 | 首页 | `/`：次抛互动展示、颜色、结构概览与视频、应用方向、Latest News、询盘 |
 | BOBII BALL Technology | `/products/bobii-ball-single-dose-container`：八色与定制、五层结构与材料说明、8 张专利证书、配方及技术页入口和询盘 |
-| Single-Dose Technology | `/single-dose-technology`：五层结构、技术原理、配方兼容、专利资料咨询和 Request Samples |
+| Product Innovations | `/single-dose-technology`：13 个系列、23 个产品概念、配方兼容、跨页技术及服务入口和 Request Samples |
 | OEM/ODM Technology | `/oem-odm`：服务、应用、开发流程、BOBII 配方库入口和询盘 |
 | About Us | `/about`：公司定位、研发与供应链能力、全球职能、使命愿景、CEO 肖像、已确认统计和地图 |
 
 四项主导航均为直接页面链接，没有 Home 项或下拉分组；Logo 返回首页。
-响应式 Menu 对话框与页脚复用同一导航数据。BOBII 保留五层结构和材料说明，
-工作原理等技术全文由 Product Innovations 承载；OEM/ODM 不重复 13 张配方卡。没有独立 Contact 或完整产品列表页，
+响应式 Menu 对话框与页脚复用同一导航数据。BOBII 保留五层结构、材料说明及专利展示，
+OEM/ODM 承载开发服务和合作流程；Product Innovations 不再重复上述区块。没有独立 Contact 或完整产品列表页，
 相应联系和产品内容由现有页面承载。
 
 ## 内容依据与确认规则
@@ -149,12 +149,12 @@ Vercel 通过 **private Vercel Blob** 保存，服务端凭据为 `BLOB_READ_WRI
 
 About 的使命愿景与 CEO 姓名/职务维护于 `src/data/about-profile.ts`；肖像路径、ALT 和尺寸维护于 `src/data/about-media.ts`。当前使用用户提供的 `tara-xu-ceo.jpg`，About 已移除三张产品展示照片。
 
-Product Innovations 菜单沿用 `/single-dose-technology`，优先展示 13 个配方系列、23 个产品概念及共享的开发支持/流程，下方保留原有技术资料。卡片与询盘共用 `src/data/concepts.ts`；页头文案维护于 `src/data/innovations.ts`。
+Product Innovations 菜单沿用 `/single-dose-technology`，展示 13 个配方系列、23 个产品概念、配方兼容及样品询盘。按最新截图要求移除开发范围/六项服务、四步合作流程、五层结构/材料说明、工作原理和专利资料咨询区块。紧凑入口分别跳转 OEM 的服务/流程和 BOBII 的结构/专利；工作原理入口取消。卡片与询盘共用 `src/data/concepts.ts`；页头文案维护于 `src/data/innovations.ts`。
 
 OEM / ODM Solutions 的六项服务、四步合作流程和项目规格表连续展示于询盘前。规格表组件为 `src/components/ProjectSpecifications.tsx`，数据读取 `src/data/products.ts`；BOBII 页不再展示该表。
 
-BOBII 页保留五层结构分解图和五项材料说明，与 Product Innovations 共用 `SingleDoseTechnologySections.tsx` 和产品数据。按用户最新截图要求，BOBII 隐藏工作原理，并移除开发服务、合作流程、项目规格；其他页面的对应内容保留。结构入口跳转本页，工作原理入口跳转 Product Innovations。
+BOBII 页保留五层结构分解图和五项材料说明，由 `SingleDoseTechnologySections.tsx` 读取产品数据。BOBII 隐藏工作原理，并移除开发服务、合作流程、项目规格；开发服务和流程在 OEM 保留。结构和专利入口跳转本页，配方兼容入口跳转 Product Innovations。
 
 BOBII 页已移除产品创新介绍和完整配方卡片库，完整 13 系列/23 概念保留于 Product Innovations。BOBII 的配方探索按钮及 OEM/新闻配方入口统一指向 `productConceptsHref`；旧 BOBII `#product-concepts` 锚点保留在该探索按钮，便于旧链接继续使用。
 
-BOBII 的 `#patents` 展示 8 张原始证书、对应专利号和胶囊集合图，位于五层结构后、询盘前。证书与号码来自用户提供的《BOBII BALL微囊次抛产品介绍-20261111.pdf》第 13 页；图片提取后转换为 WebP 缩略图及查看图，内容未修改。数据维护于 `src/data/patents.ts`，点击证书可打开原生对话框，支持关闭按钮和 Esc。Product Innovations 原有专利资料咨询保留。
+BOBII 的 `#patents` 展示 8 张原始证书、对应专利号和胶囊集合图，位于五层结构后、询盘前。证书与号码来自用户提供的《BOBII BALL微囊次抛产品介绍-20261111.pdf》第 13 页；图片提取后转换为 WebP 缩略图及查看图，内容未修改。数据维护于 `src/data/patents.ts`，点击证书可打开原生对话框，支持关闭按钮和 Esc。Product Innovations 原有专利资料咨询已按最新要求移除。

@@ -35,7 +35,7 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
       </section>
       <section className="inner-container product-benefits" aria-label="Product features">{productFeatures.map((feature, i) => <article key={feature.title}><span className="eyebrow">0{i + 1}</span><h3>{feature.title}</h3><p>{feature.description}</p></article>)}</section>
       {product.id === "bobii-ball" && <section className="inner-container product-technology-reference" id="single-dose-technology" aria-labelledby="product-technology-reference-heading">
-        <div className="inner-split"><div><p className="eyebrow">MATERIALS & FORMULA TECHNOLOGY</p><h2 id="product-technology-reference-heading">Single-Dose Technology.</h2></div><div><p>Explore the material structure, operating principles, formula evaluation and patent documentation behind the single-dose format.</p><nav aria-label="Explore Single-Dose Technology">{singleDoseMenu.links.map((topic) => {
+        <div className="inner-split"><div><p className="eyebrow">MATERIALS & FORMULA TECHNOLOGY</p><h2 id="product-technology-reference-heading">Single-Dose Technology.</h2></div><div><p>Explore the material structure, formula evaluation and patent documentation behind the single-dose format.</p><nav aria-label="Explore Single-Dose Technology">{singleDoseMenu.links.map((topic) => {
           const anchor = topic.href.split("#")[1];
           const onThisPage = anchor === "five-layer-structure" || anchor === "patents";
           return <a className="text-link" key={topic.href} id={onThisPage ? undefined : anchor} href={onThisPage ? `#${anchor}` : topic.href}>{topic.label} <ArrowUpRight size={17} /></a>;

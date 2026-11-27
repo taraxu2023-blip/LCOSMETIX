@@ -2,16 +2,14 @@ import { notFound } from "next/navigation";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import Footer from "../../components/Footer";
 import ProjectForm from "../../components/ProjectForm";
-import BobiiDevelopment from "../../components/BobiiDevelopment";
-import SingleDoseTechnologySections from "../../components/SingleDoseTechnologySections";
+import ConceptLibrary from "../../components/ConceptLibrary";
 import { productInnovationsCopy } from "../../data/innovations";
 import { getProductById, productHref } from "../../data/products";
 import { pageSeo } from "../../data/seo";
-import { technologyCompatibilityCopy, technologyPatentCopy } from "../../data/technology";
+import { technologyCompatibilityCopy } from "../../data/technology";
 import { pageMetadata } from "../../lib/seo";
 import "./single-dose-technology.css";
 import "../concepts.css";
-import "../development.css";
 
 export const metadata = pageMetadata(pageSeo.productInnovations, "/single-dose-technology");
 
@@ -29,14 +27,12 @@ export default function SingleDoseTechnology() {
         <p className="product-summary">{productInnovationsCopy.introduction}</p>
         <div className="single-dose-actions"><a className="pill dark-pill" href="#inquiry">Request Samples <ArrowUpRight size={19} /></a><a className="text-link" href={productHref(product)}>Explore BOBII BALL <ArrowUpRight size={18} /></a></div>
         <nav className="single-dose-section-nav" aria-label="Single-dose technology topics">
-          <a href="#product-concepts">Product concepts</a><a href="#development-services">Development support</a><a href="#development-process">Project steps</a>
-          <a href="#five-layer-structure">Five-Layer Structure</a><a href="#how-it-works">How It Works</a><a href="#formula-compatibility">Formula Compatibility</a><a href="#patents">Patents</a><a href="#inquiry">Request Samples</a>
+          <a href="#product-concepts">Product concepts</a><a href="/oem-odm#services">Development support</a><a href="/oem-odm#approach">Project steps</a>
+          <a href={`${productHref(product)}#five-layer-structure`}>Five-Layer Structure</a><a href="#formula-compatibility">Formula Compatibility</a><a href={`${productHref(product)}#patents`}>Patents</a><a href="#inquiry">Request Samples</a>
         </nav>
       </section>
 
-      <BobiiDevelopment productId={product.id} />
-
-      <SingleDoseTechnologySections product={product} />
+      <ConceptLibrary productId={product.id} />
 
       <section className="inner-container technology-section" id="formula-compatibility" aria-labelledby="technology-compatibility-heading">
         <p className="eyebrow">YOUR FORMULA / OUR DEVELOPMENT PROCESS</p>
@@ -45,10 +41,6 @@ export default function SingleDoseTechnology() {
         <div className="application-grid">{product.applications.map((application) => <article key={application.name}><h3>{application.name}</h3><p>{application.description}</p></article>)}</div>
         <p className="fine-print">{technologyCompatibilityCopy.note}</p>
         <a className="text-link" href="#inquiry">Discuss your formula <ArrowUpRight size={18} /></a>
-      </section>
-
-      <section className="inner-container technology-section technology-patents" id="patents" aria-labelledby="technology-patents-heading">
-        <div className="inner-split"><div><p className="eyebrow">TECHNOLOGY DOCUMENTATION</p><h2 id="technology-patents-heading">Patents.</h2></div><div><p>{technologyPatentCopy.introduction}</p><a className="text-link" href="#inquiry">{technologyPatentCopy.action} <ArrowUpRight size={18} /></a></div></div>
       </section>
 
       <section className="inner-container single-dose-project-links" aria-label="Explore products and development services">

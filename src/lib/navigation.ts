@@ -9,10 +9,9 @@ export const singleDoseMenu = {
   href: singleDoseTechnologyHref,
   description: "Explore formulation collections, product concepts and single-dose development.",
   links: [
-    { label: "Five-Layer Structure", href: `${singleDoseTechnologyHref}#five-layer-structure`, description: "Explore PE, bonding layers and the EVOH barrier." },
-    { label: "How It Works", href: `${singleDoseTechnologyHref}#how-it-works`, description: "See how the container and material structure work together." },
+    { label: "Five-Layer Structure", href: "/products/bobii-ball-single-dose-container#five-layer-structure", description: "Explore PE, bonding layers and the EVOH barrier." },
     { label: "Formula Compatibility", href: `${singleDoseTechnologyHref}#formula-compatibility`, description: "Discuss formula types and project-specific evaluation." },
-    { label: "Patents", href: `${singleDoseTechnologyHref}#patents`, description: "Ask about patent documentation for your project." },
+    { label: "Patents", href: "/products/bobii-ball-single-dose-container#patents", description: "View BOBII BALL patent certificates and documentation." },
   ],
   samplesHref: `${singleDoseTechnologyHref}#inquiry`,
 } as const;
