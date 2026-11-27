@@ -6,6 +6,7 @@ import "./information.css";
 import "./company-map.css";
 import "./single-dose-menu.css";
 import "./technology.css";
+import "./home-responsive.css";
 import { pageSeo } from "../data/seo";
 import { pageMetadata } from "../lib/seo";
 

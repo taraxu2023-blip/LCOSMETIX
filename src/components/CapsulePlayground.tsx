@@ -74,6 +74,11 @@ export default function CapsulePlayground() {
       let cycleCount = 0;
       let width = stage.clientWidth;
       let height = stage.clientHeight;
+      // Match the desktop reference unit used by home-responsive.css.
+      const motionScale = () => matchMedia("(min-width: 1200px)").matches
+        ? width / 1870
+        : 1;
+      engine.gravity.y = 1.55 * motionScale();
       let dragging: { actor: Actor; offset: { x: number; y: number } } | null =
         null;
       let cursor = { x: 0, y: 0 };
@@ -178,7 +183,9 @@ export default function CapsulePlayground() {
         const small = width < 600;
         const spriteWidth = small
           ? 32
-          : Math.min(73, width * 0.052);
+          : matchMedia("(min-width: 1200px)").matches
+            ? 73 * motionScale()
+            : Math.min(73, width * 0.052);
         const spriteHeight = spriteWidth * (1127 / 764);
         const radius = spriteWidth * 0.465;
         const staticCount = small ? 7 : 13;
@@ -215,7 +222,7 @@ export default function CapsulePlayground() {
         const tilt = staticPose ? -0.16 : (Math.random() - 0.5) * 0.5;
         Body.setAngle(body, entryAngles[orientationIndex] + tilt);
         if (!staticPose) {
-          Body.setVelocity(body, { x: small ? 2.6 : 4.8, y: 1.8 });
+          Body.setVelocity(body, { x: (small ? 2.6 : 4.8) * motionScale(), y: 1.8 * motionScale() });
         }
         Body.setAngularVelocity(body, staticPose ? 0 : (Math.random() - 0.5) * 0.028);
         const node = document.createElement("img");
@@ -401,6 +408,7 @@ export default function CapsulePlayground() {
         const oldHeight = height;
         width = stage.clientWidth;
         height = stage.clientHeight;
+        engine.gravity.y = 1.55 * motionScale();
         if (Math.abs(oldWidth - width) < 2 && Math.abs(oldHeight - height) < 2)
           return;
         rebuildWalls();

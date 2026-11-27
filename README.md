@@ -84,6 +84,12 @@ workflow before relying on the website for lead handling.
 
 ## Fonts and repository hygiene
 
+The desktop homepage uses a shared design unit in `src/app/home-responsive.css`,
+fitted to both screen axes against the supplied 1920 × 1058 composition. Its header,
+headline, introduction, controls and physics capsules scale together from 1200px
+up; narrower screens retain the readable compact/mobile layout. Other pages keep
+their existing typography. Capsule motion reads the matching stage scale on resize.
+
 The bundled local **Geist** font is an explicitly marked substitute for Futura
 PT; its letterforms, widths and spacing differ. Use Futura PT only with a
 suitable official license/source. The company logo is the supplied image.
