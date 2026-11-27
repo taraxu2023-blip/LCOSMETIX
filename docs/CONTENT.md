@@ -11,7 +11,7 @@
 | BOBII BALL Technology | `/products/bobii-ball-single-dose-container`：八色与定制、技术页入口、13 系列／23 产品概念、6 项服务、4 步流程、规格状态和询盘 |
 | Single-Dose Technology | `/single-dose-technology`：五层结构、技术原理、配方兼容、专利资料咨询和 Request Samples |
 | OEM/ODM Technology | `/oem-odm`：服务、应用、开发流程、BOBII 配方库入口和询盘 |
-| About Us | `/about`：公司定位、研发与供应链能力、全球职能、次抛照片、已确认统计和地图 |
+| About Us | `/about`：公司定位、研发与供应链能力、全球职能、使命愿景、CEO 肖像、已确认统计和地图 |
 
 四项主导航均为直接页面链接，没有 Home 项或下拉分组；Logo 返回首页。
 响应式 Menu 对话框与页脚复用同一导航数据。五层技术全文集中在技术页，BOBII
@@ -103,9 +103,9 @@ About 另参考[现有官网 About Us](https://www.lcosmetix.com/About-Us)介绍
 | `public/assets/five-layer.png` | 用户提供的五层结构示意 |
 | `public/assets/news-five-layer.webp` | 结构图的新闻缩略图 |
 | `public/assets/bobii-capsule-structure-4k.mp4` | 用户确认的首页结构视频 |
-| `public/assets/about-capsule-collection.webp` | 用户提供的次抛合集图片 |
-| `public/assets/about-capsule-formats.webp` | 用户提供的次抛形状图片 |
-| `public/assets/about-capsule-packaging.webp` | 用户提供的次抛外包装展示 |
+| `public/assets/about-capsule-collection.webp` | 用户提供的次抛合集图片（保留素材，About 不再展示） |
+| `public/assets/about-capsule-formats.webp` | 用户提供的次抛形状图片（保留素材，About 不再展示） |
+| `public/assets/about-capsule-packaging.webp` | 用户提供的次抛外包装展示（保留素材，About 不再展示） |
 | `public/assets/lcosmetix-logo.webp` | 公司 Logo，共用于导航、询盘和页脚 |
 
 首页视频进入视口后自动静音播放，减少动态效果设置下保留手动播放。BOBII 详情
@@ -146,3 +146,5 @@ Vercel 通过 **private Vercel Blob** 保存，服务端凭据为 `BLOB_READ_WRI
 `route-map.json`、`product.schema.json`、`product.example.json`、`seo-keywords.csv`、
 `acceptance-checklist.md` 及原始 README 尚未齐备。仓库自带 README 不等于该
 交接包，不能声称已按缺失阶段脚本验收，也不以规划估算冒充真实搜索量。
+
+About 的使命愿景与 CEO 姓名/职务维护于 `src/data/about-profile.ts`；肖像路径、ALT 和尺寸维护于 `src/data/about-media.ts`。当前使用用户提供的 `tara-xu-ceo.jpg`，About 已移除三张产品展示照片。

@@ -21,11 +21,8 @@ export default function About() {
         <p className="eyebrow">ABOUT L COSMETIX</p>
         <h1>{aboutProfile.headline.line1}<br /><span>{aboutProfile.headline.line2}</span></h1>
         <div className="inner-split about-lead">
-          <figure className="about-capsule-lead">
-            <img src={aboutMedia.hero.src} alt={aboutMedia.hero.alt} width={aboutMedia.hero.width} height={aboutMedia.hero.height} fetchPriority="high" />
-            <figcaption>{aboutMedia.hero.caption}</figcaption>
-          </figure>
-          <div><p>{aboutProfile.introduction}</p><p>{aboutProfile.positioning}</p>
+          <div><p>{aboutProfile.introduction}</p></div>
+          <div><p>{aboutProfile.positioning}</p>
             <p>Established in {company.founded}, our team works with beauty brands, importers, distributors and OEM manufacturers across {company.markets.join(", ").replace(/, ([^,]*)$/, " and $1")}.</p>
             <ul className="about-focus-areas" aria-label="Beauty categories">{aboutProfile.focusAreas.map((area) => <li key={area}>{area}</li>)}</ul>
             <a className="text-link" href="/#contact">Discuss your project <ArrowUpRight size={19} /></a>
@@ -33,8 +30,21 @@ export default function About() {
         </div>
         <CompanyStats />
         <nav className="about-section-nav" aria-label="On this About page">
-          <a href="#story">Integrated capabilities</a><a href="#capabilities">Global presence</a><a href="#manufacturing">Single-dose development</a><a href="/oem-odm">OEM / ODM</a><a href="#locations">Contact locations</a>
+          <a href="#mission">Mission & vision</a><a href="#story">Integrated capabilities</a><a href="#capabilities">Global presence</a><a href="#manufacturing">Single-dose development</a><a href="/oem-odm">OEM / ODM</a><a href="#locations">Contact locations</a>
         </nav>
+      </section>
+
+      <section className="inner-container about-mission" id="mission" aria-labelledby="about-mission-heading">
+        <div className="about-mission-layout">
+          <div className="about-mission-copy">
+            <h2 id="about-mission-heading">{aboutProfile.mission.title}</h2>
+            <p>{aboutProfile.mission.body}</p>
+          </div>
+          <figure className="about-leadership">
+            <img src={aboutMedia.leadership.src} alt={aboutMedia.leadership.alt} width={aboutMedia.leadership.width} height={aboutMedia.leadership.height} loading="lazy" />
+            <figcaption><span>{aboutProfile.leadership.role}</span><span>{aboutProfile.leadership.name}</span></figcaption>
+          </figure>
+        </div>
       </section>
 
       <section className="inner-container about-content-section" id="story" aria-labelledby="about-story-heading">
@@ -66,7 +76,6 @@ export default function About() {
           <div><p className="eyebrow">SINGLE-DOSE DEVELOPMENT</p><h2 id="about-manufacturing-heading">One format.<br /><span>Developed together.</span></h2></div>
           <div><p>{aboutProfile.manufacturingIntro}</p><p>{aboutProfile.bobiiIntro}</p><div className="about-service-actions">{product && <a className="text-link" href={`${productHref(product)}#product-concepts`}>Explore BOBII BALL <ArrowUpRight size={19} /></a>}<a className="text-link" href="/oem-odm">Explore OEM / ODM services <ArrowUpRight size={19} /></a></div></div>
         </div>
-        <div className="about-product-gallery">{aboutMedia.gallery.map((photo) => <figure key={photo.src}><img src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" /><figcaption>{photo.caption}</figcaption></figure>)}</div>
       </section>
 
       <section className="inner-container about-content-section" id="approach" aria-labelledby="about-approach-heading">

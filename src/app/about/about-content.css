@@ -26,19 +26,6 @@
 .about-process-list p { margin-bottom: 0; }
 .about-approach-intro { max-width: 390px; margin-block: 28px; }
 
-/* Supplied capsule imagery and the official profile keep the established layout. */
-.about-capsule-lead { min-width: 0; margin: 0; }
-.about-capsule-lead img {
-  display: block;
-  width: 100%;
-  height: 360px;
-  object-fit: contain;
-  padding: 20px;
-  background: #f8f8f6;
-  border: 1px solid var(--line);
-}
-.about-capsule-lead figcaption,
-.about-product-gallery figcaption { margin-top: 12px; color: #73736a; font-size: 11px; line-height: 1.6; }
 .about-focus-areas { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 24px 0; list-style: none; }
 .about-focus-areas li { padding: 7px 11px; border: 1px solid var(--line); border-radius: 24px; color: #62625a; font-size: 11px; line-height: 1.4; }
 .about-integrated-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 48px; margin-top: 48px; }
@@ -56,9 +43,6 @@
 .about-network-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; margin-top: 36px; }
 .about-network-grid .about-location-tag,
 .about-global-headquarters .about-location-tag { margin-top: 0; font-size: 11px; line-height: 1.6; overflow-wrap: anywhere; }
-.about-product-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; margin-block: 36px; }
-.about-product-gallery figure { min-width: 0; margin: 0; }
-.about-product-gallery img { display: block; width: 100%; height: 330px; object-fit: contain; padding: 20px; background: #f8f8f6; border: 1px solid var(--line); }
 @media (max-width: 900px) {
   .about-capability-columns { gap: 35px; }
   .about-principles, .about-services { gap: 22px; }
@@ -76,16 +60,37 @@
   .about-capability-columns { gap: 30px; }
   .about-principles h3, .about-services h3, .about-capability-list h3 { font-size: 24px; }
   .about-approach-intro { margin-block: 24px; }
-  .about-capsule-lead img { height: 280px; padding: 16px; }
   .about-focus-areas { margin-block: 22px; }
   .about-integrated-grid,
   .about-network-grid,
-  .about-global-headquarters,
-  .about-product-gallery { grid-template-columns: minmax(0, 1fr); }
+  .about-global-headquarters { grid-template-columns: minmax(0, 1fr); }
   .about-integrated-grid { gap: 22px; margin-top: 30px; }
   .about-global-headquarters { gap: 20px; padding: 22px; }
   .about-global-headquarters h3 { font-size: 27px; }
   .about-network-grid { gap: 22px; margin-top: 28px; }
-  .about-product-gallery { gap: 26px; margin-block: 28px; }
-  .about-product-gallery img { height: 300px; padding: 16px; }
+}
+
+/* Supplied mission/CEO reference: teal statement at left, portrait at right. */
+.about-mission { padding-bottom: 64px; }
+.about-mission-layout { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 48px; padding: 24px; background: #f8f8f8; align-items: stretch; }
+.about-mission-copy { padding: 36px; background: #347f90; color: #fff; }
+.about-mission-copy h2 { margin: 0; padding-bottom: 22px; border-bottom: 1px solid #ffffff70; font-size: 32px; line-height: 1.2; font-weight: 500; letter-spacing: -.025em; }
+.about-mission-copy p { margin: 20px 0 0; font-size: 16px; line-height: 1.6; color: #fff; }
+.about-leadership { min-width: 0; margin: 0; padding: 10px 18px; border: 1px solid #d5e3e6; align-self: center; }
+.about-leadership img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1.08; object-fit: cover; object-position: 50% 60%; }
+.about-leadership figcaption { position: relative; width: 80%; margin: -20px auto 0; padding: 10px 6px; background: #347f90; color: #fff; text-align: center; }
+.about-leadership figcaption span { display: block; font-size: 16px; line-height: 1.35; }
+.about-leadership figcaption span:first-child { font-size: 20px; }
+@media (max-width: 900px) {
+  .about-mission-layout { gap: 28px; grid-template-columns: minmax(0, 1fr) 220px; }
+  .about-mission-copy { padding: 28px; }
+  .about-mission-copy h2 { font-size: 29px; }
+}
+@media (max-width: 760px) {
+  .about-mission { padding-bottom: 44px; }
+  .about-mission-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 18px; }
+  .about-mission-copy { padding: 26px 24px; }
+  .about-mission-copy h2 { font-size: 28px; padding-bottom: 18px; }
+  .about-mission-copy p { margin-top: 18px; font-size: 15px; }
+  .about-leadership { width: min(100%, 260px); justify-self: center; }
 }
