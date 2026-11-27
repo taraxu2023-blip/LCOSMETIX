@@ -40,6 +40,8 @@ export default function About() {
           <div className="about-mission-copy">
             <h2 id="about-mission-heading">{aboutProfile.mission.title}</h2>
             <p>{aboutProfile.mission.body}</p>
+            <p>Vision: {aboutProfile.mission.vision}</p>
+            <p>Philosophy: {aboutProfile.mission.philosophy}</p>
           </div>
           <figure className="about-leadership">
             <img src={aboutMedia.leadership.src} alt={aboutMedia.leadership.alt} width={aboutMedia.leadership.width} height={aboutMedia.leadership.height} loading="lazy" />

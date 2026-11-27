@@ -5,7 +5,9 @@ export const aboutProfile = {
   headline: { line1: "Research-led.", line2: "Client-focused." },
   mission: {
     title: "Our mission and vision",
-    body: "Leveraging global resources, we seek to unite talents, ideas, and capabilities from diverse regions. By fostering collaboration, we aim to create a powerful synergy that enables us to deliver exceptional cosmetics products and services to China and Global Market.",
+    body: "To empower beauty brands through proprietary technology, science-driven product development, and integrated manufacturing solutions.",
+    vision: "To become a trusted international beauty technology partner.",
+    philosophy: "Science Is the Language of Skin. We translate scientific understanding into meaningful product experiences.",
   },
   leadership: { name: "Tara Xu", role: "CEO" },
   introduction: "L COSMETIX is an R&D-driven cosmetics supply chain company working with beauty brands on client-focused product development. We connect ingredients, formulations, packaging and manufacturing across facial care, body care, hair care, makeup and beauty devices.",
