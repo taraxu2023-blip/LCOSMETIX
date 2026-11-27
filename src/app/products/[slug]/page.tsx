@@ -8,6 +8,8 @@ import ProjectForm from "../../../components/ProjectForm";
 import Footer from "../../../components/Footer";
 import SingleDoseTechnologySections from "../../../components/SingleDoseTechnologySections";
 import BobiiPatents from "../../../components/BobiiPatents";
+import ProductBenefits from "../../../components/ProductBenefits";
+import "../../product-benefits.css";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return getPublishedProducts().map(({ slug }) => ({ slug })); }
@@ -21,7 +23,6 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
   const product = getProductBySlug((await params).slug);
   if (!product) notFound();
   const related = getPublishedProducts().filter((item) => item.id !== product.id);
-  const productFeatures = product.features.filter((feature) => feature.scope !== "technology");
   return <>
     <a href="#product-content" className="skip-link">Skip to content</a>
     <main id="top" className="inner-page product-detail">
@@ -33,7 +34,7 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
         <div className="product-actions"><a className="pill dark-pill" href="#inquiry">Get a Quote <ArrowUpRight size="1.1875rem" /></a><a className="text-link" id="product-concepts" href={productConceptsHref}>Explore formulation concepts <ArrowUpRight size="1.125rem" /></a></div>
         <ColorCollection product={product} headingLevel={2} />
       </section>
-      <section className="inner-container product-benefits" aria-label="Product features">{productFeatures.map((feature, i) => <article key={feature.title}><span className="eyebrow">0{i + 1}</span><h3>{feature.title}</h3><p>{feature.description}</p></article>)}</section>
+      <ProductBenefits features={product.features} />
       {product.id === "bobii-ball" && <section className="inner-container product-technology-reference" id="single-dose-technology" aria-labelledby="product-technology-reference-heading">
         <div className="inner-split"><div><p className="eyebrow">MATERIALS & FORMULA TECHNOLOGY</p><h2 id="product-technology-reference-heading">Single-Dose Technology.</h2></div><div><p>Explore the material structure, formula evaluation and patent documentation behind the single-dose format.</p><nav aria-label="Explore Single-Dose Technology">{singleDoseMenu.links.map((topic) => {
           const anchor = topic.href.split("#")[1];

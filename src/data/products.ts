@@ -1,3 +1,14 @@
+export type ProductFeature = {
+  id: string;
+  title: string;
+  description: string;
+  details: string[];
+  media: {
+    layout: "formulas" | "structure" | "custom" | "travel" | "materials";
+    images: { src: string; alt: string; width: number; height: number }[];
+  };
+};
+
 export type Product = {
   id: string;
   slug: string;
@@ -6,7 +17,7 @@ export type Product = {
   brand: string;
   category: string;
   summary: string;
-  features: { title: string; description: string; scope?: "product" | "technology" }[];
+  features: ProductFeature[];
   layers: { material: string; description: string }[];
   colors: { id: string; label: string; swatch: string; src: string }[];
   applications: { name: string; description: string }[];
@@ -24,10 +35,54 @@ export const products: Product[] = [{
   category: "Single-dose cosmetic containers",
   summary: "Explore the BOBII BALL single-dose format, color concepts and brand-specific product development, with customization options defined for your project.",
   features: [
-    { title: "Five-layer barrier", description: "A co-extruded PE / adhesive / EVOH / adhesive / PE structure designed to help protect sensitive formulas.", scope: "technology" },
-    { title: "Versatile formula compatibility", description: "Explore serums, creams, lotions, oils, foundations and sunscreens. Compatibility is assessed for each formula.", scope: "technology" },
-    { title: "Customizable design", description: "Develop shapes, colors and capacities around your brand and project requirements." },
-    { title: "Lightweight & eco-conscious", description: "Lightweight single-dose packaging, with recyclable-material and PCR options available for discussion. Final material choice is project-specific." },
+    // Advantages and illustrations: supplied BOBII BALL presentation, pp. 9–12.
+    // Material options retain the existing project-specific website copy.
+    {
+      id: "formula-compatibility", title: "Versatile formula compatibility",
+      description: "Bring serums, lotions, creams, oils and cleansing textures into one recognizable container platform. Formula and packaging compatibility are assessed for each project.",
+      details: ["One recognizable format", "Across skincare textures", "A coordinated product range"],
+      media: { layout: "formulas", images: [
+        { src: "/assets/benefits/formula-serum.webp", alt: "Violet BOBII BALL container dispensing a creamy texture", width: 658, height: 1100 },
+        { src: "/assets/benefits/formula-cream.webp", alt: "Pink BOBII BALL container illustrating a lotion texture", width: 665, height: 1100 },
+        { src: "/assets/benefits/formula-golden-oil.webp", alt: "Golden BOBII BALL container illustrating an oil texture", width: 657, height: 1100 },
+        { src: "/assets/benefits/formula-fluid.webp", alt: "Blue BOBII BALL container illustrating a fluid texture", width: 711, height: 1100 },
+      ] },
+    },
+    {
+      id: "freshness-protection", title: "Five-layer freshness protection",
+      description: "A co-extruded PE / adhesive / EVOH / adhesive / PE shell helps limit oxygen permeation and protect formula freshness. Inner PE contacts the formula, while outer PE provides mechanical protection.",
+      details: ["Five-layer co-extrusion", "EVOH oxygen barrier", "Protective PE layers"],
+      media: { layout: "structure", images: [
+        { src: "/assets/five-layer.png", alt: "Exploded BOBII BALL shell showing the five protective layers", width: 1834, height: 1601 },
+      ] },
+    },
+    {
+      id: "customizable-design", title: "Customizable design",
+      description: "Develop distinctive shapes, colors and finishes around your brand. Sculpted silhouettes, decorative printing and a coordinated family of formats turn the container into a recognizable part of your product identity.",
+      details: ["Distinctive shapes", "Surface finishes & graphics", "A shared brand identity"],
+      media: { layout: "custom", images: [
+        { src: "/assets/benefits/custom-shapes.webp", alt: "Pink custom container concepts including round, heart and star shapes", width: 1000, height: 765 },
+        { src: "/assets/benefits/custom-decoration.webp", alt: "BOBII BALL decoration concepts with printed brand graphics", width: 1000, height: 407 },
+      ] },
+    },
+    {
+      id: "portable-format", title: "Lightweight & portable",
+      description: "A compact, rounded single-dose format for travel pouches, everyday bags and skincare on the go. Lightweight packaging makes it easy to carry a selection of products without full-size bottles.",
+      details: ["Compact rounded format", "Lightweight packaging", "Everyday carry"],
+      media: { layout: "travel", images: [
+        { src: "/assets/benefits/travel-pouch.webp", alt: "Small colorful capsules in a clear pouch attached to an everyday travel bag", width: 866, height: 1100 },
+      ] },
+    },
+    {
+      id: "material-options", title: "Eco-conscious material options",
+      description: "Recyclable-material and PCR options are available for discussion. We consider material choices alongside your formula, packaging design and project requirements, with the final selection confirmed during development.",
+      details: ["Recyclable-material options", "PCR options to discuss", "Project-specific selection"],
+      media: { layout: "materials", images: [
+        { src: "/assets/capsule-pearl.webp", alt: "Pearl white container color concept illustrating the single-dose format", width: 320, height: 463 },
+        { src: "/assets/capsule-mint.webp", alt: "Mint container color concept illustrating the single-dose format", width: 320, height: 461 },
+        { src: "/assets/capsule-peach.webp", alt: "Peach container color concept illustrating the single-dose format", width: 320, height: 462 },
+      ] },
+    },
   ],
   layers: [
     { material: "PE", description: "Direct contact with the material, featuring excellent chemical compatibility, suitable for various dosage forms" },
