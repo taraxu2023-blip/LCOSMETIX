@@ -30,11 +30,11 @@ export const products: Product[] = [{
     { title: "Lightweight & eco-conscious", description: "Lightweight single-dose packaging, with recyclable-material and PCR options available for discussion. Final material choice is project-specific." },
   ],
   layers: [
-    { material: "PE", description: "Polyethylene layer forming part of the container wall." },
+    { material: "PE", description: "Direct contact with the material, featuring excellent chemical compatibility, suitable for various dosage forms" },
     { material: "Adhesive", description: "A bonding layer connecting the adjacent polymer layers." },
-    { material: "EVOH", description: "Ethylene vinyl alcohol copolymer, used as the oxygen-barrier layer." },
+    { material: "EVOH", description: "Block oxygen permeation and inhibit the oxidative degradation of active substances" },
     { material: "Adhesive", description: "A second bonding layer connecting EVOH to PE." },
-    { material: "PE", description: "Polyethylene layer completing the five-layer structure." },
+    { material: "PE", description: "Maintain strength to provide protection and buffer the impact of external factors on the EVOH barrier layer" },
   ],
   colors: [
     { id: "red", label: "Red", swatch: "#ef163d" },
