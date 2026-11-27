@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { getPublishedProducts, getProductBySlug, productHref } from "../../../data/products";
-import { catalogueDownload, singleDoseMenu } from "../../../lib/navigation";
+import { catalogueDownload, productConceptsHref, singleDoseMenu } from "../../../lib/navigation";
 import { pageMetadata } from "../../../lib/seo";
 import ColorCollection from "../../../components/ColorCollection";
 import ProjectForm from "../../../components/ProjectForm";
@@ -9,7 +9,6 @@ import ProjectSpecifications from "../../../components/ProjectSpecifications";
 import Footer from "../../../components/Footer";
 import BobiiDevelopment from "../../../components/BobiiDevelopment";
 import SingleDoseTechnologySections from "../../../components/SingleDoseTechnologySections";
-import "../../concepts.css";
 import "../../development.css";
 
 export const dynamicParams = false;
@@ -33,7 +32,7 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
         <p className="eyebrow">{product.category.toUpperCase()}</p>
         <h1>{product.brand}.<br /><span>One dose. More possibility.</span></h1>
         <p className="product-summary">{product.summary}</p>
-        <div className="product-actions"><a className="pill dark-pill" href="#inquiry">Get a Quote <ArrowUpRight size={19} /></a><a className="text-link" href="#product-concepts">Explore formulation concepts <ArrowUpRight size={18} /></a><a className="text-link" href={catalogueDownload.href} download={catalogueDownload.filename}>Download English catalogue <ArrowUpRight size={18} /></a></div>
+        <div className="product-actions"><a className="pill dark-pill" href="#inquiry">Get a Quote <ArrowUpRight size={19} /></a><a className="text-link" id="product-concepts" href={productConceptsHref}>Explore formulation concepts <ArrowUpRight size={18} /></a><a className="text-link" href={catalogueDownload.href} download={catalogueDownload.filename}>Download English catalogue <ArrowUpRight size={18} /></a></div>
         <ColorCollection product={product} headingLevel={2} />
       </section>
       <section className="inner-container product-benefits" aria-label="Product features">{productFeatures.map((feature, i) => <article key={feature.title}><span className="eyebrow">0{i + 1}</span><h3>{feature.title}</h3><p>{feature.description}</p></article>)}</section>
@@ -45,7 +44,7 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
         })}</nav></div></div>
       </section>}
       {product.id === "bobii-ball" && <SingleDoseTechnologySections product={product} />}
-      {product.id === "bobii-ball" && <BobiiDevelopment productId={product.id} />}
+      {product.id === "bobii-ball" && <BobiiDevelopment productId={product.id} showConcepts={false} />}
       <ProjectSpecifications product={product} />
       {related.length > 0 && <section className="inner-container"><h2>Related products</h2><div className="application-grid">{related.map((item) => <a className="text-link" key={item.id} href={productHref(item)}>{item.name}<ArrowUpRight size={18} /></a>)}</div></section>}
       <section id="inquiry" className="contact-section inner-container"><ProjectForm productId={product.id} /></section>

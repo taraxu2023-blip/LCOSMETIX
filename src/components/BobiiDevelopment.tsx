@@ -2,9 +2,9 @@ import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import ConceptLibrary from "./ConceptLibrary";
 import { oemOdmServices, projectApproach } from "../data/company-profile";
 
-export default function BobiiDevelopment({ productId }: { productId: string }) {
+export default function BobiiDevelopment({ productId, showConcepts = true }: { productId: string; showConcepts?: boolean }) {
   return <>
-    <ConceptLibrary productId={productId} />
+    {showConcepts && <ConceptLibrary productId={productId} />}
 
     <section className="inner-container development-section" id="development-services" aria-labelledby="development-services-heading">
       <p className="eyebrow">OUR DEVELOPMENT SCOPE</p>

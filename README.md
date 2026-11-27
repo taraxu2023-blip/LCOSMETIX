@@ -52,7 +52,7 @@ non-Vercel Node.js hosting and release verification. See
 | Page | Route |
 | --- | --- |
 | Home | `/` |
-| BOBII BALL Technology and formulation concepts | `/products/bobii-ball-single-dose-container` |
+| BOBII BALL Technology | `/products/bobii-ball-single-dose-container` |
 | Product Innovations and single-dose technology | `/single-dose-technology` |
 | OEM/ODM Technology | `/oem-odm` |
 | About Us | `/about` |
@@ -60,8 +60,8 @@ non-Vercel Node.js hosting and release verification. See
 The four primary navigation links go directly to their pages; the logo returns
 home. The responsive Menu dialog exposes the same destinations. Single-Dose
 Technology holds the five-layer structure, operating principles, formula
-compatibility, patent-document enquiry and sample request. The BOBII page holds
-the 13 collections / 23 development concepts and product customization.
+compatibility, patent-document enquiry and sample request. The Product Innovations page holds
+the 13 collections / 23 development concepts; BOBII presents product customization and material technology.
 
 Content lives in `src/data/`, navigation in `src/lib/navigation.ts`, pages in
 `src/app/`, reusable UI in `src/components/` and assets in `public/assets/`.

@@ -74,7 +74,7 @@ export default function About() {
       <section className="inner-container about-factory" id="manufacturing" aria-labelledby="about-manufacturing-heading">
         <div className="inner-split">
           <div><p className="eyebrow">SINGLE-DOSE DEVELOPMENT</p><h2 id="about-manufacturing-heading">One format.<br /><span>Developed together.</span></h2></div>
-          <div><p>{aboutProfile.manufacturingIntro}</p><p>{aboutProfile.bobiiIntro}</p><div className="about-service-actions">{product && <a className="text-link" href={`${productHref(product)}#product-concepts`}>Explore BOBII BALL <ArrowUpRight size={19} /></a>}<a className="text-link" href="/oem-odm">Explore OEM / ODM services <ArrowUpRight size={19} /></a></div></div>
+          <div><p>{aboutProfile.manufacturingIntro}</p><p>{aboutProfile.bobiiIntro}</p><div className="about-service-actions">{product && <a className="text-link" href={productHref(product)}>Explore BOBII BALL <ArrowUpRight size={19} /></a>}<a className="text-link" href="/oem-odm">Explore OEM / ODM services <ArrowUpRight size={19} /></a></div></div>
         </div>
       </section>
 

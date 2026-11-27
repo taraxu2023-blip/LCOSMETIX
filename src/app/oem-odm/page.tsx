@@ -3,10 +3,10 @@ import Footer from "../../components/Footer";
 import ProjectForm from "../../components/ProjectForm";
 import ProjectSpecifications from "../../components/ProjectSpecifications";
 import { oemOdmServices, projectApproach } from "../../data/company-profile";
-import { getProductById, productHref } from "../../data/products";
+import { getProductById } from "../../data/products";
 import { getPublishedConceptCollections } from "../../data/concepts";
 import { pageSeo } from "../../data/seo";
-import { catalogueDownload } from "../../lib/navigation";
+import { catalogueDownload, productConceptsHref } from "../../lib/navigation";
 import { pageMetadata } from "../../lib/seo";
 import "./oem-odm.css";
 
@@ -33,7 +33,7 @@ export default function OemOdm() {
           </div>
         </div>
         <nav className="oem-section-nav" aria-label="OEM / ODM topics and formulation concepts">
-          {product && <a href={`${productHref(product)}#product-concepts`}>Formulation concepts</a>}<a href="#applications">Applications</a><a href="#services">Services</a><a href="#approach">Project steps</a>{product && <a href="#project-specifications">Project specifications</a>}<a href="#inquiry">Start your project</a>
+          {product && <a href={productConceptsHref}>Formulation concepts</a>}<a href="#applications">Applications</a><a href="#services">Services</a><a href="#approach">Project steps</a>{product && <a href="#project-specifications">Project specifications</a>}<a href="#inquiry">Start your project</a>
         </nav>
       </section>
 
@@ -47,8 +47,8 @@ export default function OemOdm() {
         <section className="inner-container oem-section" id="product-concepts" aria-labelledby="oem-concepts-heading">
           <p className="eyebrow">FORMULATION DEVELOPMENT</p>
           <div className="inner-split">
-            <h2 id="oem-concepts-heading">Formulation concepts.<br /><span>Explore with BOBII BALL.</span></h2>
-            <div><p>Explore {collections.length} formulation collections and {conceptCount} development concepts on the BOBII BALL technology page. Each concept is a starting point for project-specific formulation and packaging development.</p><a className="text-link" href={`${productHref(product)}#product-concepts`}>Explore {collections.length} formulation collections <ArrowUpRight size={19} /></a></div>
+            <h2 id="oem-concepts-heading">Formulation concepts.<br /><span>Explore product innovations.</span></h2>
+            <div><p>Explore {collections.length} formulation collections and {conceptCount} development concepts on the Product Innovations page. Each concept is a starting point for project-specific formulation and packaging development.</p><a className="text-link" href={productConceptsHref}>Explore {collections.length} formulation collections <ArrowUpRight size={19} /></a></div>
           </div>
         </section>
       </>}

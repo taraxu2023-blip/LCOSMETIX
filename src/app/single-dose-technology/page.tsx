@@ -53,7 +53,7 @@ export default function SingleDoseTechnology() {
 
       <section className="inner-container single-dose-project-links" aria-label="Explore products and development services">
         <p>Continue with a product concept or discuss the development support your project needs.</p>
-        <div><a className="text-link" href={`${productHref(product)}#product-concepts`}>BOBII BALL formulation concepts <ArrowUpRight size={18} /></a><a className="text-link" href="/oem-odm">OEM / ODM services <ArrowUpRight size={18} /></a></div>
+        <div><a className="text-link" href={productHref(product)}>Explore BOBII BALL <ArrowUpRight size={18} /></a><a className="text-link" href="/oem-odm">OEM / ODM services <ArrowUpRight size={18} /></a></div>
       </section>
 
       <section id="inquiry" className="contact-section inner-container" aria-labelledby="technology-samples-heading">

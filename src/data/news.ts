@@ -1,5 +1,6 @@
 import { getProductById, productHref } from "./products";
 import { getPublishedConceptCollections } from "./concepts";
+import { productConceptsHref } from "../lib/navigation";
 
 type NewsItem = {
   id: string;
@@ -43,7 +44,7 @@ export function getLatestNews(): NewsItem[] {
       category: "Product innovations",
       title: `${collections.length} collections. ${conceptCount} development concepts.`,
       summary: "Explore skincare, facial oils, cleansing, hybrid makeup and sun care as starting points for brand-specific development.",
-      href: `${productHref(product)}#product-concepts`,
+      href: productConceptsHref,
       image: { src: product.colors.find((color) => color.id === "blue")?.src || product.colors[0].src, alt: "Blue BOBII BALL container illustrating formulation concepts", width: 320, height: 461 },
       publishedAt: null,
       dateLabel: null,
