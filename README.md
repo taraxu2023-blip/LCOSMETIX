@@ -61,7 +61,10 @@ The four primary navigation links go directly to their pages; the logo returns
 home. The responsive Menu dialog exposes the same destinations. Single-Dose
 Technology holds the five-layer structure, operating principles, formula
 compatibility, patent-document enquiry and sample request. The Product Innovations page holds
-the 13 collections / 23 development concepts; BOBII presents product customization and material technology.
+the 13 collections / 23 development concepts; BOBII presents product customization,
+the five-layer exploded structure and material descriptions. Operating principles,
+development services, the cooperation process and project specifications are omitted
+from BOBII; their existing sections on Product Innovations and OEM remain available.
 
 Content lives in `src/data/`, navigation in `src/lib/navigation.ts`, pages in
 `src/app/`, reusable UI in `src/components/` and assets in `public/assets/`.

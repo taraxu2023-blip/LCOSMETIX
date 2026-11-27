@@ -8,14 +8,14 @@
 | 页面 | 地址与主要内容 |
 | --- | --- |
 | 首页 | `/`：次抛互动展示、颜色、结构概览与视频、应用方向、Latest News、询盘 |
-| BOBII BALL Technology | `/products/bobii-ball-single-dose-container`：八色与定制、五层结构和原理、配方页入口、6 项服务、4 步流程、规格状态和询盘 |
+| BOBII BALL Technology | `/products/bobii-ball-single-dose-container`：八色与定制、五层结构与材料说明、配方及技术页入口和询盘 |
 | Single-Dose Technology | `/single-dose-technology`：五层结构、技术原理、配方兼容、专利资料咨询和 Request Samples |
 | OEM/ODM Technology | `/oem-odm`：服务、应用、开发流程、BOBII 配方库入口和询盘 |
 | About Us | `/about`：公司定位、研发与供应链能力、全球职能、使命愿景、CEO 肖像、已确认统计和地图 |
 
 四项主导航均为直接页面链接，没有 Home 项或下拉分组；Logo 返回首页。
-响应式 Menu 对话框与页脚复用同一导航数据。五层技术全文集中在技术页，BOBII
-保留简短入口；OEM/ODM 不重复 13 张配方卡。没有独立 Contact 或完整产品列表页，
+响应式 Menu 对话框与页脚复用同一导航数据。BOBII 保留五层结构和材料说明，
+工作原理等技术全文由 Product Innovations 承载；OEM/ODM 不重复 13 张配方卡。没有独立 Contact 或完整产品列表页，
 相应联系和产品内容由现有页面承载。
 
 ## 内容依据与确认规则
@@ -151,8 +151,8 @@ About 的使命愿景与 CEO 姓名/职务维护于 `src/data/about-profile.ts`�
 
 Product Innovations 菜单沿用 `/single-dose-technology`，优先展示 13 个配方系列、23 个产品概念及共享的开发支持/流程，下方保留原有技术资料。卡片与询盘共用 `src/data/concepts.ts`；页头文案维护于 `src/data/innovations.ts`。
 
-OEM / ODM Solutions 的六项服务、四步合作流程和项目规格表连续展示于询盘前。规格表由 `src/components/ProjectSpecifications.tsx` 共用，数据仍读取 `src/data/products.ts`，与 BOBII 详情保持一致。
+OEM / ODM Solutions 的六项服务、四步合作流程和项目规格表连续展示于询盘前。规格表组件为 `src/components/ProjectSpecifications.tsx`，数据读取 `src/data/products.ts`；BOBII 页不再展示该表。
 
-BOBII 页增加五层结构分解图、五项材料说明和三项工作原理，由 `SingleDoseTechnologySections.tsx` 与 Product Innovations 共同渲染，读取同一份产品和技术数据。BOBII 的结构/原理入口直接跳转本页对应区块。
+BOBII 页保留五层结构分解图和五项材料说明，与 Product Innovations 共用 `SingleDoseTechnologySections.tsx` 和产品数据。按用户最新截图要求，BOBII 隐藏工作原理，并移除开发服务、合作流程、项目规格；其他页面的对应内容保留。结构入口跳转本页，工作原理入口跳转 Product Innovations。
 
 BOBII 页已移除产品创新介绍和完整配方卡片库，完整 13 系列/23 概念保留于 Product Innovations。BOBII 的配方探索按钮及 OEM/新闻配方入口统一指向 `productConceptsHref`；旧 BOBII `#product-concepts` 锚点保留在该探索按钮，便于旧链接继续使用。
