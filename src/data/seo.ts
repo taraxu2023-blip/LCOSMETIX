@@ -9,7 +9,7 @@ export const pageSeo = {
   },
   oemOdm: {
     title: "Cosmetic OEM/ODM & Formulation Development | L COSMETIX",
-    description: "Explore cosmetic OEM/ODM services with L COSMETIX: formulation development, packaging customization, prototyping, sampling, and manufacturing coordination.",
+    description: "Develop your beauty brand with L COSMETIX OEM/ODM solutions: formulation, BOBII BALL packaging, sampling, manufacturing and quality coordination.",
   },
   productInnovations: {
     title: "Product Innovations & Cosmetic Formulation Concepts | L COSMETIX",

@@ -67,6 +67,11 @@ with an accessible enlargement dialog. Development services, the cooperation pro
 and project specifications are available on OEM. The removed operating-principles
 section is no longer linked from either product page.
 
+OEM / ODM Solutions also explains the two collaboration routes, manufacturing
+roles and project quality checkpoints, illustrated with the three supplied real
+production photographs. Content and responsive media records live in
+`src/data/oem-solutions.ts`.
+
 Content lives in `src/data/`, navigation in `src/lib/navigation.ts`, pages in
 `src/app/`, reusable UI in `src/components/` and assets in `public/assets/`.
 Unknown specifications stay empty; shared readers exclude draft products from

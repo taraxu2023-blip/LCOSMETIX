@@ -18,8 +18,35 @@
 .oem-process-list h3 { margin-top: 0; }
 .oem-process-list p { margin-bottom: 0; }
 .oem-approach-intro { max-width: 390px; margin-block: 28px; }
+.oem-collaboration-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+.oem-collaboration-grid article { display: flex; flex-direction: column; align-items: start; border-top: 1px solid var(--ink); padding-top: 26px; }
+.oem-collaboration-grid h3 { font-size: clamp(26px, 2.7vw, 36px); font-weight: 400; letter-spacing: -.045em; line-height: 1.15; margin: 16px 0 20px; }
+.oem-collaboration-grid article > p:not(.eyebrow) { color: #73736a; font-size: 14px; }
+.oem-collaboration-grid ul { padding: 0; margin: 12px 0 28px; list-style: none; width: 100%; color: #73736a; font-size: 12px; }
+.oem-collaboration-grid li { padding-block: 10px; border-bottom: 1px solid var(--line); }
+.oem-collaboration-grid .text-link { margin-top: auto; font-size: 14px; }
+.oem-factory-images { display: grid; grid-template-columns: .95fr 1.05fr; gap: 30px; align-items: start; }
+.oem-production-photo { min-width: 0; margin: 0; }
+.oem-production-photo img { display: block; width: 100%; height: auto; background: var(--soft); }
+.oem-production-photo figcaption { color: #73736a; font-size: 11px; line-height: 1.6; margin-top: 12px; }
+.oem-capability-roles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 42px; }
+.oem-capability-roles article { border-top: 1px solid var(--line); padding-top: 22px; }
+.oem-capability-roles h3, .oem-quality-checks h3 { font-size: 22px; font-weight: 400; letter-spacing: -.035em; line-height: 1.25; margin: 14px 0; }
+.oem-capability-roles article > p:not(.eyebrow), .oem-quality-checks p, .oem-quality-intro { color: #73736a; font-size: 14px; }
+.oem-quality-layout { align-items: start; }
+.oem-quality-layout h2 { margin-bottom: 30px; }
+.oem-quality-layout > div > .eyebrow { max-width: 320px; }
+.oem-quality-intro { margin: 0 0 28px; }
+.oem-quality-checks { list-style: none; padding: 0; margin: 0 0 22px; }
+.oem-quality-checks li { display: grid; grid-template-columns: 24px minmax(0, 1fr); gap: 18px; border-top: 1px solid var(--line); padding-block: 22px; }
+.oem-quality-checks li > span { padding-top: 5px; }
+.oem-quality-checks h3 { margin-top: 0; }
+.oem-quality-checks p { margin-bottom: 0; }
+.oem-quality-layout .text-link { font-size: 14px; }
 @media (max-width: 900px) {
   .oem-services-grid { gap: 22px; }
+  .oem-collaboration-grid { gap: 30px; }
+  .oem-capability-roles { gap: 22px; }
 }
 @media (max-width: 760px) {
   .oem-page section[id] { scroll-margin-top: 90px; }
@@ -30,4 +57,9 @@
   .oem-services-grid { grid-template-columns: 1fr; gap: 20px; margin-top: 32px; }
   .oem-services-grid h3, .oem-process-list h3 { font-size: 24px; }
   .oem-approach-intro { margin-block: 24px; }
+  .oem-collaboration-grid, .oem-factory-images, .oem-capability-roles { grid-template-columns: 1fr; gap: 30px; }
+  .oem-collaboration-grid h3 { font-size: 29px; }
+  .oem-capability-roles { margin-top: 32px; }
+  .oem-production-photo figcaption { margin-top: 10px; }
+  .oem-quality-layout { gap: 30px; }
 }

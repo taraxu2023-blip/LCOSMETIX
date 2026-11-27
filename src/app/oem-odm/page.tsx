@@ -2,6 +2,7 @@ import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import Footer from "../../components/Footer";
 import ProjectForm from "../../components/ProjectForm";
 import ProjectSpecifications from "../../components/ProjectSpecifications";
+import OemCapabilities from "../../components/OemCapabilities";
 import { oemOdmServices, projectApproach } from "../../data/company-profile";
 import { getProductById } from "../../data/products";
 import { getPublishedConceptCollections } from "../../data/concepts";
@@ -27,15 +28,17 @@ export default function OemOdm() {
         <div className="inner-split oem-intro-copy">
           <p className="large-copy">Your formula.<br />A development route of its own.</p>
           <div>
-            <p>Connect product strategy, formulation development, single-dose packaging and manufacturing coordination around your brand’s brief.</p>
-            <p>Explore our formulation concepts or bring your own idea. Together, we define the product scope, technical evaluation and production route for your target market.</p>
+            <p>From concept to commercialization, we bring together product strategy, formulation development, BOBII BALL integration, packaging design, prototyping, manufacturing and quality coordination.</p>
+            <p>Bring your formula or develop a new concept with us. Our technical team and manufacturing network help define a practical route for your brand and target market.</p>
             <div className="oem-hero-actions"><a className="pill dark-pill" href="#inquiry">Start your project <ArrowUpRight size={19} /></a><a className="text-link" href={catalogueDownload.href} download={catalogueDownload.filename}>English catalogue <ArrowUpRight size={18} /></a></div>
           </div>
         </div>
         <nav className="oem-section-nav" aria-label="OEM / ODM topics and formulation concepts">
-          {product && <a href={productConceptsHref}>Formulation concepts</a>}<a href="#services">Services</a><a href="#approach">Project steps</a>{product && <a href="#project-specifications">Project specifications</a>}<a href="#inquiry">Start your project</a>
+          <a href="#collaboration">OEM & ODM</a><a href="#manufacturing">Manufacturing</a><a href="#quality">Quality coordination</a><a href="#services">Services</a><a href="#approach">Project steps</a>{product && <a href="#project-specifications">Project specifications</a>}<a href="#inquiry">Start your project</a>
         </nav>
       </section>
+
+      <OemCapabilities />
 
       {product &&
         <section className="inner-container oem-section" id="product-concepts" aria-labelledby="oem-concepts-heading">
