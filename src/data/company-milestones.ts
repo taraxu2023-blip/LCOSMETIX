@@ -1,8 +1,8 @@
 // Source: Company Milestone slide supplied by the user on 2026-11-27.
-// The first range describes a foundation phase; company.founded remains 2015.
+// The user corrected the first period to 2015–2018, matching company.founded.
 export const companyMilestones = [
   {
-    period: "2014–2018",
+    period: "2015–2018",
     description: "Established our foundation in Guangzhou, China, with CHANDO, HEXZE and Carslan partnerships.",
   },
   {
