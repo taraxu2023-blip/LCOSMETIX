@@ -4,7 +4,7 @@ import { getPublishedProducts, productHref } from "../data/products";
 export const singleDoseTechnologyHref = "/single-dose-technology";
 
 export const singleDoseMenu = {
-  label: "Single-Dose Technology",
+  label: "Product Innovations",
   href: singleDoseTechnologyHref,
   description: "Materials, principles and compatibility for your next single-dose project.",
   links: [
