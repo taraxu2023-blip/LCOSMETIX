@@ -150,6 +150,8 @@ Vercel 通过 **private Vercel Blob** 保存，服务端凭据为 `BLOB_READ_WRI
 
 About 的使命愿景与 CEO 姓名/职务维护于 `src/data/about-profile.ts`；肖像路径、ALT 和尺寸维护于 `src/data/about-media.ts`。当前使用用户提供的 `tara-xu-ceo.jpg`，About 已移除三张产品展示照片。
 
+About 简介左侧使用用户新提供的公司前台照片 `莱度公司图片.jpg`，以完整方图展示；原简介、定位、成立年份、市场、分类及联系按钮统一放于右侧，手机端按照片、文字顺序堆叠。图片转为 750px/480px WebP，媒体记录与 ALT 统一维护于 `src/data/about-media.ts`。
+
 Product Innovations 菜单沿用 `/single-dose-technology`，展示 13 个配方系列、23 个产品概念、配方兼容及样品询盘。按最新截图要求移除开发范围/六项服务、四步合作流程、五层结构/材料说明、工作原理和专利资料咨询区块。紧凑入口分别跳转 OEM 的服务/流程和 BOBII 的结构/专利；工作原理入口取消。卡片与询盘共用 `src/data/concepts.ts`；页头文案维护于 `src/data/innovations.ts`。
 
 OEM / ODM Solutions 的六项服务、四步合作流程和项目规格表连续展示于询盘前。规格表组件为 `src/components/ProjectSpecifications.tsx`，数据读取 `src/data/products.ts`；BOBII 页不再展示该表。

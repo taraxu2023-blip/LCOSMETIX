@@ -94,3 +94,11 @@
   .about-mission-copy p { margin-top: 18px; font-size: 15px; }
   .about-leadership { width: min(100%, 260px); justify-self: center; }
 }
+.about-page .about-lead { grid-template-columns: .95fr 1.05fr; gap: 50px; align-items: center; }
+.about-reception { min-width: 0; margin: 0; }
+.about-reception img { display: block; width: 100%; height: auto; aspect-ratio: 1; }
+.about-lead-copy > p:first-child { margin-top: 0; }
+.about-lead-copy > .text-link { margin-top: 8px; }
+@media (max-width: 760px) {
+  .about-page .about-lead { grid-template-columns: 1fr; gap: 28px; }
+}

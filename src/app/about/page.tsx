@@ -21,8 +21,8 @@ export default function About() {
         <p className="eyebrow">ABOUT L COSMETIX</p>
         <h1>{aboutProfile.headline.line1}<br /><span>{aboutProfile.headline.line2}</span></h1>
         <div className="inner-split about-lead">
-          <div><p>{aboutProfile.introduction}</p></div>
-          <div><p>{aboutProfile.positioning}</p>
+          <figure className="about-reception"><img src={aboutMedia.reception.src} srcSet={aboutMedia.reception.srcSet} sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1100px) 44vw, 456px" alt={aboutMedia.reception.alt} width={aboutMedia.reception.width} height={aboutMedia.reception.height} decoding="async" /></figure>
+          <div className="about-lead-copy"><p>{aboutProfile.introduction}</p><p>{aboutProfile.positioning}</p>
             <p>Established in {company.founded}, our team works with beauty brands, importers, distributors and OEM manufacturers across {company.markets.join(", ").replace(/, ([^,]*)$/, " and $1")}.</p>
             <ul className="about-focus-areas" aria-label="Beauty categories">{aboutProfile.focusAreas.map((area) => <li key={area}>{area}</li>)}</ul>
             <a className="text-link" href="/#contact">Discuss your project <ArrowUpRight size={19} /></a>
