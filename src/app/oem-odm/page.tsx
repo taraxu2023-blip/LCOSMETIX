@@ -33,17 +33,11 @@ export default function OemOdm() {
           </div>
         </div>
         <nav className="oem-section-nav" aria-label="OEM / ODM topics and formulation concepts">
-          {product && <a href={productConceptsHref}>Formulation concepts</a>}<a href="#applications">Applications</a><a href="#services">Services</a><a href="#approach">Project steps</a>{product && <a href="#project-specifications">Project specifications</a>}<a href="#inquiry">Start your project</a>
+          {product && <a href={productConceptsHref}>Formulation concepts</a>}<a href="#services">Services</a><a href="#approach">Project steps</a>{product && <a href="#project-specifications">Project specifications</a>}<a href="#inquiry">Start your project</a>
         </nav>
       </section>
 
-      {product && <>
-        <section className="inner-container applications-section" id="applications" aria-labelledby="oem-applications-heading">
-          <p className="eyebrow">FORMULA DIRECTIONS</p>
-          <h2 id="oem-applications-heading">A format for your next idea.</h2>
-          <div className="application-grid">{product.applications.map((application) => <article key={application.name}><h3>{application.name}</h3><p>{application.description}</p></article>)}</div>
-          <p className="fine-print">Formula compatibility and performance are evaluated for each project.</p>
-        </section>
+      {product &&
         <section className="inner-container oem-section" id="product-concepts" aria-labelledby="oem-concepts-heading">
           <p className="eyebrow">FORMULATION DEVELOPMENT</p>
           <div className="inner-split">
@@ -51,7 +45,7 @@ export default function OemOdm() {
             <div><p>Explore {collections.length} formulation collections and {conceptCount} development concepts on the Product Innovations page. Each concept is a starting point for project-specific formulation and packaging development.</p><a className="text-link" href={productConceptsHref}>Explore {collections.length} formulation collections <ArrowUpRight size={19} /></a></div>
           </div>
         </section>
-      </>}
+      }
 
       <section className="inner-container oem-section" id="services" aria-labelledby="oem-services-heading">
         <p className="eyebrow">OUR DEVELOPMENT SCOPE</p>

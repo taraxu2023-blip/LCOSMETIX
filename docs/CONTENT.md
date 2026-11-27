@@ -10,7 +10,7 @@
 | 首页 | `/`：次抛互动展示、颜色、结构概览与视频、应用方向、Latest News、询盘 |
 | BOBII BALL Technology | `/products/bobii-ball-single-dose-container`：八色与定制、五层结构与材料说明、8 张专利证书、配方及技术页入口和询盘 |
 | Product Innovations | `/single-dose-technology`：13 个系列、23 个产品概念、配方兼容、跨页技术及服务入口和 Request Samples |
-| OEM/ODM Technology | `/oem-odm`：服务、应用、开发流程、BOBII 配方库入口和询盘 |
+| OEM / ODM Solutions | `/oem-odm`：开发服务、合作流程、项目规格、Product Innovations 配方库入口和询盘 |
 | About Us | `/about`：公司定位、研发与供应链能力、全球职能、使命愿景、CEO 肖像、已确认统计和地图 |
 
 四项主导航均为直接页面链接，没有 Home 项或下拉分组；Logo 返回首页。
@@ -152,6 +152,8 @@ About 的使命愿景与 CEO 姓名/职务维护于 `src/data/about-profile.ts`�
 Product Innovations 菜单沿用 `/single-dose-technology`，展示 13 个配方系列、23 个产品概念、配方兼容及样品询盘。按最新截图要求移除开发范围/六项服务、四步合作流程、五层结构/材料说明、工作原理和专利资料咨询区块。紧凑入口分别跳转 OEM 的服务/流程和 BOBII 的结构/专利；工作原理入口取消。卡片与询盘共用 `src/data/concepts.ts`；页头文案维护于 `src/data/innovations.ts`。
 
 OEM / ODM Solutions 的六项服务、四步合作流程和项目规格表连续展示于询盘前。规格表组件为 `src/components/ProjectSpecifications.tsx`，数据读取 `src/data/products.ts`；BOBII 页不再展示该表。
+
+OEM 的 Formula Directions / A format for your next idea 区块已按用户截图整体移除，包括三类配方应用介绍和底部兼容性说明；顶部 Applications 锚点入口一并取消。其他页面使用的共享应用数据保留。
 
 BOBII 页保留五层结构分解图和五项材料说明，由 `SingleDoseTechnologySections.tsx` 读取产品数据。BOBII 隐藏工作原理，并移除开发服务、合作流程、项目规格；开发服务和流程在 OEM 保留。结构和专利入口跳转本页，配方兼容入口跳转 Product Innovations。
 
