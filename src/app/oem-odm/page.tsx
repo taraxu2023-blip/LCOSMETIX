@@ -1,6 +1,7 @@
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import Footer from "../../components/Footer";
 import ProjectForm from "../../components/ProjectForm";
+import ProjectSpecifications from "../../components/ProjectSpecifications";
 import { oemOdmServices, projectApproach } from "../../data/company-profile";
 import { getProductById, productHref } from "../../data/products";
 import { getPublishedConceptCollections } from "../../data/concepts";
@@ -32,14 +33,8 @@ export default function OemOdm() {
           </div>
         </div>
         <nav className="oem-section-nav" aria-label="OEM / ODM topics and formulation concepts">
-          {product && <a href={`${productHref(product)}#product-concepts`}>Formulation concepts</a>}<a href="#services">Services</a><a href="#applications">Applications</a><a href="#approach">Project steps</a><a href="#inquiry">Start your project</a>
+          {product && <a href={`${productHref(product)}#product-concepts`}>Formulation concepts</a>}<a href="#applications">Applications</a><a href="#services">Services</a><a href="#approach">Project steps</a>{product && <a href="#project-specifications">Project specifications</a>}<a href="#inquiry">Start your project</a>
         </nav>
-      </section>
-
-      <section className="inner-container oem-section" id="services" aria-labelledby="oem-services-heading">
-        <p className="eyebrow">OUR DEVELOPMENT SCOPE</p>
-        <div className="inner-split oem-section-lead"><h2 id="oem-services-heading">Built around<br /><span>your project.</span></h2><div><p>Our Guangzhou development and production capabilities work with an independent manufacturing partner network. The participating team, facility and responsibilities are defined for your project.</p><p>Select the support your brief needs, from an initial formulation direction to sampling, packaging and manufacturing coordination.</p></div></div>
-        <div className="oem-services-grid">{oemOdmServices.map((service, index) => <article key={service.title}><span className="eyebrow">0{index + 1}</span><h3>{service.title}</h3><p>{service.description}</p></article>)}</div>
       </section>
 
       {product && <>
@@ -58,6 +53,12 @@ export default function OemOdm() {
         </section>
       </>}
 
+      <section className="inner-container oem-section" id="services" aria-labelledby="oem-services-heading">
+        <p className="eyebrow">OUR DEVELOPMENT SCOPE</p>
+        <div className="inner-split oem-section-lead"><h2 id="oem-services-heading">Built around<br /><span>your project.</span></h2><div><p>Our Guangzhou development and production capabilities work with an independent manufacturing partner network. The participating team, facility and responsibilities are defined for your project.</p><p>Select the support your brief needs, from an initial formulation direction to sampling, packaging and manufacturing coordination.</p></div></div>
+        <div className="oem-services-grid">{oemOdmServices.map((service, index) => <article key={service.title}><span className="eyebrow">0{index + 1}</span><h3>{service.title}</h3><p>{service.description}</p></article>)}</div>
+      </section>
+
       <section className="inner-container oem-section" id="approach" aria-labelledby="oem-approach-heading">
         <p className="eyebrow">WORKING TOGETHER</p>
         <div className="inner-split">
@@ -66,6 +67,7 @@ export default function OemOdm() {
         </div>
       </section>
 
+      {product && <ProjectSpecifications product={product} />}
       <section id="inquiry" className="contact-section inner-container"><ProjectForm productId={product?.id} /></section>
     </main>
     <Footer />

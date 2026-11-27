@@ -5,6 +5,7 @@ import { catalogueDownload, singleDoseMenu } from "../../../lib/navigation";
 import { pageMetadata } from "../../../lib/seo";
 import ColorCollection from "../../../components/ColorCollection";
 import ProjectForm from "../../../components/ProjectForm";
+import ProjectSpecifications from "../../../components/ProjectSpecifications";
 import Footer from "../../../components/Footer";
 import BobiiDevelopment from "../../../components/BobiiDevelopment";
 import "../../concepts.css";
@@ -23,12 +24,6 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
   if (!product) notFound();
   const related = getPublishedProducts().filter((item) => item.id !== product.id);
   const productFeatures = product.features.filter((feature) => feature.scope !== "technology");
-  const specs = [
-    ["Capacity", product.specifications.capacityMl === null ? "Confirm for your project" : `${product.specifications.capacityMl} ml`],
-    ["Dimensions", product.specifications.dimensionsMm || "Confirm for your project"],
-    ["Minimum order", product.specifications.moq === null ? "Request a quotation" : `${product.specifications.moq}`],
-    ["Lead time", product.specifications.leadTimeDays === null ? "Confirm with our team" : `${product.specifications.leadTimeDays} days`],
-  ];
   return <>
     <a href="#product-content" className="skip-link">Skip to content</a>
     <main id="top" className="inner-page product-detail">
@@ -45,7 +40,7 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
         <div className="inner-split"><div><p className="eyebrow">MATERIALS & FORMULA TECHNOLOGY</p><h2 id="product-technology-reference-heading">Single-Dose Technology.</h2></div><div><p>Explore the material structure, operating principles, formula evaluation and patent documentation behind the single-dose format.</p><nav aria-label="Explore Single-Dose Technology">{singleDoseMenu.links.map((topic) => <a className="text-link" key={topic.href} id={topic.href.split("#")[1]} href={topic.href}>{topic.label} <ArrowUpRight size={17} /></a>)}</nav></div></div>
       </section>}
       {product.id === "bobii-ball" && <BobiiDevelopment productId={product.id} />}
-      <section className="inner-container product-specifications"><p className="eyebrow">PROJECT SPECIFICATIONS</p><div className="inner-split"><h2>Defined together.<br /><span>Made for your formula.</span></h2><dl>{specs.map(([label, value]) => <div key={label}><dt>{label}</dt><dd>{value}</dd></div>)}</dl></div></section>
+      <ProjectSpecifications product={product} />
       {related.length > 0 && <section className="inner-container"><h2>Related products</h2><div className="application-grid">{related.map((item) => <a className="text-link" key={item.id} href={productHref(item)}>{item.name}<ArrowUpRight size={18} /></a>)}</div></section>}
       <section id="inquiry" className="contact-section inner-container"><ProjectForm productId={product.id} /></section>
     </main>
