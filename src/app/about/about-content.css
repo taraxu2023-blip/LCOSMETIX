@@ -1,0 +1,91 @@
+/* About additions follow the existing white 1024px content system. */
+.about-page section[id] { scroll-margin-top: 130px; }
+.about-section-nav { display: flex; flex-wrap: wrap; gap: 12px 25px; padding-top: 9px; font-size: 12px; color: #73736a; }
+.about-section-nav a { border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+.about-section-nav a:hover { color: var(--ink); border-color: var(--ink); }
+.about-content-section { padding-block: 65px; border-top: 1px solid var(--line); }
+.about-principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; margin-top: 52px; }
+.about-principles article { border-top: 1px solid var(--line); padding-top: 22px; }
+.about-principles h3, .about-capability-list h3, .about-services h3, .about-process-list h3 { font-size: 24px; line-height: 1.2; font-weight: 400; letter-spacing: -0.04em; margin-block: 14px; }
+.about-principles article > p:not(.eyebrow), .about-capability-list p, .about-services p, .about-process-list p, .about-approach-intro { font-size: 14px; color: #73736a; line-height: 1.8; }
+.about-section-lead { margin-bottom: 40px; }
+.about-capability-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; }
+.about-group-label { font-size: 11px; letter-spacing: 0.12em; margin-bottom: 22px; }
+.about-capability-list article { border-top: 1px solid var(--line); padding-block: 23px 18px; }
+.about-location-tag { color: #73736a; font-size: 12px; }
+.about-capability-list h3 { font-size: 23px; margin-top: 12px; }
+.about-capability-columns .fine-print { line-height: 1.7; max-width: 390px; }
+.about-services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; margin-top: 56px; }
+.about-services article { border-top: 1px solid var(--line); padding-top: 22px; }
+.about-services h3 { font-size: 23px; }
+.about-service-actions { display: flex; flex-wrap: wrap; gap: 20px 28px; align-items: center; }
+.about-process-list { list-style: none; margin: 0; padding: 0; }
+.about-process-list li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 22px; border-top: 1px solid var(--line); padding-block: 24px; }
+.about-process-list li > span { padding-top: 6px; color: #73736a; font-size: 11px; letter-spacing: 0.12em; }
+.about-process-list h3 { margin-top: 0; }
+.about-process-list p { margin-bottom: 0; }
+.about-approach-intro { max-width: 390px; margin-block: 28px; }
+
+/* Supplied capsule imagery and the official profile keep the established layout. */
+.about-capsule-lead { min-width: 0; margin: 0; }
+.about-capsule-lead img {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: contain;
+  padding: 20px;
+  background: #f8f8f6;
+  border: 1px solid var(--line);
+}
+.about-capsule-lead figcaption,
+.about-product-gallery figcaption { margin-top: 12px; color: #73736a; font-size: 11px; line-height: 1.6; }
+.about-focus-areas { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 24px 0; list-style: none; }
+.about-focus-areas li { padding: 7px 11px; border: 1px solid var(--line); border-radius: 24px; color: #62625a; font-size: 11px; line-height: 1.4; }
+.about-integrated-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 48px; margin-top: 48px; }
+.about-integrated-grid article,
+.about-network-grid article { min-width: 0; padding-top: 22px; border-top: 1px solid var(--line); }
+.about-integrated-grid h3,
+.about-network-grid h3 { margin-block: 14px; font-size: 23px; line-height: 1.2; font-weight: 400; letter-spacing: -.04em; }
+.about-integrated-grid p,
+.about-network-grid p { color: #73736a; font-size: 14px; line-height: 1.8; }
+.about-global-headquarters { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 30px; background: #f8f8f6; border: 1px solid var(--line); }
+.about-global-headquarters > div { min-width: 0; }
+.about-global-headquarters h3 { margin-block: 14px; font-size: 29px; line-height: 1.15; font-weight: 400; letter-spacing: -.04em; }
+.about-global-headquarters p { color: #73736a; font-size: 14px; line-height: 1.8; }
+.about-global-headquarters ul { display: flex; flex-direction: column; justify-content: center; gap: 11px; margin: 0; padding-left: 19px; font-size: 14px; line-height: 1.7; }
+.about-network-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; margin-top: 36px; }
+.about-network-grid .about-location-tag,
+.about-global-headquarters .about-location-tag { margin-top: 0; font-size: 11px; line-height: 1.6; overflow-wrap: anywhere; }
+.about-product-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; margin-block: 36px; }
+.about-product-gallery figure { min-width: 0; margin: 0; }
+.about-product-gallery img { display: block; width: 100%; height: 330px; object-fit: contain; padding: 20px; background: #f8f8f6; border: 1px solid var(--line); }
+@media (max-width: 900px) {
+  .about-capability-columns { gap: 35px; }
+  .about-principles, .about-services { gap: 22px; }
+  .about-integrated-grid { gap: 24px 30px; }
+  .about-global-headquarters { gap: 28px; }
+  .about-network-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+}
+@media (max-width: 760px) {
+  .about-page section[id] { scroll-margin-top: 90px; }
+  .about-content-section { padding-block: 44px; }
+  .about-section-nav { gap: 12px 20px; line-height: 1.6; }
+  .about-principles, .about-capability-columns, .about-services { grid-template-columns: 1fr; gap: 20px; }
+  .about-principles, .about-services { margin-top: 32px; }
+  .about-section-lead { margin-bottom: 28px; }
+  .about-capability-columns { gap: 30px; }
+  .about-principles h3, .about-services h3, .about-capability-list h3 { font-size: 24px; }
+  .about-approach-intro { margin-block: 24px; }
+  .about-capsule-lead img { height: 280px; padding: 16px; }
+  .about-focus-areas { margin-block: 22px; }
+  .about-integrated-grid,
+  .about-network-grid,
+  .about-global-headquarters,
+  .about-product-gallery { grid-template-columns: minmax(0, 1fr); }
+  .about-integrated-grid { gap: 22px; margin-top: 30px; }
+  .about-global-headquarters { gap: 20px; padding: 22px; }
+  .about-global-headquarters h3 { font-size: 27px; }
+  .about-network-grid { gap: 22px; margin-top: 28px; }
+  .about-product-gallery { gap: 26px; margin-block: 28px; }
+  .about-product-gallery img { height: 300px; padding: 16px; }
+}

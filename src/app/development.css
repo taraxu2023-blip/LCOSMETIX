@@ -1,0 +1,48 @@
+/* Reuse the confirmed OEM/ODM presentation within the BOBII development content. */
+.product-detail .concept-library,
+.development-section { scroll-margin-top: 32px; }
+.development-section { padding-block: 65px; border-top: 1px solid var(--line); }
+.development-section-lead { margin-bottom: 40px; }
+.development-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+  margin-top: 48px;
+}
+.development-services-grid article { min-width: 0; border-top: 1px solid var(--line); padding-top: 22px; }
+.development-services-grid h3,
+.development-process-list h3 {
+  font-size: 23px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: -.04em;
+  margin-block: 14px;
+}
+.development-services-grid p,
+.development-process-list p,
+.development-approach-intro { font-size: 14px; line-height: 1.8; color: #73736a; }
+.development-process-list { list-style: none; margin: 0; padding: 0; }
+.development-process-list li {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 22px;
+  border-top: 1px solid var(--line);
+  padding-block: 24px;
+}
+.development-process-list li > span { padding-top: 6px; color: #73736a; font-size: 11px; letter-spacing: .12em; }
+.development-process-list h3 { margin-top: 0; }
+.development-process-list p { margin-bottom: 0; }
+.development-approach-intro { max-width: 390px; margin-block: 28px; }
+@media (max-width: 900px) {
+  .development-services-grid { gap: 22px; }
+}
+@media (max-width: 760px) {
+  .product-detail .concept-library,
+  .development-section { scroll-margin-top: 20px; }
+  .development-section { padding-block: 44px; }
+  .development-section-lead { margin-bottom: 28px; }
+  .development-services-grid { grid-template-columns: 1fr; gap: 20px; margin-top: 32px; }
+  .development-services-grid h3,
+  .development-process-list h3 { font-size: 24px; }
+  .development-approach-intro { margin-block: 24px; }
+}

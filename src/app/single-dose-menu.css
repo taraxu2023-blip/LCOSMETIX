@@ -1,0 +1,11 @@
+/* Shared header fit rules. All four primary labels are direct page links. */
+@media (min-width: 1440px) {
+  .site-header { gap: clamp(24px, 2vw, 38px); }
+  .header-navigation { display: flex; gap: clamp(18px, 1.3vw, 26px); }
+}
+@media (min-width: 1440px) and (max-width: 1699px) {
+  .site-header .header-actions .menu-pill { display: none; }
+}
+@media (max-width: 1439px) {
+  .header-navigation { display: none; }
+}

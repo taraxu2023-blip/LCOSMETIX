@@ -1,0 +1,66 @@
+/* Supplied capsule artwork, split into 24 cached-image fragments on interaction. */
+.capsule-menu-visual {
+  display: inline-block;
+  position: relative;
+  flex: 0 0 auto;
+  width: calc(var(--capsule-height, 96px) * .6911);
+  height: var(--capsule-height, 96px);
+  pointer-events: none;
+  user-select: none;
+  isolation: isolate;
+  transform: translate3d(var(--capsule-pointer-x, 0px), var(--capsule-pointer-y, 0px), 0) rotate(var(--capsule-pointer-rotate, 0deg));
+  transition: transform 260ms cubic-bezier(.2, .7, .2, 1), filter 240ms ease;
+  filter: drop-shadow(2px 5px 5px rgba(72, 60, 87, .09));
+}
+.capsule-menu-visual > img {
+  display: block;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+.capsule-menu-whole { opacity: 1; transition: opacity 180ms ease; }
+.capsule-menu-fragment {
+  opacity: 0;
+  transform: translate3d(0, 0, 0) rotate(0deg);
+  transform-origin: 50% 50%;
+  transition: transform 510ms cubic-bezier(.2, .75, .2, 1), opacity 180ms ease;
+}
+.capsule-menu-link:is(:focus-visible, :active) .capsule-menu-whole { opacity: 0; }
+.capsule-menu-link:is(:focus-visible, :active) .capsule-menu-fragment {
+  opacity: 1;
+  transform: translate3d(
+    calc(var(--fragment-x) * var(--capsule-scatter-scale, 1) * .8),
+    calc(var(--fragment-y) * var(--capsule-scatter-scale, 1) * .8),
+    0
+  ) rotate(var(--fragment-rotate));
+  transition-delay: var(--fragment-delay);
+}
+.capsule-menu-link:focus-visible .capsule-menu-visual {
+  filter: drop-shadow(2px 6px 7px rgba(110, 84, 139, .16));
+}
+@media (hover: hover) and (pointer: fine) {
+  .capsule-menu-link:hover .capsule-menu-whole { opacity: 0; }
+  .capsule-menu-link:hover .capsule-menu-fragment {
+    opacity: 1;
+    transform: translate3d(
+      calc(var(--fragment-x) * var(--capsule-scatter-scale, 1)),
+      calc(var(--fragment-y) * var(--capsule-scatter-scale, 1)),
+      0
+    ) rotate(var(--fragment-rotate));
+    transition-delay: var(--fragment-delay);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .capsule-menu-visual, .capsule-menu-visual > img {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+  .capsule-menu-link .capsule-menu-whole { opacity: 1 !important; }
+  .capsule-menu-link .capsule-menu-fragment { opacity: 0 !important; }
+}
