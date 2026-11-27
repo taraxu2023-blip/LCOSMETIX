@@ -25,7 +25,7 @@ type NavigationItem = {
 export const siteNavigation: readonly NavigationItem[] = [
   { label: "BOBII BALL Technology", href: getPublishedProducts()[0] ? productHref(getPublishedProducts()[0]) : "/#capsules", description: "Explore the BOBII BALL format, colors and formulation concepts." },
   { label: singleDoseMenu.label, href: singleDoseMenu.href, description: singleDoseMenu.description },
-  { label: "OEM/ODM Technology", href: "/oem-odm", description: "Explore formulation concepts, development and manufacturing." },
+  { label: "OEM / ODM Solutions", href: "/oem-odm", description: "Explore formulation concepts, development and manufacturing." },
   { label: "About Us", href: "/about", description: "Meet our company, capabilities and partner network." },
 ] as const;
 
