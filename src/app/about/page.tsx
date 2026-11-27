@@ -1,6 +1,5 @@
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import Footer from "../../components/Footer";
-import CompanyStats from "../../components/CompanyStats";
 import CompanyMap from "../../components/CompanyMap";
 import { company } from "../../data/company";
 import { aboutProfile } from "../../data/about-profile";
@@ -29,7 +28,6 @@ export default function About() {
             <a className="text-link" href="/#contact">Discuss your project <ArrowUpRight size="1.1875rem" /></a>
           </div>
         </div>
-        <CompanyStats />
         <nav className="about-section-nav" aria-label="On this About page">
           <a href="#mission">Mission & vision</a><a href="#milestones">Company milestones</a><a href="#story">Integrated capabilities</a><a href="#capabilities">Global presence</a><a href="#manufacturing">Single-dose development</a><a href="/oem-odm">OEM / ODM</a><a href="#locations">Contact locations</a>
         </nav>
