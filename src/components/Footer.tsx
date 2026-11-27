@@ -8,6 +8,6 @@ export default function Footer() {
     <p>Single-dose containers. OEM/ODM possibilities.</p>
     <nav aria-label="Footer">{siteNavigation.map(({ label, href }) => <a href={href} key={href}>{label}</a>)}</nav>
     <address className="footer-contact"><a href={`mailto:${company.email}`}>{company.email}</a><span>{company.address}</span></address>
-    <div className="footer-bottom"><span>© {new Date().getFullYear()} {company.legalName}</span><a href="#top">Back to top <ArrowUpRight size={14} /></a></div>
+    <div className="footer-bottom"><span>© {new Date().getFullYear()} {company.legalName}</span><a href="#top">Back to top <ArrowUpRight size="0.875rem" /></a></div>
   </footer>;
 }

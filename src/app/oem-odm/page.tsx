@@ -30,7 +30,7 @@ export default function OemOdm() {
           <div>
             <p>From concept to commercialization, we bring together product strategy, formulation development, BOBII BALL integration, packaging design, prototyping, manufacturing and quality coordination.</p>
             <p>Bring your formula or develop a new concept with us. Our technical team and manufacturing network help define a practical route for your brand and target market.</p>
-            <div className="oem-hero-actions"><a className="pill dark-pill" href="#inquiry">Start your project <ArrowUpRight size={19} /></a></div>
+            <div className="oem-hero-actions"><a className="pill dark-pill" href="#inquiry">Start your project <ArrowUpRight size="1.1875rem" /></a></div>
           </div>
         </div>
         <nav className="oem-section-nav" aria-label="OEM / ODM topics and formulation concepts">
@@ -45,7 +45,7 @@ export default function OemOdm() {
           <p className="eyebrow">FORMULATION DEVELOPMENT</p>
           <div className="inner-split">
             <h2 id="oem-concepts-heading">Formulation concepts.<br /><span>Explore product innovations.</span></h2>
-            <div><p>Explore {collections.length} formulation collections and {conceptCount} development concepts on the Product Innovations page. Each concept is a starting point for project-specific formulation and packaging development.</p><a className="text-link" href={productConceptsHref}>Explore {collections.length} formulation collections <ArrowUpRight size={19} /></a></div>
+            <div><p>Explore {collections.length} formulation collections and {conceptCount} development concepts on the Product Innovations page. Each concept is a starting point for project-specific formulation and packaging development.</p><a className="text-link" href={productConceptsHref}>Explore {collections.length} formulation collections <ArrowUpRight size="1.1875rem" /></a></div>
           </div>
         </section>
       }
@@ -59,7 +59,7 @@ export default function OemOdm() {
       <section className="inner-container oem-section" id="approach" aria-labelledby="oem-approach-heading">
         <p className="eyebrow">WORKING TOGETHER</p>
         <div className="inner-split">
-          <div><h2 id="oem-approach-heading">A clear brief.<br /><span>A considered process.</span></h2><p className="oem-approach-intro">Start with samples, customization or brand-specific development. Timing, order quantities and testing requirements are confirmed for the selected product and project scope.</p><a className="text-link" href="#inquiry">Tell us about your idea <ArrowUpRight size={19} /></a></div>
+          <div><h2 id="oem-approach-heading">A clear brief.<br /><span>A considered process.</span></h2><p className="oem-approach-intro">Start with samples, customization or brand-specific development. Timing, order quantities and testing requirements are confirmed for the selected product and project scope.</p><a className="text-link" href="#inquiry">Tell us about your idea <ArrowUpRight size="1.1875rem" /></a></div>
           <ol className="oem-process-list">{projectApproach.map((step, index) => <li key={step.title}><span>0{index + 1}</span><div><h3>{step.title}</h3><p>{step.description}</p></div></li>)}</ol>
         </div>
       </section>

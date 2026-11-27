@@ -25,7 +25,7 @@ export default function SingleDoseTechnology() {
         <p className="eyebrow" id="single-dose-technology">{productInnovationsCopy.eyebrow}</p>
         <h1>{productInnovationsCopy.headline.line1}<br /><span>{productInnovationsCopy.headline.line2}</span></h1>
         <p className="product-summary">{productInnovationsCopy.introduction}</p>
-        <div className="single-dose-actions"><a className="pill dark-pill" href="#inquiry">Request Samples <ArrowUpRight size={19} /></a><a className="text-link" href={productHref(product)}>Explore BOBII BALL <ArrowUpRight size={18} /></a></div>
+        <div className="single-dose-actions"><a className="pill dark-pill" href="#inquiry">Request Samples <ArrowUpRight size="1.1875rem" /></a><a className="text-link" href={productHref(product)}>Explore BOBII BALL <ArrowUpRight size="1.125rem" /></a></div>
         <nav className="single-dose-section-nav" aria-label="Single-dose technology topics">
           <a href="#product-concepts">Product concepts</a><a href="/oem-odm#services">Development support</a><a href="/oem-odm#approach">Project steps</a>
           <a href={`${productHref(product)}#five-layer-structure`}>Five-Layer Structure</a><a href="#formula-compatibility">Formula Compatibility</a><a href={`${productHref(product)}#patents`}>Patents</a><a href="#inquiry">Request Samples</a>
@@ -40,12 +40,12 @@ export default function SingleDoseTechnology() {
         <p className="technology-section-intro">{technologyCompatibilityCopy.introduction}</p>
         <div className="application-grid">{product.applications.map((application) => <article key={application.name}><h3>{application.name}</h3><p>{application.description}</p></article>)}</div>
         <p className="fine-print">{technologyCompatibilityCopy.note}</p>
-        <a className="text-link" href="#inquiry">Discuss your formula <ArrowUpRight size={18} /></a>
+        <a className="text-link" href="#inquiry">Discuss your formula <ArrowUpRight size="1.125rem" /></a>
       </section>
 
       <section className="inner-container single-dose-project-links" aria-label="Explore products and development services">
         <p>Continue with a product concept or discuss the development support your project needs.</p>
-        <div><a className="text-link" href={productHref(product)}>Explore BOBII BALL <ArrowUpRight size={18} /></a><a className="text-link" href="/oem-odm">OEM / ODM services <ArrowUpRight size={18} /></a></div>
+        <div><a className="text-link" href={productHref(product)}>Explore BOBII BALL <ArrowUpRight size="1.125rem" /></a><a className="text-link" href="/oem-odm">OEM / ODM services <ArrowUpRight size="1.125rem" /></a></div>
       </section>
 
       <section id="inquiry" className="contact-section inner-container" aria-labelledby="technology-samples-heading">

@@ -22,11 +22,11 @@ export default function About() {
         <p className="eyebrow">ABOUT L COSMETIX</p>
         <h1>{aboutProfile.headline.line1}<br /><span>{aboutProfile.headline.line2}</span></h1>
         <div className="inner-split about-lead">
-          <figure className="about-reception"><img src={aboutMedia.reception.src} srcSet={aboutMedia.reception.srcSet} sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1100px) 44vw, 456px" alt={aboutMedia.reception.alt} width={aboutMedia.reception.width} height={aboutMedia.reception.height} decoding="async" /></figure>
+          <figure className="about-reception"><img src={aboutMedia.reception.src} srcSet={aboutMedia.reception.srcSet} sizes="(max-width: 760px) calc(100vw - 40px), 46vw" alt={aboutMedia.reception.alt} width={aboutMedia.reception.width} height={aboutMedia.reception.height} decoding="async" /></figure>
           <div className="about-lead-copy"><p>{aboutProfile.introduction}</p><p>{aboutProfile.positioning}</p>
             <p>Established in {company.founded}, our team works with beauty brands, importers, distributors and OEM manufacturers across {company.markets.join(", ").replace(/, ([^,]*)$/, " and $1")}.</p>
             <ul className="about-focus-areas" aria-label="Beauty categories">{aboutProfile.focusAreas.map((area) => <li key={area}>{area}</li>)}</ul>
-            <a className="text-link" href="/#contact">Discuss your project <ArrowUpRight size={19} /></a>
+            <a className="text-link" href="/#contact">Discuss your project <ArrowUpRight size="1.1875rem" /></a>
           </div>
         </div>
         <CompanyStats />
@@ -90,7 +90,7 @@ export default function About() {
       <section className="inner-container about-factory" id="manufacturing" aria-labelledby="about-manufacturing-heading">
         <div className="inner-split">
           <div><p className="eyebrow">SINGLE-DOSE DEVELOPMENT</p><h2 id="about-manufacturing-heading">One format.<br /><span>Developed together.</span></h2></div>
-          <div><p>{aboutProfile.manufacturingIntro}</p><p>{aboutProfile.bobiiIntro}</p><div className="about-service-actions">{product && <a className="text-link" href={productHref(product)}>Explore BOBII BALL <ArrowUpRight size={19} /></a>}<a className="text-link" href="/oem-odm">Explore OEM / ODM services <ArrowUpRight size={19} /></a></div></div>
+          <div><p>{aboutProfile.manufacturingIntro}</p><p>{aboutProfile.bobiiIntro}</p><div className="about-service-actions">{product && <a className="text-link" href={productHref(product)}>Explore BOBII BALL <ArrowUpRight size="1.1875rem" /></a>}<a className="text-link" href="/oem-odm">Explore OEM / ODM services <ArrowUpRight size="1.1875rem" /></a></div></div>
         </div>
       </section>
 
@@ -98,16 +98,16 @@ export default function About() {
         <p className="eyebrow">WORKING TOGETHER</p>
         <div className="inner-split">
           <h2 id="about-approach-heading">A clear brief.<br /><span>A considered process.</span></h2>
-          <div><p>Our dedicated OEM / ODM page brings together formulation directions, customization options and the steps from your initial brief to production preparation.</p><a className="text-link" href="/oem-odm#approach">Explore the development process <ArrowUpRight size={19} /></a></div>
+          <div><p>Our dedicated OEM / ODM page brings together formulation directions, customization options and the steps from your initial brief to production preparation.</p><a className="text-link" href="/oem-odm#approach">Explore the development process <ArrowUpRight size="1.1875rem" /></a></div>
         </div>
       </section>
 
       <section className="inner-container about-markets">
         <p className="eyebrow">PARTNERSHIPS ACROSS MARKETS</p>
-        <div className="inner-split"><h2>For beauty brands.<br /><span>Across borders.</span></h2><div><p>We work with customers in {company.markets.join(", ").replace(/, ([^,]*)$/, " and $1")}.</p><div className="market-tags">{company.customers.map((customer) => <span key={customer}>{customer}</span>)}</div><p>Explore the BOBII BALL format, or start a conversation about your own single-dose project.</p>{product && <a className="text-link" href={productHref(product)}>Explore {product.brand} <ArrowUpRight size={19} /></a>}</div></div>
+        <div className="inner-split"><h2>For beauty brands.<br /><span>Across borders.</span></h2><div><p>We work with customers in {company.markets.join(", ").replace(/, ([^,]*)$/, " and $1")}.</p><div className="market-tags">{company.customers.map((customer) => <span key={customer}>{customer}</span>)}</div><p>Explore the BOBII BALL format, or start a conversation about your own single-dose project.</p>{product && <a className="text-link" href={productHref(product)}>Explore {product.brand} <ArrowUpRight size="1.1875rem" /></a>}</div></div>
       </section>
       <CompanyMap widthClass="inner-container" />
-      <section className="inner-container inner-contact-callout"><h2>Let’s develop<br />what comes next.</h2><div><a className="pill dark-pill" href="/#contact">Get a Quote <ArrowUpRight size={19} /></a><address><a href={`mailto:${company.email}`}>{company.email}</a><span>{company.address}</span></address></div></section>
+      <section className="inner-container inner-contact-callout"><h2>Let’s develop<br />what comes next.</h2><div><a className="pill dark-pill" href="/#contact">Get a Quote <ArrowUpRight size="1.1875rem" /></a><address><a href={`mailto:${company.email}`}>{company.email}</a><span>{company.address}</span></address></div></section>
     </main>
     <Footer />
   </>;

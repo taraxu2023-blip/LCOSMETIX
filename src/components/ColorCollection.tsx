@@ -55,7 +55,7 @@ export default function ColorCollection({ product, headingLevel = 3 }: { product
           Color concepts shown. Final options agreed per project.
         </p>
         <a className="text-link" href={productHref(product)}>
-          Explore {product.brand} <ArrowUpRight size={21} />
+          Explore {product.brand} <ArrowUpRight size="1.3125rem" />
         </a>
       </div>
     </div>

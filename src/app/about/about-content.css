@@ -1,127 +1,127 @@
 /* About additions follow the existing white 1024px content system. */
-.about-page section[id] { scroll-margin-top: 130px; }
-.about-section-nav { display: flex; flex-wrap: wrap; gap: 12px 25px; padding-top: 9px; font-size: 12px; color: #73736a; }
-.about-section-nav a { border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+.about-page section[id] { scroll-margin-top: 8.125rem; }
+.about-section-nav { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5625rem; padding-top: 0.5625rem; font-size: 0.75rem; color: #73736a; }
+.about-section-nav a { border-bottom: 1px solid var(--line); padding-bottom: 0.375rem; }
 .about-section-nav a:hover { color: var(--ink); border-color: var(--ink); }
-.about-content-section { padding-block: 65px; border-top: 1px solid var(--line); }
-.about-principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; margin-top: 52px; }
-.about-principles article { border-top: 1px solid var(--line); padding-top: 22px; }
-.about-principles h3, .about-capability-list h3, .about-services h3, .about-process-list h3 { font-size: 28px; line-height: 1.2; font-weight: 400; letter-spacing: -0.04em; margin-block: 14px; }
-.about-principles article > p:not(.eyebrow), .about-capability-list p, .about-services p, .about-process-list p, .about-approach-intro { font-size: 14px; color: #73736a; line-height: 1.8; }
-.about-section-lead { margin-bottom: 40px; }
-.about-capability-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; }
-.about-group-label { font-size: 14px; letter-spacing: 0.12em; margin-bottom: 22px; }
-.about-capability-list article { border-top: 1px solid var(--line); padding-block: 23px 18px; }
-.about-location-tag { color: #73736a; font-size: 14px; }
-.about-capability-list h3 { font-size: 27px; margin-top: 12px; }
-.about-capability-columns .fine-print { line-height: 1.7; max-width: 390px; }
-.about-services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; margin-top: 56px; }
-.about-services article { border-top: 1px solid var(--line); padding-top: 22px; }
-.about-services h3 { font-size: 27px; }
-.about-service-actions { display: flex; flex-wrap: wrap; gap: 20px 28px; align-items: center; }
+.about-content-section { padding-block: 4.0625rem; border-top: 1px solid var(--line); }
+.about-principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.875rem; margin-top: 3.25rem; }
+.about-principles article { border-top: 1px solid var(--line); padding-top: 1.375rem; }
+.about-principles h3, .about-capability-list h3, .about-services h3, .about-process-list h3 { font-size: 1.75rem; line-height: 1.2; font-weight: 400; letter-spacing: -0.04em; margin-block: 0.875rem; }
+.about-principles article > p:not(.eyebrow), .about-capability-list p, .about-services p, .about-process-list p, .about-approach-intro { font-size: 0.875rem; color: #73736a; line-height: 1.8; }
+.about-section-lead { margin-bottom: 2.5rem; }
+.about-capability-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4rem; }
+.about-group-label { font-size: 0.875rem; letter-spacing: 0.12em; margin-bottom: 1.375rem; }
+.about-capability-list article { border-top: 1px solid var(--line); padding-block: 1.4375rem 1.125rem; }
+.about-location-tag { color: #73736a; font-size: 0.875rem; }
+.about-capability-list h3 { font-size: 1.6875rem; margin-top: 0.75rem; }
+.about-capability-columns .fine-print { line-height: 1.7; max-width: 24.375rem; }
+.about-services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.875rem; margin-top: 3.5rem; }
+.about-services article { border-top: 1px solid var(--line); padding-top: 1.375rem; }
+.about-services h3 { font-size: 1.6875rem; }
+.about-service-actions { display: flex; flex-wrap: wrap; gap: 1.25rem 1.75rem; align-items: center; }
 .about-process-list { list-style: none; margin: 0; padding: 0; }
-.about-process-list li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 22px; border-top: 1px solid var(--line); padding-block: 24px; }
-.about-process-list li > span { padding-top: 6px; color: #73736a; font-size: 14px; letter-spacing: 0.12em; }
+.about-process-list li { display: grid; grid-template-columns: 1.875rem minmax(0, 1fr); gap: 1.375rem; border-top: 1px solid var(--line); padding-block: 1.5rem; }
+.about-process-list li > span { padding-top: 0.375rem; color: #73736a; font-size: 0.875rem; letter-spacing: 0.12em; }
 .about-process-list h3 { margin-top: 0; }
 .about-process-list p { margin-bottom: 0; }
-.about-approach-intro { max-width: 390px; margin-block: 28px; }
+.about-approach-intro { max-width: 24.375rem; margin-block: 1.75rem; }
 
-.about-focus-areas { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 24px 0; list-style: none; }
-.about-focus-areas li { padding: 7px 11px; border: 1px solid var(--line); border-radius: 24px; color: #62625a; font-size: 11px; line-height: 1.4; }
-.about-integrated-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 48px; margin-top: 48px; }
+.about-focus-areas { display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0; margin: 1.5rem 0; list-style: none; }
+.about-focus-areas li { padding: 0.4375rem 0.6875rem; border: 1px solid var(--line); border-radius: 1.5rem; color: #62625a; font-size: 0.6875rem; line-height: 1.4; }
+.about-integrated-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.875rem 3rem; margin-top: 3rem; }
 .about-integrated-grid article,
-.about-network-grid article { min-width: 0; padding-top: 22px; border-top: 1px solid var(--line); }
+.about-network-grid article { min-width: 0; padding-top: 1.375rem; border-top: 1px solid var(--line); }
 .about-integrated-grid h3,
-.about-network-grid h3 { margin-block: 14px; font-size: 27px; line-height: 1.2; font-weight: 400; letter-spacing: -.04em; }
+.about-network-grid h3 { margin-block: 0.875rem; font-size: 1.6875rem; line-height: 1.2; font-weight: 400; letter-spacing: -.04em; }
 .about-integrated-grid p,
-.about-network-grid p { color: #73736a; font-size: 14px; line-height: 1.8; }
-.about-global-headquarters { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 30px; background: #f8f8f6; border: 1px solid var(--line); }
+.about-network-grid p { color: #73736a; font-size: 0.875rem; line-height: 1.8; }
+.about-global-headquarters { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 1.875rem; background: #f8f8f6; border: 1px solid var(--line); }
 .about-global-headquarters > div { min-width: 0; }
-.about-global-headquarters h3 { margin-block: 14px; font-size: 34px; line-height: 1.15; font-weight: 400; letter-spacing: -.04em; }
-.about-global-headquarters p { color: #73736a; font-size: 14px; line-height: 1.8; }
-.about-global-headquarters ul { display: flex; flex-direction: column; justify-content: center; gap: 11px; margin: 0; padding-left: 19px; font-size: 14px; line-height: 1.7; }
-.about-network-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; margin-top: 36px; }
+.about-global-headquarters h3 { margin-block: 0.875rem; font-size: 2.125rem; line-height: 1.15; font-weight: 400; letter-spacing: -.04em; }
+.about-global-headquarters p { color: #73736a; font-size: 0.875rem; line-height: 1.8; }
+.about-global-headquarters ul { display: flex; flex-direction: column; justify-content: center; gap: 0.6875rem; margin: 0; padding-left: 1.1875rem; font-size: 0.875rem; line-height: 1.7; }
+.about-network-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.875rem; margin-top: 2.25rem; }
 .about-network-grid .about-location-tag,
-.about-global-headquarters .about-location-tag { margin-top: 0; font-size: 14px; line-height: 1.6; overflow-wrap: anywhere; }
+.about-global-headquarters .about-location-tag { margin-top: 0; font-size: 0.875rem; line-height: 1.6; overflow-wrap: anywhere; }
 @media (max-width: 900px) {
-  .about-capability-columns { gap: 35px; }
-  .about-principles, .about-services { gap: 22px; }
-  .about-integrated-grid { gap: 24px 30px; }
-  .about-global-headquarters { gap: 28px; }
-  .about-network-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+  .about-capability-columns { gap: 2.1875rem; }
+  .about-principles, .about-services { gap: 1.375rem; }
+  .about-integrated-grid { gap: 1.5rem 1.875rem; }
+  .about-global-headquarters { gap: 1.75rem; }
+  .about-network-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
 }
 @media (max-width: 760px) {
-  .about-page section[id] { scroll-margin-top: 90px; }
-  .about-content-section { padding-block: 44px; }
-  .about-section-nav { gap: 12px 20px; line-height: 1.6; }
-  .about-principles, .about-capability-columns, .about-services { grid-template-columns: 1fr; gap: 20px; }
-  .about-principles, .about-services { margin-top: 32px; }
-  .about-section-lead { margin-bottom: 28px; }
-  .about-capability-columns { gap: 30px; }
-  .about-principles h3, .about-services h3, .about-capability-list h3 { font-size: 28px; }
-  .about-approach-intro { margin-block: 24px; }
-  .about-focus-areas { margin-block: 22px; }
+  .about-page section[id] { scroll-margin-top: 5.625rem; }
+  .about-content-section { padding-block: 2.75rem; }
+  .about-section-nav { gap: 0.75rem 1.25rem; line-height: 1.6; }
+  .about-principles, .about-capability-columns, .about-services { grid-template-columns: 1fr; gap: 1.25rem; }
+  .about-principles, .about-services { margin-top: 2rem; }
+  .about-section-lead { margin-bottom: 1.75rem; }
+  .about-capability-columns { gap: 1.875rem; }
+  .about-principles h3, .about-services h3, .about-capability-list h3 { font-size: 1.75rem; }
+  .about-approach-intro { margin-block: 1.5rem; }
+  .about-focus-areas { margin-block: 1.375rem; }
   .about-integrated-grid,
   .about-network-grid,
   .about-global-headquarters { grid-template-columns: minmax(0, 1fr); }
-  .about-integrated-grid { gap: 22px; margin-top: 30px; }
-  .about-global-headquarters { gap: 20px; padding: 22px; }
-  .about-global-headquarters h3 { font-size: 32px; }
-  .about-network-grid { gap: 22px; margin-top: 28px; }
+  .about-integrated-grid { gap: 1.375rem; margin-top: 1.875rem; }
+  .about-global-headquarters { gap: 1.25rem; padding: 1.375rem; }
+  .about-global-headquarters h3 { font-size: 2rem; }
+  .about-network-grid { gap: 1.375rem; margin-top: 1.75rem; }
 }
 
 /* Supplied mission/CEO reference: teal statement at left, portrait at right. */
-.about-mission { padding-bottom: 64px; }
-.about-mission-layout { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 48px; padding: 24px; background: #f8f8f8; align-items: stretch; }
-.about-mission-copy { padding: 36px; background: #347f90; color: #fff; }
-.about-mission-copy h2 { margin: 0; padding-bottom: 22px; border-bottom: 1px solid #ffffff70; font-size: 38px; line-height: 1.2; font-weight: 500; letter-spacing: -.025em; }
-.about-mission-copy p { margin: 20px 0 0; font-size: 16px; line-height: 1.6; color: #fff; }
-.about-leadership { min-width: 0; margin: 0; padding: 10px 18px; border: 1px solid #d5e3e6; align-self: center; }
+.about-mission { padding-bottom: 4rem; }
+.about-mission-layout { display: grid; grid-template-columns: minmax(0, 1fr) 15rem; gap: 3rem; padding: 1.5rem; background: #f8f8f8; align-items: stretch; }
+.about-mission-copy { padding: 2.25rem; background: #347f90; color: #fff; }
+.about-mission-copy h2 { margin: 0; padding-bottom: 1.375rem; border-bottom: 1px solid #ffffff70; font-size: 2.375rem; line-height: 1.2; font-weight: 500; letter-spacing: -.025em; }
+.about-mission-copy p { margin: 1.25rem 0 0; font-size: 1rem; line-height: 1.6; color: #fff; }
+.about-leadership { min-width: 0; margin: 0; padding: 0.625rem 1.125rem; border: 1px solid #d5e3e6; align-self: center; }
 .about-leadership img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1.08; object-fit: cover; object-position: 50% 60%; }
-.about-leadership figcaption { position: relative; width: 80%; margin: -20px auto 0; padding: 10px 6px; background: #347f90; color: #fff; text-align: center; }
-.about-leadership figcaption span { display: block; font-size: 16px; line-height: 1.35; }
-.about-leadership figcaption span:first-child { font-size: 20px; }
+.about-leadership figcaption { position: relative; width: 80%; margin: -1.25rem auto 0; padding: 0.625rem 0.375rem; background: #347f90; color: #fff; text-align: center; }
+.about-leadership figcaption span { display: block; font-size: 1rem; line-height: 1.35; }
+.about-leadership figcaption span:first-child { font-size: 1.25rem; }
 @media (max-width: 900px) {
-  .about-mission-layout { gap: 28px; grid-template-columns: minmax(0, 1fr) 220px; }
-  .about-mission-copy { padding: 28px; }
-  .about-mission-copy h2 { font-size: 34px; }
+  .about-mission-layout { gap: 1.75rem; grid-template-columns: minmax(0, 1fr) 13.75rem; }
+  .about-mission-copy { padding: 1.75rem; }
+  .about-mission-copy h2 { font-size: 2.125rem; }
 }
 @media (max-width: 760px) {
-  .about-mission { padding-bottom: 44px; }
-  .about-mission-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 18px; }
-  .about-mission-copy { padding: 26px 24px; }
-  .about-mission-copy h2 { font-size: 33px; padding-bottom: 18px; }
-  .about-mission-copy p { margin-top: 18px; font-size: 15px; }
-  .about-leadership { width: min(100%, 260px); justify-self: center; }
+  .about-mission { padding-bottom: 2.75rem; }
+  .about-mission-layout { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; padding: 1.125rem; }
+  .about-mission-copy { padding: 1.625rem 1.5rem; }
+  .about-mission-copy h2 { font-size: 2.0625rem; padding-bottom: 1.125rem; }
+  .about-mission-copy p { margin-top: 1.125rem; font-size: 0.9375rem; }
+  .about-leadership { width: min(100%, 16.25rem); justify-self: center; }
 }
-.about-page .about-lead { grid-template-columns: .95fr 1.05fr; gap: 50px; align-items: center; }
+.about-page .about-lead { grid-template-columns: .95fr 1.05fr; gap: 3.125rem; align-items: center; }
 .about-reception { min-width: 0; margin: 0; }
 .about-reception img { display: block; width: 100%; height: auto; aspect-ratio: 1; }
 .about-lead-copy > p:first-child { margin-top: 0; }
-.about-lead-copy > .text-link { margin-top: 8px; }
-.about-milestones-header { padding: 42px 32px; background: #347f90; color: #fff; text-align: center; }
-.about-milestones-header h2 { margin: 0; color: inherit; font-size: clamp(38px, 4.6vw, 64px); line-height: 1.12; }
-.about-milestones-header p { margin: 20px 0 0; color: #e0f0f3; font-size: 18px; line-height: 1.6; }
-.about-timeline { position: relative; max-width: 1120px; margin: 56px auto 0; padding: 0; list-style: none; }
-.about-timeline::before { content: ""; position: absolute; top: 20px; bottom: 20px; left: 50%; width: 1px; background: #79b6c3; }
-.about-timeline li { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding-bottom: 42px; }
+.about-lead-copy > .text-link { margin-top: 0.5rem; }
+.about-milestones-header { padding: 2.625rem 2rem; background: #347f90; color: #fff; text-align: center; }
+.about-milestones-header h2 { margin: 0; color: inherit; font-size: clamp(2.375rem, 4.6vw, 4rem); line-height: 1.12; }
+.about-milestones-header p { margin: 1.25rem 0 0; color: #e0f0f3; font-size: 1.125rem; line-height: 1.6; }
+.about-timeline { position: relative; max-width: 70rem; margin: 3.5rem auto 0; padding: 0; list-style: none; }
+.about-timeline::before { content: ""; position: absolute; top: 1.25rem; bottom: 1.25rem; left: 50%; width: 1px; background: #79b6c3; }
+.about-timeline li { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding-bottom: 2.625rem; }
 .about-timeline li:last-child { padding-bottom: 0; }
-.about-timeline li::before { content: ""; position: absolute; top: 17px; left: calc(50% - 6px); width: 13px; height: 13px; border-radius: 50%; background: #347f90; box-shadow: 0 0 0 6px #fff; }
-.about-timeline-entry { grid-column: 1; min-width: 0; padding-right: 48px; text-align: right; }
-.about-timeline li:nth-child(even) .about-timeline-entry { grid-column: 2; padding: 0 0 0 48px; text-align: left; }
-.about-timeline h3 { margin: 0; font-size: clamp(30px, 3vw, 42px); font-weight: 400; line-height: 1.2; letter-spacing: -.035em; }
-.about-timeline p { margin: 16px 0 0; color: #73736a; font-size: 17px; line-height: 1.8; }
+.about-timeline li::before { content: ""; position: absolute; top: 1.0625rem; left: calc(50% - 0.375rem); width: 0.8125rem; height: 0.8125rem; border-radius: 50%; background: #347f90; box-shadow: 0 0 0 0.375rem #fff; }
+.about-timeline-entry { grid-column: 1; min-width: 0; padding-right: 3rem; text-align: right; }
+.about-timeline li:nth-child(even) .about-timeline-entry { grid-column: 2; padding: 0 0 0 3rem; text-align: left; }
+.about-timeline h3 { margin: 0; font-size: clamp(1.875rem, 3vw, 2.625rem); font-weight: 400; line-height: 1.2; letter-spacing: -.035em; }
+.about-timeline p { margin: 1rem 0 0; color: #73736a; font-size: 1.0625rem; line-height: 1.8; }
 @media (max-width: 760px) {
-  .about-page .about-lead { grid-template-columns: 1fr; gap: 28px; }
-  .about-milestones-header { padding: 30px 20px; text-align: left; }
-  .about-milestones-header h2 { font-size: clamp(34px, 8vw, 44px); }
-  .about-milestones-header p { margin-top: 16px; font-size: 16px; }
-  .about-timeline { margin-top: 36px; }
-  .about-timeline::before { left: 7px; top: 14px; bottom: 14px; }
-  .about-timeline li { grid-template-columns: minmax(0, 1fr); padding-bottom: 32px; }
-  .about-timeline li::before { top: 11px; left: 1px; }
+  .about-page .about-lead { grid-template-columns: 1fr; gap: 1.75rem; }
+  .about-milestones-header { padding: 1.875rem 1.25rem; text-align: left; }
+  .about-milestones-header h2 { font-size: clamp(2.125rem, 8vw, 2.75rem); }
+  .about-milestones-header p { margin-top: 1rem; font-size: 1rem; }
+  .about-timeline { margin-top: 2.25rem; }
+  .about-timeline::before { left: 0.4375rem; top: 0.875rem; bottom: 0.875rem; }
+  .about-timeline li { grid-template-columns: minmax(0, 1fr); padding-bottom: 2rem; }
+  .about-timeline li::before { top: 0.6875rem; left: 1px; }
   .about-timeline-entry,
-  .about-timeline li:nth-child(even) .about-timeline-entry { grid-column: 1; padding: 0 0 0 34px; text-align: left; }
-  .about-timeline h3 { font-size: 32px; }
-  .about-timeline p { margin-top: 12px; font-size: 16px; }
+  .about-timeline li:nth-child(even) .about-timeline-entry { grid-column: 1; padding: 0 0 0 2.125rem; text-align: left; }
+  .about-timeline h3 { font-size: 2rem; }
+  .about-timeline p { margin-top: 0.75rem; font-size: 1rem; }
 }

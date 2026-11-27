@@ -15,7 +15,7 @@ export default function LatestNews() {
           <div className="news-story-meta"><span>{item.category}</span>{item.dateLabel && (item.publishedAt ? <time dateTime={item.publishedAt}>{item.dateLabel}</time> : <span>{item.dateLabel}</span>)}</div>
           <h3>{item.title}</h3><p>{item.summary}</p>
         </div>
-        <ArrowUpRight className="news-story-arrow" size={20} aria-hidden="true" />
+        <ArrowUpRight className="news-story-arrow" size="1.25rem" aria-hidden="true" />
       </a>
     </article>)}</div>
   </section>;

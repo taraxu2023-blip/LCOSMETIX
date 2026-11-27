@@ -35,7 +35,7 @@ export default function ConceptLibrary({ productId }: { productId: string }) {
         <span className="concept-development-stage">{developmentLabels[collection.developmentStage]}</span>
         <p className="concept-card-summary">{collection.summary}</p>
         <details className="concept-card-details">
-          <summary>Explore {collection.productNames.length} {collection.productNames.length === 1 ? "product concept" : "product concepts"}<Plus size={16} aria-hidden="true" /></summary>
+          <summary>Explore {collection.productNames.length} {collection.productNames.length === 1 ? "product concept" : "product concepts"}<Plus size="1rem" aria-hidden="true" /></summary>
           <div>
             <h4>Concept lineup</h4>
             <ul>{collection.productNames.map((name) => <li key={name}>{name}</li>)}</ul>
@@ -47,7 +47,7 @@ export default function ConceptLibrary({ productId }: { productId: string }) {
     </div>
     <div className="concept-library-footer">
       <p>Choose a collection in the inquiry form and tell us your target market, preferred format and estimated volume.</p>
-      <a className="text-link" href="#inquiry">Discuss a product concept <ArrowUpRight size={19} /></a>
+      <a className="text-link" href="#inquiry">Discuss a product concept <ArrowUpRight size="1.1875rem" /></a>
     </div>
   </section>;
 }

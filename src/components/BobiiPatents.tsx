@@ -13,7 +13,7 @@ export default function BobiiPatents() {
         <ul className="patent-number-list">{bobiiPatents.map((patent) => <li key={patent.number} translate="no">{patent.number}</li>)}</ul>
         <p className="patent-progress">Further applications in progress.</p>
         <img className="patent-product-image" src="/assets/about-capsule-collection.webp" alt="BOBII BALL single-dose capsules in a collection jar" width="1400" height="1050" loading="lazy" />
-        <a className="text-link" href="#inquiry">Discuss patent documentation <ArrowUpRight size={18} /></a>
+        <a className="text-link" href="#inquiry">Discuss patent documentation <ArrowUpRight size="1.125rem" /></a>
       </div>
     </div>
   </section>;

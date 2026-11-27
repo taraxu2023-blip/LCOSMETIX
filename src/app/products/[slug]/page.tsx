@@ -30,7 +30,7 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
         <p className="eyebrow">{product.category.toUpperCase()}</p>
         <h1>{product.brand}.<br /><span>One dose. More possibility.</span></h1>
         <p className="product-summary">{product.summary}</p>
-        <div className="product-actions"><a className="pill dark-pill" href="#inquiry">Get a Quote <ArrowUpRight size={19} /></a><a className="text-link" id="product-concepts" href={productConceptsHref}>Explore formulation concepts <ArrowUpRight size={18} /></a></div>
+        <div className="product-actions"><a className="pill dark-pill" href="#inquiry">Get a Quote <ArrowUpRight size="1.1875rem" /></a><a className="text-link" id="product-concepts" href={productConceptsHref}>Explore formulation concepts <ArrowUpRight size="1.125rem" /></a></div>
         <ColorCollection product={product} headingLevel={2} />
       </section>
       <section className="inner-container product-benefits" aria-label="Product features">{productFeatures.map((feature, i) => <article key={feature.title}><span className="eyebrow">0{i + 1}</span><h3>{feature.title}</h3><p>{feature.description}</p></article>)}</section>
@@ -38,12 +38,12 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
         <div className="inner-split"><div><p className="eyebrow">MATERIALS & FORMULA TECHNOLOGY</p><h2 id="product-technology-reference-heading">Single-Dose Technology.</h2></div><div><p>Explore the material structure, formula evaluation and patent documentation behind the single-dose format.</p><nav aria-label="Explore Single-Dose Technology">{singleDoseMenu.links.map((topic) => {
           const anchor = topic.href.split("#")[1];
           const onThisPage = anchor === "five-layer-structure" || anchor === "patents";
-          return <a className="text-link" key={topic.href} id={onThisPage ? undefined : anchor} href={onThisPage ? `#${anchor}` : topic.href}>{topic.label} <ArrowUpRight size={17} /></a>;
+          return <a className="text-link" key={topic.href} id={onThisPage ? undefined : anchor} href={onThisPage ? `#${anchor}` : topic.href}>{topic.label} <ArrowUpRight size="1.0625rem" /></a>;
         })}</nav></div></div>
       </section>}
       {product.id === "bobii-ball" && <SingleDoseTechnologySections product={product} showPrinciples={false} />}
       {product.id === "bobii-ball" && <BobiiPatents />}
-      {related.length > 0 && <section className="inner-container"><h2>Related products</h2><div className="application-grid">{related.map((item) => <a className="text-link" key={item.id} href={productHref(item)}>{item.name}<ArrowUpRight size={18} /></a>)}</div></section>}
+      {related.length > 0 && <section className="inner-container"><h2>Related products</h2><div className="application-grid">{related.map((item) => <a className="text-link" key={item.id} href={productHref(item)}>{item.name}<ArrowUpRight size="1.125rem" /></a>)}</div></section>}
       <section id="inquiry" className="contact-section inner-container"><ProjectForm productId={product.id} /></section>
     </main>
     <Footer />

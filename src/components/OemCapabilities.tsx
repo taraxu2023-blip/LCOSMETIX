@@ -3,7 +3,7 @@ import { oemCapabilityRoles, oemCollaboration, oemMedia, oemQualityChecks } from
 
 function ProductionPhoto({ photo }: { photo: typeof oemMedia[keyof typeof oemMedia] }) {
   return <figure className="oem-production-photo">
-    <img src={photo.src} srcSet={photo.srcSet} sizes="(max-width: 760px) calc(100vw - 40px), (max-width: 1100px) 46vw, 510px" width={photo.width} height={photo.height} alt={photo.alt} loading="lazy" decoding="async" />
+    <img src={photo.src} srcSet={photo.srcSet} sizes="(max-width: 760px) calc(100vw - 40px), 46vw" width={photo.width} height={photo.height} alt={photo.alt} loading="lazy" decoding="async" />
     <figcaption>{photo.caption}</figcaption>
   </figure>;
 }
@@ -16,7 +16,7 @@ export default function OemCapabilities() {
       <div className="oem-collaboration-grid">{oemCollaboration.map((route) => <article key={route.name}>
         <p className="eyebrow">{route.name}</p><h3>{route.title}</h3><p>{route.description}</p>
         <ul>{route.scope.map((item) => <li key={item}>{item}</li>)}</ul>
-        <a className="text-link" href="#inquiry">Discuss your {route.name} project <ArrowUpRight size={18} /></a>
+        <a className="text-link" href="#inquiry">Discuss your {route.name} project <ArrowUpRight size="1.125rem" /></a>
       </article>)}</div>
     </section>
 
@@ -30,7 +30,7 @@ export default function OemCapabilities() {
     <section className="inner-container oem-section" id="quality" aria-labelledby="oem-quality-heading">
       <div className="inner-split oem-quality-layout">
         <div><p className="eyebrow">PROJECT EVALUATION / QUALITY COORDINATION</p><h2 id="oem-quality-heading">Agreed standards.<br /><span>At every stage.</span></h2><ProductionPhoto photo={oemMedia.team} /></div>
-        <div><p className="oem-quality-intro">From sample review to manufacturing preparation, we define the checks and responsibilities your product needs.</p><ol className="oem-quality-checks">{oemQualityChecks.map((check, index) => <li key={check.title}><span className="eyebrow">0{index + 1}</span><div><h3>{check.title}</h3><p>{check.description}</p></div></li>)}</ol><a className="text-link" href="#inquiry">Discuss your project requirements <ArrowUpRight size={18} /></a></div>
+        <div><p className="oem-quality-intro">From sample review to manufacturing preparation, we define the checks and responsibilities your product needs.</p><ol className="oem-quality-checks">{oemQualityChecks.map((check, index) => <li key={check.title}><span className="eyebrow">0{index + 1}</span><div><h3>{check.title}</h3><p>{check.description}</p></div></li>)}</ol><a className="text-link" href="#inquiry">Discuss your project requirements <ArrowUpRight size="1.125rem" /></a></div>
       </div>
     </section>
   </>;

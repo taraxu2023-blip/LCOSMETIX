@@ -43,7 +43,7 @@ export default function Navigation() {
         </nav>
         <div className="header-actions">
           <a href="/#contact" className="pill contact-pill">
-            Get a Quote <ArrowUpRight size={17} />
+            Get a Quote <ArrowUpRight size="1.0625rem" />
           </a>
           <button
             type="button"
@@ -54,7 +54,7 @@ export default function Navigation() {
             aria-haspopup="dialog"
             onClick={() => setOpen(true)}
           >
-            menu. <List size={22} />
+            menu. <List size="1.375rem" />
           </button>
         </div>
       </header>
@@ -79,7 +79,7 @@ export default function Navigation() {
             L COSMETIX <span>/ EXPLORE</span>
           </p>
           <button type="button" className="mega-menu-close" aria-label="Close menu" onClick={closeMenu}>
-            <X size={21} weight="light" />
+            <X size="1.3125rem" weight="light" />
           </button>
         </div>
         <div className="mega-menu-body">
@@ -99,14 +99,14 @@ export default function Navigation() {
                   <span className="mega-menu-link-title">{label}</span>
                   <span className="mega-menu-link-description">{description}</span>
                 </span>
-                <ArrowUpRight size={25} weight="light" />
+                <ArrowUpRight size="1.5625rem" weight="light" />
               </a>
             ))}
           </nav>
         </div>
         <div className="mega-menu-footer">
           <a href="/#contact" className="mega-menu-contact" onClick={closeMenu}>
-            Let’s talk about your project <ArrowUpRight size={18} />
+            Let’s talk about your project <ArrowUpRight size="1.125rem" />
           </a>
         </div>
       </dialog>

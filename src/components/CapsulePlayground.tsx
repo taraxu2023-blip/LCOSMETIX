@@ -492,14 +492,14 @@ export default function CapsulePlayground() {
           }
           onClick={togglePause}
         >
-          {paused ? <Play size={15} /> : <Pause size={15} />}
+          {paused ? <Play size="0.9375rem" /> : <Pause size="0.9375rem" />}
         </button>
         <button
           type="button"
           aria-label="Replay falling capsules"
           onClick={replay}
         >
-          <ArrowClockwise size={16} />
+          <ArrowClockwise size="1rem" />
         </button>
       </div>
     </>

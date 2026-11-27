@@ -1,7 +1,7 @@
 /* Shared header fit rules. All four primary labels are direct page links. */
 @media (min-width: 1440px) {
-  .site-header { gap: clamp(24px, 2vw, 38px); }
-  .header-navigation { display: flex; gap: clamp(32px, 2.6vw, 50px); }
+  .site-header { gap: clamp(1.5rem, 2vw, 2.375rem); }
+  .header-navigation { display: flex; gap: clamp(2rem, 2.6vw, 3.125rem); }
 }
 @media (min-width: 1440px) and (max-width: 1699px) {
   .site-header .header-actions .menu-pill { display: none; }

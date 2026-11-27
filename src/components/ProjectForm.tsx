@@ -46,7 +46,7 @@ export default function ProjectForm({ productId }: { productId?: string }) {
         <h2 className="inquiry-specialization">{company.specialization}</h2>
         <p>Tell our factory and export team what you have in mind.</p>
         <address className="company-contact">
-          <a href={`mailto:${company.email}`}>{company.email} <ArrowUpRight size={16} /></a>
+          <a href={`mailto:${company.email}`}>{company.email} <ArrowUpRight size="1rem" /></a>
           <span>{company.legalName}</span>
           <span>{company.address}</span>
         </address>
@@ -54,15 +54,15 @@ export default function ProjectForm({ productId }: { productId?: string }) {
       <div>
         {receipt && (
           <div className="brief-success" role="status">
-            <Check size={32} />
+            <Check size="2rem" />
             <h3>Thank you. Your inquiry has been saved.</h3>
             <p>Keep this reference for any follow-up with our team.</p>
             <p className="inquiry-reference">{receipt}</p>
             <a className="text-link" href={`mailto:${company.email}?subject=${encodeURIComponent(`BOBII BALL inquiry ${receipt}`)}`}>
-              Email our team <ArrowUpRight size={18} />
+              Email our team <ArrowUpRight size="1.125rem" />
             </a>
             <button className="text-link" type="button" onClick={() => { form.current?.reset(); setIntent("Samples"); setSelectedProductId(initialProductId); setSelectedConceptId(""); setReceipt(null); }}>
-              Start another inquiry <ArrowUpRight size={18} />
+              Start another inquiry <ArrowUpRight size="1.125rem" />
             </button>
           </div>
         )}
@@ -103,7 +103,7 @@ export default function ProjectForm({ productId }: { productId?: string }) {
           <label>Message *<textarea name="message" required rows={3} placeholder="Tell us about your project and launch plans." maxLength={4000} /></label>
           <div className="form-honeypot" aria-hidden="true"><label>Website<input name="website" tabIndex={-1} autoComplete="off" /></label></div>
           {error && <p className="form-error" role="alert">{error}</p>}
-          <button type="submit" className="pill dark-pill" disabled={pending}>{pending ? "Saving your inquiry…" : "Get a Quote"} <ArrowUpRight size={20} /></button>
+          <button type="submit" className="pill dark-pill" disabled={pending}>{pending ? "Saving your inquiry…" : "Get a Quote"} <ArrowUpRight size="1.25rem" /></button>
           <p className="fine-print">Required fields are marked *. Your contact details and project information are used to respond to your inquiry.</p>
         </form>
       </div>

@@ -3,14 +3,14 @@
   display: inline-block;
   position: relative;
   flex: 0 0 auto;
-  width: calc(var(--capsule-height, 96px) * .6911);
-  height: var(--capsule-height, 96px);
+  width: calc(var(--capsule-height, 6rem) * .6911);
+  height: var(--capsule-height, 6rem);
   pointer-events: none;
   user-select: none;
   isolation: isolate;
   transform: translate3d(var(--capsule-pointer-x, 0px), var(--capsule-pointer-y, 0px), 0) rotate(var(--capsule-pointer-rotate, 0deg));
   transition: transform 260ms cubic-bezier(.2, .7, .2, 1), filter 240ms ease;
-  filter: drop-shadow(2px 5px 5px rgba(72, 60, 87, .09));
+  filter: drop-shadow(2px 0.3125rem 0.3125rem rgba(72, 60, 87, .09));
 }
 .capsule-menu-visual > img {
   display: block;
@@ -41,7 +41,7 @@
   transition-delay: var(--fragment-delay);
 }
 .capsule-menu-link:focus-visible .capsule-menu-visual {
-  filter: drop-shadow(2px 6px 7px rgba(110, 84, 139, .16));
+  filter: drop-shadow(2px 0.375rem 0.4375rem rgba(110, 84, 139, .16));
 }
 @media (hover: hover) and (pointer: fine) {
   .capsule-menu-link:hover .capsule-menu-whole { opacity: 0; }

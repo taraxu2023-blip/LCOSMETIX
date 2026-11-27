@@ -24,12 +24,12 @@ export default function CompanyMap({ widthClass = "content-width" }: { widthClas
     <div className="company-map-layout">
       <div className="location-selector" role="group" aria-label="Business contact locations">
         {positions.map((location, index) => <button key={location.id} type="button" aria-pressed={selected === location.id} aria-controls={`${instanceId}-details`} onClick={() => setSelected(location.id)}>
-          <span className="location-index">0{index + 1}</span><span className="location-selector-copy"><strong>{location.city}</strong><span>{location.country === location.city ? location.countryCode : location.country}</span></span><ArrowUpRight size={17} weight="light" />
+          <span className="location-index">0{index + 1}</span><span className="location-selector-copy"><strong>{location.city}</strong><span>{location.country === location.city ? location.countryCode : location.country}</span></span><ArrowUpRight size="1.0625rem" weight="light" />
         </button>)}
-        <a className="location-email" href={`mailto:${company.email}`}>{company.email}<ArrowUpRight size={14} /></a>
+        <a className="location-email" href={`mailto:${company.email}`}>{company.email}<ArrowUpRight size="0.875rem" /></a>
       </div>
       <div className="location-display">
-        <div className="location-map-meta"><span><GlobeHemisphereEast size={15} weight="light" /> CONNECTED ACROSS BORDERS</span><span>{String(positions.length).padStart(2, "0")} CONTACT LOCATIONS</span></div>
+        <div className="location-map-meta"><span><GlobeHemisphereEast size="0.9375rem" weight="light" /> CONNECTED ACROSS BORDERS</span><span>{String(positions.length).padStart(2, "0")} CONTACT LOCATIONS</span></div>
         <div className="company-map-canvas">
           <svg className="company-world" viewBox="0 0 1000 520" aria-hidden="true" focusable="false">
             <defs><linearGradient id={gradientId} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#86cbd4" stopOpacity="0.15" /><stop offset="0.55" stopColor="#4098ac" stopOpacity="0.8" /><stop offset="1" stopColor="#87d8df" stopOpacity="0.25" /></linearGradient></defs>
@@ -57,7 +57,7 @@ export default function CompanyMap({ widthClass = "content-width" }: { widthClas
         <div className="location-detail" id={`${instanceId}-details`} aria-live="polite" aria-atomic="true">
           <div className="location-detail-title"><span>{active.countryCode}</span><div><h3>{active.city}</h3><p>{active.country}</p></div></div>
           <address>{active.address ? <>{active.address}{active.postalCode && <span>Postal code: {active.postalCode}</span>}</> : <a href={`mailto:${company.email}`}>Email our team for South Korea enquiries.</a>}</address>
-          <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`} target="_blank" rel="noopener noreferrer">{active.scope === "country" ? "View country on Google Maps" : "View on Google Maps"}<ArrowUpRight size={17} /></a>
+          <a href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(mapQuery)}`} target="_blank" rel="noopener noreferrer">{active.scope === "country" ? "View country on Google Maps" : "View on Google Maps"}<ArrowUpRight size="1.0625rem" /></a>
         </div>
       </div>
     </div>

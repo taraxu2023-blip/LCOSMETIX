@@ -40,7 +40,7 @@ export default function Home() {
                 create distinctive, market-ready products.
               </p>
               <a href="#capsules">
-                Meet BOBII BALL <ArrowDownRight size={19} />
+                Meet BOBII BALL <ArrowDownRight size="1.1875rem" />
               </a>
             </div>
           </div>
@@ -48,7 +48,7 @@ export default function Home() {
           <div className="hero-bottom">
             <span>FORMULA. FORMAT. POSSIBILITY.</span>
             <a href="#contact">
-              FOR BEAUTY BRANDS, WITH L COSMETIX <ArrowUpRight size={15} />
+              FOR BEAUTY BRANDS, WITH L COSMETIX <ArrowUpRight size="0.9375rem" />
             </a>
           </div>
         </section>
@@ -87,17 +87,17 @@ export default function Home() {
               project.
             </p>
             <div className="tech-detail">
-              <Plus size={17} />
+              <Plus size="1.0625rem" />
               <span>Five-layer shell</span>
               <span>PE / EVOH / PE + bonding layers</span>
             </div>
             <div className="tech-detail">
-              <Plus size={17} />
+              <Plus size="1.0625rem" />
               <span>Formula compatibility</span>
               <span>Evaluated for your project</span>
             </div>
             <a href="/single-dose-technology#formula-compatibility" className="text-link">
-              Explore Single-Dose Technology <ArrowUpRight size={22} />
+              Explore Single-Dose Technology <ArrowUpRight size="1.375rem" />
             </a>
           </div>
           <div className="technical-image technical-video">
@@ -116,7 +116,7 @@ export default function Home() {
           <p className="eyebrow">ONE FORMAT. MANY POSSIBILITIES.</p>
           <h2 id="applications-heading">Your formula.<br />A new way to experience it.</h2>
           <div className="application-grid">{product.applications.map((application) => <article key={application.name}><h3>{application.name}</h3><p>{application.description}</p></article>)}</div>
-          <a href="/oem-odm#applications" className="text-link">Explore applications <ArrowUpRight size={19} /></a>
+          <a href="/oem-odm#applications" className="text-link">Explore applications <ArrowUpRight size="1.1875rem" /></a>
           <p className="fine-print">Formula compatibility and performance are evaluated for each project.</p>
         </section>}
         <LatestNews />

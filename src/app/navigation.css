@@ -1,6 +1,6 @@
 /* Shared navigation. Reserve the original header height in the home hero. */
-.hero { padding-top: 108px; }
-.site-header { position: absolute; top: 15px; left: 17px; right: 17px; gap: clamp(24px, 3vw, 56px); }
+.hero { padding-top: 6.75rem; }
+.site-header { position: absolute; top: 0.9375rem; left: 1.0625rem; right: 1.0625rem; gap: clamp(1.5rem, 3vw, 3.5rem); }
 .site-header .wordmark, .header-actions { flex-shrink: 0; }
 .header-navigation {
   display: flex;
@@ -8,13 +8,13 @@
   min-width: 0;
   align-items: center;
   justify-content: center;
-  gap: clamp(18px, 2.15vw, 38px);
+  gap: clamp(1.125rem, 2.15vw, 2.375rem);
 }
 .header-navigation > a {
   position: relative;
-  padding-block: 14px;
+  padding-block: 0.875rem;
   white-space: nowrap;
-  font-size: clamp(16px, 1.3vw, 22px);
+  font-size: clamp(1rem, 1.3vw, 1.375rem);
   font-weight: 400;
   letter-spacing: -0.025em;
   line-height: 1.2;
@@ -25,7 +25,7 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 6px;
+  bottom: 0.375rem;
   height: 1px;
   background: currentColor;
   transform: scaleX(0);
@@ -36,63 +36,63 @@
 .header-navigation > a:hover::after,
 .header-navigation > a:focus-visible::after { transform: scaleX(1); }
 @media (min-width: 1280px) and (max-width: 1379px) {
-  .header-navigation { gap: 18px; }
+  .header-navigation { gap: 1.125rem; }
 }
 @media (max-width: 1279px) {
   .header-navigation { display: none; }
 }
 .site-footer nav { flex-wrap: wrap; }
-#about { scroll-margin-top: 34px; }
+#about { scroll-margin-top: 2.125rem; }
 
 .mega-menu {
   position: fixed;
   inset: 0;
   margin: auto;
-  width: min(1100px, calc(100% - 64px));
+  width: min(68.75rem, calc(100% - 4rem));
   max-width: none;
-  max-height: calc(100dvh - 64px);
-  padding: 30px 38px 0;
+  max-height: calc(100dvh - 4rem);
+  padding: 1.875rem 2.375rem 0;
   overflow: auto;
   overscroll-behavior: contain;
   color: var(--ink);
   background: rgba(250, 250, 252, 0.88);
-  -webkit-backdrop-filter: blur(30px) saturate(135%);
-  backdrop-filter: blur(30px) saturate(135%);
+  -webkit-backdrop-filter: blur(1.875rem) saturate(135%);
+  backdrop-filter: blur(1.875rem) saturate(135%);
   border: 1px solid rgba(255, 255, 255, 0.9);
-  border-radius: 28px;
-  box-shadow: 0 32px 110px -28px rgba(22, 20, 35, 0.3), 0 3px 14px rgba(22, 20, 35, 0.04);
+  border-radius: 1.75rem;
+  box-shadow: 0 2rem 6.875rem -1.75rem rgba(22, 20, 35, 0.3), 0 0.1875rem 0.875rem rgba(22, 20, 35, 0.04);
 }
 .mega-menu:not([open]) { display: none; }
 .mega-menu[open] { animation: mega-menu-enter 200ms ease-out both; }
 .mega-menu::backdrop {
   background: rgba(31, 30, 37, 0.19);
-  -webkit-backdrop-filter: blur(9px);
-  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(0.5625rem);
+  backdrop-filter: blur(0.5625rem);
 }
 .mega-menu-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 25px;
+  margin-bottom: 1.5625rem;
 }
 .mega-menu-label {
   margin: 0;
-  font-size: 13px;
+  font-size: 0.8125rem;
   font-weight: 500;
   letter-spacing: 0.025em;
 }
 .mega-menu-label span {
-  margin-left: 12px;
+  margin-left: 0.75rem;
   color: #86838b;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 400;
   letter-spacing: 0.09em;
 }
 .mega-menu-close {
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   flex-shrink: 0;
   color: #37333e;
   background: rgba(255, 255, 255, 0.65);
@@ -103,105 +103,105 @@
 .mega-menu-close:hover { background: #fff; }
 .mega-menu-body {
   display: grid;
-  grid-template-columns: 290px minmax(0, 1fr);
-  gap: 42px;
-  padding-bottom: 30px;
+  grid-template-columns: 18.125rem minmax(0, 1fr);
+  gap: 2.625rem;
+  padding-bottom: 1.875rem;
 }
 .mega-menu-feature {
   position: relative;
-  min-height: 390px;
+  min-height: 24.375rem;
   overflow: hidden;
   background: rgba(232, 230, 238, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.75);
-  border-radius: 18px;
+  border-radius: 1.125rem;
 }
 .mega-feature-label {
   position: absolute;
-  top: 22px;
-  left: 22px;
+  top: 1.375rem;
+  left: 1.375rem;
   z-index: 1;
-  font-size: 9px;
+  font-size: 0.5625rem;
   letter-spacing: 0.11em;
   color: #7e758d;
 }
 .mega-menu-feature img {
   position: absolute;
-  width: 176px;
-  height: 250px;
+  width: 11rem;
+  height: 15.625rem;
   object-fit: contain;
-  top: 43px;
-  left: calc(50% - 88px);
+  top: 2.6875rem;
+  left: calc(50% - 5.5rem);
   transform: rotate(-13deg);
-  filter: drop-shadow(5px 16px 12px rgba(82, 56, 100, 0.12));
+  filter: drop-shadow(0.3125rem 1rem 0.75rem rgba(82, 56, 100, 0.12));
 }
 .mega-feature-caption {
   position: absolute;
-  bottom: 24px;
-  left: 22px;
-  right: 16px;
+  bottom: 1.5rem;
+  left: 1.375rem;
+  right: 1rem;
 }
 .mega-feature-caption p {
-  font-size: 25px;
+  font-size: 1.5625rem;
   letter-spacing: -0.04em;
   line-height: 1.12;
-  margin: 0 0 13px;
+  margin: 0 0 0.8125rem;
 }
-.mega-feature-caption > span { font-size: 8px; letter-spacing: 0.08em; color: #8c8496; }
+.mega-feature-caption > span { font-size: 0.5rem; letter-spacing: 0.08em; color: #8c8496; }
 .mega-menu-links { display: flex; flex-direction: column; justify-content: center; }
 .mega-menu-links > a {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 22px 0;
-  min-height: 98px;
+  gap: 1.25rem;
+  padding: 1.375rem 0;
+  min-height: 6.125rem;
   border-top: 1px solid rgba(87, 77, 102, 0.13);
 }
 .mega-menu-links > a:last-child { border-bottom: 1px solid rgba(87, 77, 102, 0.13); }
-.mega-menu-number { align-self: flex-start; padding-top: 6px; font-size: 10px; color: #99919f; }
+.mega-menu-number { align-self: flex-start; padding-top: 0.375rem; font-size: 0.625rem; color: #99919f; }
 .mega-menu-link-copy { flex: 1; min-width: 0; }
 .mega-menu-link-title {
   display: block;
-  font-size: clamp(22px, 2.5vw, 33px);
+  font-size: clamp(1.375rem, 2.5vw, 2.0625rem);
   line-height: 1.1;
   letter-spacing: -0.045em;
   transition: color 160ms ease;
 }
-.mega-menu-link-description { display: block; margin-top: 9px; font-size: 12px; line-height: 1.4; color: #87808d; }
+.mega-menu-link-description { display: block; margin-top: 0.5625rem; font-size: 0.75rem; line-height: 1.4; color: #87808d; }
 .mega-menu-links > a > svg { flex-shrink: 0; color: #817389; transition: transform 160ms ease, color 160ms ease; }
 .mega-menu-links > a:hover .mega-menu-link-title { color: #80628f; }
-.mega-menu-links > a:hover > svg { transform: translate(3px, -3px); color: #80628f; }
+.mega-menu-links > a:hover > svg { transform: translate(0.1875rem, -0.1875rem); color: #80628f; }
 .mega-menu-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  padding-block: 23px 25px;
+  gap: 1.25rem;
+  padding-block: 1.4375rem 1.5625rem;
   border-top: 1px solid rgba(87, 77, 102, 0.13);
 }
-.mega-menu-download, .mega-menu-contact { display: flex; align-items: center; gap: 12px; font-size: 12px; }
-.mega-menu-download > span { font-size: 8px; letter-spacing: 0.04em; color: #99909f; }
+.mega-menu-download, .mega-menu-contact { display: flex; align-items: center; gap: 0.75rem; font-size: 0.75rem; }
+.mega-menu-download > span { font-size: 0.5rem; letter-spacing: 0.04em; color: #99909f; }
 @keyframes mega-menu-enter {
-  from { opacity: 0; transform: translateY(10px) scale(0.985); }
+  from { opacity: 0; transform: translateY(0.625rem) scale(0.985); }
   to { opacity: 1; transform: translateY(0) scale(1); }
 }
 @media (max-width: 980px) and (min-width: 761px) {
-  .mega-menu-body { grid-template-columns: 220px minmax(0, 1fr); gap: 28px; }
-  .mega-menu-link-title { font-size: 25px; }
+  .mega-menu-body { grid-template-columns: 13.75rem minmax(0, 1fr); gap: 1.75rem; }
+  .mega-menu-link-title { font-size: 1.5625rem; }
 }
 @media (max-width: 760px) {
-  .hero { padding-top: 82px; }
-  .site-header { top: 9px; left: 9px; right: 9px; gap: 0; }
-  .mega-menu { width: calc(100% - 28px); max-height: calc(100dvh - 28px); padding: 20px 22px 0; border-radius: 20px; }
-  .mega-menu-header { margin-bottom: 22px; }
-  .mega-menu-label { font-size: 11px; }
-  .mega-menu-label span { margin-left: 7px; font-size: 8px; }
-  .mega-menu-body { display: block; padding-bottom: 24px; }
+  .hero { padding-top: 5.125rem; }
+  .site-header { top: 0.5625rem; left: 0.5625rem; right: 0.5625rem; gap: 0; }
+  .mega-menu { width: calc(100% - 1.75rem); max-height: calc(100dvh - 1.75rem); padding: 1.25rem 1.375rem 0; border-radius: 1.25rem; }
+  .mega-menu-header { margin-bottom: 1.375rem; }
+  .mega-menu-label { font-size: 0.6875rem; }
+  .mega-menu-label span { margin-left: 0.4375rem; font-size: 0.5rem; }
+  .mega-menu-body { display: block; padding-bottom: 1.5rem; }
   .mega-menu-feature { display: none; }
-  .mega-menu-links > a { padding-block: 22px; min-height: 94px; gap: 12px; }
-  .mega-menu-link-title { font-size: clamp(20px, 5.6vw, 28px); letter-spacing: -0.04em; }
-  .mega-menu-link-description { font-size: 12px; max-width: 240px; }
-  .mega-menu-links > a > svg { width: 21px; height: 21px; }
-  .mega-menu-footer { align-items: flex-start; flex-direction: column; gap: 22px; padding-block: 22px; }
+  .mega-menu-links > a { padding-block: 1.375rem; min-height: 5.875rem; gap: 0.75rem; }
+  .mega-menu-link-title { font-size: clamp(1.25rem, 5.6vw, 1.75rem); letter-spacing: -0.04em; }
+  .mega-menu-link-description { font-size: 0.75rem; max-width: 15rem; }
+  .mega-menu-links > a > svg { width: 1.3125rem; height: 1.3125rem; }
+  .mega-menu-footer { align-items: flex-start; flex-direction: column; gap: 1.375rem; padding-block: 1.375rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .mega-menu[open] { animation: none; }

@@ -30,7 +30,7 @@ export default function BobiiDevelopment({ productId, showConcepts = true }: { p
         <div>
           <h2 id="development-process-heading">A clear brief.<br /><span>A considered process.</span></h2>
           <p className="development-approach-intro">Start with samples, customization or brand-specific development. Timing, order quantities and testing requirements are confirmed for the selected product and project scope.</p>
-          <a className="text-link" href="#inquiry">Tell us about your idea <ArrowUpRight size={19} /></a>
+          <a className="text-link" href="#inquiry">Tell us about your idea <ArrowUpRight size="1.1875rem" /></a>
         </div>
         <ol className="development-process-list">
           {projectApproach.map((step, index) => <li key={step.title}>

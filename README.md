@@ -84,11 +84,16 @@ workflow before relying on the website for lead handling.
 
 ## Fonts and repository hygiene
 
-The desktop homepage uses a shared design unit in `src/app/home-responsive.css`,
-fitted to both screen axes against the supplied 1920 × 1058 composition. Its header,
-headline, introduction, controls and physics capsules scale together from 1200px
-up; narrower screens retain the readable compact/mobile layout. Other pages keep
-their existing typography. Capsule motion reads the matching stage scale on resize.
+Every desktop page uses the homepage's 1920 × 1058 reference through
+`src/app/site-responsive.css`, fitted against both viewport axes from 1200px up.
+The shared header and content containers align across Home, BOBII, Innovations,
+OEM/ODM and About. Content dimensions and icons use rem to scale typography,
+images, cards, timelines, forms and spacing together. The desktop content root
+aligns the previous 15px body copy with the homepage's 18px reading size; compact
+and mobile layouts retain their 16px root and existing reflow breakpoints.
+Use rem for new scalable dimensions, pixels for viewport breakpoints and thin
+rules. `home-responsive.css` retains the approved hero composition; capsule
+motion reads the matching stage scale on resize. No document zoom is applied.
 
 The bundled local **Geist** font is an explicitly marked substitute for Futura
 PT; its letterforms, widths and spacing differ. Use Futura PT only with a
