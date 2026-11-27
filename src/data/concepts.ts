@@ -20,8 +20,19 @@ export type ProductConceptCollection = {
 };
 
 const capsuleIllustrations = {
-  blue: 461, cyan: 458, green: 461, orange: 461,
-  pink: 462, red: 460, violet: 461, yellow: 460,
+  blue: { src: "/assets/capsule-rainbow-blue.webp", height: 461 },
+  cyan: { src: "/assets/capsule-rainbow-cyan.webp", height: 458 },
+  green: { src: "/assets/capsule-rainbow-green.webp", height: 461 },
+  orange: { src: "/assets/capsule-rainbow-orange.webp", height: 461 },
+  pink: { src: "/assets/capsule-rainbow-pink.webp", height: 462 },
+  red: { src: "/assets/capsule-rainbow-red.webp", height: 460 },
+  violet: { src: "/assets/capsule-rainbow-violet.webp", height: 461 },
+  yellow: { src: "/assets/capsule-rainbow-yellow.webp", height: 460 },
+  aqua: { src: "/assets/capsule-aqua.webp", height: 463 },
+  mint: { src: "/assets/capsule-mint.webp", height: 461 },
+  lilac: { src: "/assets/capsule-lilac.webp", height: 463 },
+  peach: { src: "/assets/capsule-peach.webp", height: 462 },
+  pearl: { src: "/assets/capsule-pearl.webp", height: 463 },
 } as const;
 
 type ConceptInput = Omit<ProductConceptCollection,
@@ -35,10 +46,10 @@ function developmentConcept({ color, ...input }: ConceptInput): ProductConceptCo
     publicationStatus: "published",
     developmentStage: "concept",
     illustration: {
-      src: `/assets/capsule-rainbow-${color}.webp`,
+      src: capsuleIllustrations[color].src,
       alt: `${color[0].toUpperCase()}${color.slice(1)} BOBII BALL container concept illustration`,
       width: 320,
-      height: capsuleIllustrations[color],
+      height: capsuleIllustrations[color].height,
     },
   };
 }
@@ -95,42 +106,42 @@ export const productConceptCollections: ProductConceptCollection[] = [
   }),
   developmentConcept({
     id: "radiance-tone-up-cream", name: "Radiance Tone-Up Cream",
-    category: "Hybrid beauty & sun care", color: "pink", sourcePages: "16",
+    category: "Hybrid beauty & sun care", color: "red", sourcePages: "16",
     summary: "A tone-up cream direction connecting skincare and cosmetic product development.",
     productNames: ["Radiance Tone-Up Cream"],
     formulationThemes: ["Niacinamide", "Tone-up cream concept"],
   }),
   developmentConcept({
     id: "gentle-cleansing-oil", name: "Gentle Cleansing Oil",
-    category: "Cleansing solutions", color: "yellow", sourcePages: "17",
+    category: "Cleansing solutions", color: "aqua", sourcePages: "17",
     summary: "A cleansing-oil concept with an emulsifying system to discuss during formulation development.",
     productNames: ["Gentle Cleansing Oil"],
     formulationThemes: ["Oil cleansing", "Emulsifying system"],
   }),
   developmentConcept({
     id: "gentle-cleansing-milk", name: "Gentle Cleansing Milk",
-    category: "Cleansing solutions", color: "cyan", sourcePages: "18",
+    category: "Cleansing solutions", color: "mint", sourcePages: "18",
     summary: "A milk-texture cleansing direction for a single-dose facial cleansing project.",
     productNames: ["Gentle Cleansing Milk"],
     formulationThemes: ["Milk-texture cleansing concept"],
   }),
   developmentConcept({
     id: "fresh-foam-cleanser", name: "Fresh Foam Cleanser",
-    category: "Cleansing solutions", color: "green", sourcePages: "19",
+    category: "Cleansing solutions", color: "lilac", sourcePages: "19",
     summary: "A foam-cleanser direction exploring an amino-acid and soap-based cleansing system.",
     productNames: ["Fresh Foam Cleanser"],
     formulationThemes: ["Amino-acid cleansing", "Soap-based system"],
   }),
   developmentConcept({
     id: "hydrating-foundation-serum", name: "Hydrating Foundation Serum",
-    category: "Hybrid beauty & sun care", color: "orange", sourcePages: "20",
+    category: "Hybrid beauty & sun care", color: "peach", sourcePages: "20",
     summary: "A serum-inspired foundation direction for hybrid skincare and makeup development.",
     productNames: ["Hydrating Foundation Serum"],
     formulationThemes: ["Serum-inspired foundation concept"],
   }),
   developmentConcept({
     id: "daily-defense-sunscreen", name: "Daily Defense Sunscreen",
-    category: "Hybrid beauty & sun care", color: "blue", sourcePages: "21",
+    category: "Hybrid beauty & sun care", color: "pearl", sourcePages: "21",
     summary: "A single-dose sunscreen development direction, with formula and performance testing defined per project.",
     productNames: ["Daily Defense Sunscreen"],
     formulationThemes: ["Single-dose sunscreen development"],
