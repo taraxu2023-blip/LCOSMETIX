@@ -29,12 +29,11 @@ npm start
 | --- | --- |
 | `/` | 首页 |
 | `/about` | 公司介绍与联系地图 |
-| `/oem-odm` | OEM/ODM 服务、应用与流程 |
-| `/single-dose-technology` | 五层结构、原理、配方兼容、专利资料咨询 |
+| `/oem-odm` | OEM/ODM 合作方式、制造照片、质量协调、服务与流程 |
+| `/single-dose-technology` | Product Innovations，13 系列／23 概念与配方兼容 |
 | `/single-dose-technology#inquiry` | Request Samples，默认选择 Samples |
-| `/products/bobii-ball-single-dose-container` | BOBII 产品、13 系列／23 概念、服务与流程 |
+| `/products/bobii-ball-single-dose-container` | BOBII 产品、五层结构与专利证书 |
 | `/#contact` | 首页询盘 |
-| `/assets/bobii-ball-catalogue-en.pdf` | 英文画册 |
 
 ## 环境变量
 

@@ -28,8 +28,3 @@ export const siteNavigation: readonly NavigationItem[] = [
   { label: "OEM / ODM Solutions", href: "/oem-odm", description: "Explore formulation concepts, development and manufacturing." },
   { label: "About Us", href: "/about", description: "Meet our company, capabilities and partner network." },
 ] as const;
-
-export const catalogueDownload = {
-  href: "/assets/bobii-ball-catalogue-en.pdf",
-  filename: "BOBII-BALL-Catalogue-EN.pdf",
-} as const;

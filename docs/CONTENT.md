@@ -95,9 +95,10 @@ About 另参考[现有官网 About Us](https://www.lcosmetix.com/About-Us)介绍
 
 ## 素材与交互
 
+按用户最新要求，所有英文目录下载入口及对应公开 PDF 均已移除，包括首页新闻区、共享菜单、BOBII、OEM 和未展示的 FAQ 文案。个人资料目录中的原始文件保持不变。
+
 | 素材 | 用途与来源说明 |
 | --- | --- |
-| `public/assets/bobii-ball-catalogue-en.pdf` | 用户提供的英文产品介绍，统一用于画册下载 |
 | `public/assets/bobii-production.webp` | 用户提供的次抛生产照片 |
 | `public/assets/bobii-manufacturing-base.webp` | 用户提供的工厂形象照片，不据照片推断产权或位置 |
 | `public/assets/five-layer.png` | 用户提供的五层结构示意 |

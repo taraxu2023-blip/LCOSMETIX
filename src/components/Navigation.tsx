@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ArrowDown, ArrowUpRight, List, X } from "@phosphor-icons/react";
-import { catalogueDownload, siteNavigation } from "../lib/navigation";
+import { ArrowUpRight, List, X } from "@phosphor-icons/react";
+import { siteNavigation } from "../lib/navigation";
 
 export default function Navigation() {
   const [open, setOpen] = useState(false);
@@ -105,13 +105,6 @@ export default function Navigation() {
           </nav>
         </div>
         <div className="mega-menu-footer">
-          <a
-            className="mega-menu-download"
-            href={catalogueDownload.href}
-            download={catalogueDownload.filename}
-          >
-            <ArrowDown size={17} /> Product catalogue <span>PDF / ENGLISH</span>
-          </a>
           <a href="/#contact" className="mega-menu-contact" onClick={closeMenu}>
             Let’s talk about your project <ArrowUpRight size={18} />
           </a>

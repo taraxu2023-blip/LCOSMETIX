@@ -7,7 +7,7 @@ import { oemOdmServices, projectApproach } from "../../data/company-profile";
 import { getProductById } from "../../data/products";
 import { getPublishedConceptCollections } from "../../data/concepts";
 import { pageSeo } from "../../data/seo";
-import { catalogueDownload, productConceptsHref } from "../../lib/navigation";
+import { productConceptsHref } from "../../lib/navigation";
 import { pageMetadata } from "../../lib/seo";
 import "./oem-odm.css";
 
@@ -30,7 +30,7 @@ export default function OemOdm() {
           <div>
             <p>From concept to commercialization, we bring together product strategy, formulation development, BOBII BALL integration, packaging design, prototyping, manufacturing and quality coordination.</p>
             <p>Bring your formula or develop a new concept with us. Our technical team and manufacturing network help define a practical route for your brand and target market.</p>
-            <div className="oem-hero-actions"><a className="pill dark-pill" href="#inquiry">Start your project <ArrowUpRight size={19} /></a><a className="text-link" href={catalogueDownload.href} download={catalogueDownload.filename}>English catalogue <ArrowUpRight size={18} /></a></div>
+            <div className="oem-hero-actions"><a className="pill dark-pill" href="#inquiry">Start your project <ArrowUpRight size={19} /></a></div>
           </div>
         </div>
         <nav className="oem-section-nav" aria-label="OEM / ODM topics and formulation concepts">

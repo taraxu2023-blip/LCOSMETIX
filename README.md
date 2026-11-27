@@ -2,7 +2,7 @@
 
 English B2B cosmetic single-dose website built with Next.js App Router,
 TypeScript and React. The repository includes the application source, shared
-product/company data, supplied images, local fonts, English catalogue and
+product/company data, supplied images, local fonts and
 homepage video.
 
 ## Requirements and local use

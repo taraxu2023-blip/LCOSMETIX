@@ -1,6 +1,5 @@
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import { getLatestNews } from "../data/news";
-import { catalogueDownload } from "../lib/navigation";
 
 export default function LatestNews() {
   const news = getLatestNews();
@@ -8,7 +7,6 @@ export default function LatestNews() {
     <div className="latest-news-heading">
       <p className="eyebrow">FROM L COSMETIX</p>
       <h2 id="latest-news-heading">Latest<br />news.</h2>
-      <a className="text-link" href={catalogueDownload.href} download={catalogueDownload.filename}>English catalogue <ArrowUpRight size={18} /></a>
     </div>
     <div className="latest-news-list">{news.map((item) => <article key={item.id}>
       <a className="news-story-link" href={item.href}>
