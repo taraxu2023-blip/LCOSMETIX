@@ -1,4 +1,5 @@
-// Sources: the official About Us page and the company-role diagram supplied by the user.
+// Sources: the official About Us page and user-supplied company materials.
+// Global presence follows the corrected bilingual plan screenshot supplied on 2026-11-27.
 // Use company.founded for the confirmed founding year; legal/contact details remain in company.ts.
 // These operational roles do not establish ownership of every listed manufacturing facility.
 export const aboutProfile = {
@@ -23,18 +24,17 @@ export const aboutProfile = {
     { title: "Packaging & design", description: "Consider format, appearance and the way a product is used alongside its formulation, rather than treating packaging as a separate decision." },
     { title: "Manufacturing & export", description: "Coordinate the selected manufacturing route, order execution and export requirements, with the participating teams and responsibilities agreed for each project." },
   ],
-  headquarters: {
-    location: "Guangzhou, China",
-    title: "R&D & project headquarters",
-    description: "Guangzhou brings together formulation, packaging and device development with design, finished-goods sales, order execution and administrative support.",
-    functions: ["Formulation, packaging & device R&D", "Design team", "Finished-goods sales & order execution", "Administration"],
+  commercialHub: {
+    location: "Singapore",
+    title: "Global Business Operations",
+    description: "Singapore serves as our international commercial hub, supporting global customer relationships, business development, project management, and cross-border collaboration.",
+    functions: ["Global customer relationships", "Business development", "Project management", "Cross-border collaboration"],
   },
   network: [
-    { location: "Shanghai, China", title: "Ingredients research & supply", description: "Raw-ingredient R&D, sales and order execution support the ingredient side of product development." },
-    { location: "Hong Kong", title: "International business finance", description: "Financing coordination supports international business within the company network." },
-    { location: "Singapore", title: "Sourcing & export", description: "Sourcing for markets outside Europe and America connects with finished-goods export operations." },
-    { location: "Foshan, Guangdong, China", title: "Manufacturing network", description: "A manufacturing location within the network supports the production route selected for the project." },
-    { location: "Osan-si, Gyeonggi-do, South Korea", title: "Manufacturing network", description: "The Korean manufacturing location forms part of the network available for product-specific production coordination." },
+    { id: "guangzhou-rd", location: "Guangzhou, China", title: "In-House R&D", description: "Our directly operated R&D center in Guangzhou focuses on cosmetic formulation, proprietary Single-Dose Technology, BOBII BALL development, and product innovation." },
+    { id: "guangzhou-manufacturing", location: "Guangzhou, China", title: "In-House Manufacturing", description: "Our directly operated manufacturing base in Guangzhou supports process development, product manufacturing, and the commercialization of innovative beauty products, strengthening collaboration between R&D and production." },
+    { id: "nanjing-partner", location: "Nanjing, China", title: "Manufacturing Partner", description: "Our independent OEM manufacturing partner in Nanjing supports commercial-scale production for selected cosmetic applications as part of our flexible manufacturing network." },
+    { id: "singapore-partner", location: "Singapore", title: "Manufacturing Partner", description: "Our independent OEM manufacturing partner in Singapore provides additional contract manufacturing capabilities for product-specific and international market requirements." },
   ],
   manufacturingIntro: "A development brief connects the formula, packaging, sample review and production requirements. We align the work with the selected team and manufacturing route, then confirm specifications, responsibilities and the checks needed before production.",
   bobiiIntro: "BOBII BALL brings our single-dose work into a distinctive cosmetic container. Explore its five-layer material structure, color concepts and formulation-development directions, or discuss a format for your own brand.",

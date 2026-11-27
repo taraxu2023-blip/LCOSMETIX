@@ -35,19 +35,19 @@
 .about-network-grid h3 { margin-block: 0.875rem; font-size: 1.6875rem; line-height: 1.2; font-weight: 400; letter-spacing: -.04em; }
 .about-integrated-grid p,
 .about-network-grid p { color: #73736a; font-size: 0.875rem; line-height: 1.8; }
-.about-global-headquarters { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 1.875rem; background: #f8f8f6; border: 1px solid var(--line); }
-.about-global-headquarters > div { min-width: 0; }
-.about-global-headquarters h3 { margin-block: 0.875rem; font-size: 2.125rem; line-height: 1.15; font-weight: 400; letter-spacing: -.04em; }
-.about-global-headquarters p { color: #73736a; font-size: 0.875rem; line-height: 1.8; }
-.about-global-headquarters ul { display: flex; flex-direction: column; justify-content: center; gap: 0.6875rem; margin: 0; padding-left: 1.1875rem; font-size: 0.875rem; line-height: 1.7; }
-.about-network-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.875rem; margin-top: 2.25rem; }
+.about-commercial-hub { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 1.875rem; background: #f8f8f6; border: 1px solid var(--line); }
+.about-commercial-hub > div { min-width: 0; }
+.about-commercial-hub h3 { margin-block: 0.875rem; font-size: 2.125rem; line-height: 1.15; font-weight: 400; letter-spacing: -.04em; }
+.about-commercial-hub p { color: #73736a; font-size: 0.875rem; line-height: 1.8; }
+.about-commercial-hub ul { display: flex; flex-direction: column; justify-content: center; gap: 0.6875rem; margin: 0; padding-left: 1.1875rem; font-size: 0.875rem; line-height: 1.7; }
+.about-network-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.875rem; margin-top: 2.25rem; }
 .about-network-grid .about-location-tag,
-.about-global-headquarters .about-location-tag { margin-top: 0; font-size: 0.875rem; line-height: 1.6; overflow-wrap: anywhere; }
+.about-commercial-hub .about-location-tag { margin-top: 0; font-size: 0.875rem; line-height: 1.6; overflow-wrap: anywhere; }
 @media (max-width: 900px) {
   .about-capability-columns { gap: 2.1875rem; }
   .about-principles, .about-services { gap: 1.375rem; }
   .about-integrated-grid { gap: 1.5rem 1.875rem; }
-  .about-global-headquarters { gap: 1.75rem; }
+  .about-commercial-hub { gap: 1.75rem; }
   .about-network-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem; }
 }
 @media (max-width: 760px) {
@@ -63,10 +63,10 @@
   .about-focus-areas { margin-block: 1.375rem; }
   .about-integrated-grid,
   .about-network-grid,
-  .about-global-headquarters { grid-template-columns: minmax(0, 1fr); }
+  .about-commercial-hub { grid-template-columns: minmax(0, 1fr); }
   .about-integrated-grid { gap: 1.375rem; margin-top: 1.875rem; }
-  .about-global-headquarters { gap: 1.25rem; padding: 1.375rem; }
-  .about-global-headquarters h3 { font-size: 2rem; }
+  .about-commercial-hub { gap: 1.25rem; padding: 1.375rem; }
+  .about-commercial-hub h3 { font-size: 2rem; }
   .about-network-grid { gap: 1.375rem; margin-top: 1.75rem; }
 }
 

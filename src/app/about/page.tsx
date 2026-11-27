@@ -78,13 +78,13 @@ export default function About() {
         <p className="eyebrow">OUR GLOBAL PRESENCE</p>
         <div className="inner-split about-section-lead">
           <h2 id="about-capabilities-heading">Connected expertise.<br /><span>Clear responsibilities.</span></h2>
-          <div><p>Our network connects research, ingredient development, sourcing, international business and manufacturing across the roles below.</p><p>Each project follows an agreed development and manufacturing route, with responsibilities defined for the participating team and facility.</p></div>
+          <div><p>Our international commercial hub in Singapore connects with directly operated R&D and manufacturing capabilities in Guangzhou.</p><p>Independent OEM manufacturing partners in Nanjing and Singapore provide additional capabilities for product-specific and international market requirements.</p></div>
         </div>
-        <div className="about-global-headquarters">
-          <div><p className="about-location-tag">{aboutProfile.headquarters.location}</p><h3>{aboutProfile.headquarters.title}</h3><p>{aboutProfile.headquarters.description}</p></div>
-          <ul>{aboutProfile.headquarters.functions.map((role) => <li key={role}>{role}</li>)}</ul>
+        <div className="about-commercial-hub">
+          <div><p className="about-location-tag">{aboutProfile.commercialHub.location}</p><h3>{aboutProfile.commercialHub.title}</h3><p>{aboutProfile.commercialHub.description}</p></div>
+          <ul>{aboutProfile.commercialHub.functions.map((role) => <li key={role}>{role}</li>)}</ul>
         </div>
-        <div className="about-network-grid">{aboutProfile.network.map((office) => <article key={office.location}><p className="about-location-tag">{office.location}</p><h3>{office.title}</h3><p>{office.description}</p></article>)}</div>
+        <div className="about-network-grid">{aboutProfile.network.map((office) => <article key={office.id}><p className="about-location-tag">{office.location}</p><h3>{office.title}</h3><p>{office.description}</p></article>)}</div>
       </section>
 
       <section className="inner-container about-factory" id="manufacturing" aria-labelledby="about-manufacturing-heading">
