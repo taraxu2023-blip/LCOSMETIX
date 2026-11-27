@@ -11,8 +11,8 @@ export const pageSeo = {
     title: "Cosmetic OEM/ODM & Formulation Development | L COSMETIX",
     description: "Explore cosmetic OEM/ODM services with L COSMETIX: formulation development, packaging customization, prototyping, sampling, and manufacturing coordination.",
   },
-  singleDoseTechnology: {
-    title: "Single-Dose Technology & Five-Layer Structure | L COSMETIX",
-    description: "Explore single-dose technology with L COSMETIX: five-layer materials, operating principles, formula compatibility, patent documentation and sample requests.",
+  productInnovations: {
+    title: "Product Innovations & Cosmetic Formulation Concepts | L COSMETIX",
+    description: "Explore L COSMETIX formulation collections for skincare, facial oils, cleansing, makeup and sun care, with single-dose development support and sample enquiries.",
   },
 };

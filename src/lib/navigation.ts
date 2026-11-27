@@ -6,7 +6,7 @@ export const singleDoseTechnologyHref = "/single-dose-technology";
 export const singleDoseMenu = {
   label: "Product Innovations",
   href: singleDoseTechnologyHref,
-  description: "Materials, principles and compatibility for your next single-dose project.",
+  description: "Explore formulation collections, product concepts and single-dose development.",
   links: [
     { label: "Five-Layer Structure", href: `${singleDoseTechnologyHref}#five-layer-structure`, description: "Explore PE, bonding layers and the EVOH barrier." },
     { label: "How It Works", href: `${singleDoseTechnologyHref}#how-it-works`, description: "See how the container and material structure work together." },

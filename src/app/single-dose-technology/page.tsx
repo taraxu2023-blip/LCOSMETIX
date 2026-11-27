@@ -2,13 +2,17 @@ import { notFound } from "next/navigation";
 import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import Footer from "../../components/Footer";
 import ProjectForm from "../../components/ProjectForm";
+import BobiiDevelopment from "../../components/BobiiDevelopment";
+import { productInnovationsCopy } from "../../data/innovations";
 import { getProductById, productHref } from "../../data/products";
 import { pageSeo } from "../../data/seo";
 import { technologyCompatibilityCopy, technologyPatentCopy, technologyPrinciples } from "../../data/technology";
 import { pageMetadata } from "../../lib/seo";
 import "./single-dose-technology.css";
+import "../concepts.css";
+import "../development.css";
 
-export const metadata = pageMetadata(pageSeo.singleDoseTechnology, "/single-dose-technology");
+export const metadata = pageMetadata(pageSeo.productInnovations, "/single-dose-technology");
 
 export default function SingleDoseTechnology() {
   const product = getProductById("bobii-ball");
@@ -18,15 +22,18 @@ export default function SingleDoseTechnology() {
     <a href="#technology-content" className="skip-link">Skip to content</a>
     <main id="top" className="inner-page single-dose-page">
       <section className="inner-container inner-intro" id="technology-content">
-        <nav className="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>Single-Dose Technology</span></nav>
-        <p className="eyebrow" id="single-dose-technology">MATERIALS / PRINCIPLES / DEVELOPMENT</p>
-        <h1>Single-Dose<br /><span>Technology.</span></h1>
-        <p className="product-summary">Explore the five-layer structure, material principles and formula-specific development behind the BOBII BALL single-dose format.</p>
+        <nav className="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span>{productInnovationsCopy.title}</span></nav>
+        <p className="eyebrow" id="single-dose-technology">{productInnovationsCopy.eyebrow}</p>
+        <h1>{productInnovationsCopy.headline.line1}<br /><span>{productInnovationsCopy.headline.line2}</span></h1>
+        <p className="product-summary">{productInnovationsCopy.introduction}</p>
         <div className="single-dose-actions"><a className="pill dark-pill" href="#inquiry">Request Samples <ArrowUpRight size={19} /></a><a className="text-link" href={productHref(product)}>Explore BOBII BALL <ArrowUpRight size={18} /></a></div>
         <nav className="single-dose-section-nav" aria-label="Single-dose technology topics">
+          <a href="#product-concepts">Product concepts</a><a href="#development-services">Development support</a><a href="#development-process">Project steps</a>
           <a href="#five-layer-structure">Five-Layer Structure</a><a href="#how-it-works">How It Works</a><a href="#formula-compatibility">Formula Compatibility</a><a href="#patents">Patents</a><a href="#inquiry">Request Samples</a>
         </nav>
       </section>
+
+      <BobiiDevelopment productId={product.id} />
 
       <section className="inner-container layer-section" id="five-layer-structure" aria-labelledby="technology-layers-heading">
         <div className="inner-split"><div><p className="eyebrow">FIVE LAYERS / ONE STRUCTURE</p><h2 id="technology-layers-heading">Protection.<br /><span>Layer by layer.</span></h2><p>The shell combines polyethylene, bonding layers and an EVOH barrier. Final material grades and wall thicknesses are confirmed during project development.</p></div><img src={product.media.structure} alt="BOBII BALL five-layer shell exploded view" width="1834" height="1601" loading="lazy" /></div>

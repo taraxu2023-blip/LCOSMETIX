@@ -53,7 +53,7 @@ non-Vercel Node.js hosting and release verification. See
 | --- | --- |
 | Home | `/` |
 | BOBII BALL Technology and formulation concepts | `/products/bobii-ball-single-dose-container` |
-| Single-Dose Technology | `/single-dose-technology` |
+| Product Innovations and single-dose technology | `/single-dose-technology` |
 | OEM/ODM Technology | `/oem-odm` |
 | About Us | `/about` |
 

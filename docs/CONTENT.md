@@ -148,3 +148,5 @@ Vercel 通过 **private Vercel Blob** 保存，服务端凭据为 `BLOB_READ_WRI
 交接包，不能声称已按缺失阶段脚本验收，也不以规划估算冒充真实搜索量。
 
 About 的使命愿景与 CEO 姓名/职务维护于 `src/data/about-profile.ts`；肖像路径、ALT 和尺寸维护于 `src/data/about-media.ts`。当前使用用户提供的 `tara-xu-ceo.jpg`，About 已移除三张产品展示照片。
+
+Product Innovations 菜单沿用 `/single-dose-technology`，优先展示与 BOBII 页共用的 13 个配方系列、23 个产品概念及开发支持/流程，下方保留原有技术资料。卡片与询盘共用 `src/data/concepts.ts`；页头文案维护于 `src/data/innovations.ts`。
