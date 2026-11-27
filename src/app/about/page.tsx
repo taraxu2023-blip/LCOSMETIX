@@ -9,6 +9,7 @@ import { pageSeo } from "../../data/seo";
 import { pageMetadata } from "../../lib/seo";
 import { getPublishedProducts, productHref } from "../../data/products";
 import "./about-content.css";
+import "./about-editorial.css";
 
 export const metadata = pageMetadata(pageSeo.about, "/about");
 
@@ -37,13 +38,15 @@ export default function About() {
         <div className="about-mission-layout">
           <div className="about-mission-copy">
             <h2 id="about-mission-heading">{aboutProfile.mission.title}</h2>
-            <p>{aboutProfile.mission.body}</p>
-            <p>Vision: {aboutProfile.mission.vision}</p>
-            <p>Philosophy: {aboutProfile.mission.philosophy}</p>
+            <div className="about-mission-statements">
+              <div className="about-mission-statement"><h3>Mission</h3><p>{aboutProfile.mission.body}</p></div>
+              <div className="about-mission-statement"><h3>Vision:</h3><p>{aboutProfile.mission.vision}</p></div>
+              <div className="about-mission-statement"><h3>Philosophy:</h3><p>{aboutProfile.mission.philosophy}</p></div>
+            </div>
           </div>
           <figure className="about-leadership">
             <img src={aboutMedia.leadership.src} alt={aboutMedia.leadership.alt} width={aboutMedia.leadership.width} height={aboutMedia.leadership.height} loading="lazy" />
-            <figcaption><span>{aboutProfile.leadership.role}</span><span>{aboutProfile.leadership.name}</span></figcaption>
+            <figcaption><span className="about-leadership-name">{aboutProfile.leadership.name}</span><span className="about-leadership-role">{aboutProfile.leadership.role}</span></figcaption>
           </figure>
         </div>
       </section>
