@@ -99,6 +99,29 @@
 .about-reception img { display: block; width: 100%; height: auto; aspect-ratio: 1; }
 .about-lead-copy > p:first-child { margin-top: 0; }
 .about-lead-copy > .text-link { margin-top: 8px; }
+.about-milestones-header { padding: 42px 32px; background: #347f90; color: #fff; text-align: center; }
+.about-milestones-header h2 { margin: 0; color: inherit; font-size: clamp(38px, 4.6vw, 64px); line-height: 1.12; }
+.about-milestones-header p { margin: 20px 0 0; color: #e0f0f3; font-size: 18px; line-height: 1.6; }
+.about-timeline { position: relative; max-width: 1120px; margin: 56px auto 0; padding: 0; list-style: none; }
+.about-timeline::before { content: ""; position: absolute; top: 20px; bottom: 20px; left: 50%; width: 1px; background: #79b6c3; }
+.about-timeline li { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding-bottom: 42px; }
+.about-timeline li:last-child { padding-bottom: 0; }
+.about-timeline li::before { content: ""; position: absolute; top: 17px; left: calc(50% - 6px); width: 13px; height: 13px; border-radius: 50%; background: #347f90; box-shadow: 0 0 0 6px #fff; }
+.about-timeline-entry { grid-column: 1; min-width: 0; padding-right: 48px; text-align: right; }
+.about-timeline li:nth-child(even) .about-timeline-entry { grid-column: 2; padding: 0 0 0 48px; text-align: left; }
+.about-timeline h3 { margin: 0; font-size: clamp(30px, 3vw, 42px); font-weight: 400; line-height: 1.2; letter-spacing: -.035em; }
+.about-timeline p { margin: 16px 0 0; color: #73736a; font-size: 17px; line-height: 1.8; }
 @media (max-width: 760px) {
   .about-page .about-lead { grid-template-columns: 1fr; gap: 28px; }
+  .about-milestones-header { padding: 30px 20px; text-align: left; }
+  .about-milestones-header h2 { font-size: clamp(34px, 8vw, 44px); }
+  .about-milestones-header p { margin-top: 16px; font-size: 16px; }
+  .about-timeline { margin-top: 36px; }
+  .about-timeline::before { left: 7px; top: 14px; bottom: 14px; }
+  .about-timeline li { grid-template-columns: minmax(0, 1fr); padding-bottom: 32px; }
+  .about-timeline li::before { top: 11px; left: 1px; }
+  .about-timeline-entry,
+  .about-timeline li:nth-child(even) .about-timeline-entry { grid-column: 1; padding: 0 0 0 34px; text-align: left; }
+  .about-timeline h3 { font-size: 32px; }
+  .about-timeline p { margin-top: 12px; font-size: 16px; }
 }

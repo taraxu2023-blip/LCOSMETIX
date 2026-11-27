@@ -5,6 +5,7 @@ import CompanyMap from "../../components/CompanyMap";
 import { company } from "../../data/company";
 import { aboutProfile } from "../../data/about-profile";
 import { aboutMedia } from "../../data/about-media";
+import { companyMilestones } from "../../data/company-milestones";
 import { pageSeo } from "../../data/seo";
 import { pageMetadata } from "../../lib/seo";
 import { getPublishedProducts, productHref } from "../../data/products";
@@ -30,7 +31,7 @@ export default function About() {
         </div>
         <CompanyStats />
         <nav className="about-section-nav" aria-label="On this About page">
-          <a href="#mission">Mission & vision</a><a href="#story">Integrated capabilities</a><a href="#capabilities">Global presence</a><a href="#manufacturing">Single-dose development</a><a href="/oem-odm">OEM / ODM</a><a href="#locations">Contact locations</a>
+          <a href="#mission">Mission & vision</a><a href="#milestones">Company milestones</a><a href="#story">Integrated capabilities</a><a href="#capabilities">Global presence</a><a href="#manufacturing">Single-dose development</a><a href="/oem-odm">OEM / ODM</a><a href="#locations">Contact locations</a>
         </nav>
       </section>
 
@@ -45,6 +46,21 @@ export default function About() {
             <figcaption><span>{aboutProfile.leadership.role}</span><span>{aboutProfile.leadership.name}</span></figcaption>
           </figure>
         </div>
+      </section>
+
+      <section className="inner-container about-content-section about-milestones" id="milestones" aria-labelledby="about-milestones-heading">
+        <header className="about-milestones-header">
+          <h2 id="about-milestones-heading">Company milestones.</h2>
+          <p>Our journey of innovation and global expansion.</p>
+        </header>
+        <ol className="about-timeline" aria-label="Company history">
+          {companyMilestones.map((milestone) => <li key={milestone.period}>
+            <div className="about-timeline-entry">
+              <h3>{milestone.period}</h3>
+              <p>{milestone.description}</p>
+            </div>
+          </li>)}
+        </ol>
       </section>
 
       <section className="inner-container about-content-section" id="story" aria-labelledby="about-story-heading">
