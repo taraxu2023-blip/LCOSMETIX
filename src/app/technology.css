@@ -1,6 +1,6 @@
 /* Shared technical styles and the product page's concise technology links. */
 .product-technology-reference { padding-block: 50px; border-top: 1px solid var(--line); }
-.product-technology-reference h2 { font-size: clamp(30px, 3vw, 42px); font-weight: 400; line-height: 1.15; letter-spacing: -.05em; margin-top: 18px; }
+.product-technology-reference h2 { font-size: clamp(35px, 3.54vw, 50px); font-weight: 400; line-height: 1.15; letter-spacing: -.05em; margin-top: 18px; }
 .product-technology-reference nav { display: flex; flex-wrap: wrap; gap: 16px 24px; margin-top: 22px; }
 .product-technology-reference nav a { font-size: 13px; scroll-margin-top: 150px; }
 .technology-structure .inner-split > img { display: block; width: 100%; height: auto; }
@@ -16,7 +16,7 @@
 }
 .technology-section h2 {
   margin: 20px 0 28px;
-  font-size: clamp(36px, 4vw, 54px);
+  font-size: clamp(42px, 4.72vw, 64px);
   font-weight: 400;
   line-height: 1.08;
   letter-spacing: -0.055em;
@@ -39,10 +39,10 @@
   padding-top: 22px;
   border-top: 1px solid var(--line);
 }
-.technology-principles > li > span { color: #73736a; font-size: 11px; }
+.technology-principles > li > span { color: #73736a; font-size: 14px; }
 .technology-principles h3 {
   margin: 18px 0 12px;
-  font-size: 23px;
+  font-size: 27px;
   font-weight: 400;
   letter-spacing: -0.04em;
   line-height: 1.2;
@@ -53,7 +53,7 @@
 .technology-patents h2 { margin-bottom: 0; }
 .technology-patents .text-link { margin-top: 12px; }
 .bobii-patents { padding-block: 65px; border-top: 1px solid var(--line); scroll-margin-top: 130px; }
-.bobii-patents h2 { margin: 24px 0 48px; font-size: clamp(36px, 4.6vw, 64px); font-weight: 400; line-height: 1.08; letter-spacing: -.055em; }
+.bobii-patents h2 { margin: 24px 0 48px; font-size: clamp(42px, 5.43vw, 76px); font-weight: 400; line-height: 1.08; letter-spacing: -.055em; }
 .bobii-patents-layout { display: grid; grid-template-columns: 1.35fr 1fr; gap: 40px; align-items: start; }
 .patent-gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px 14px; margin: 0; padding: 0; list-style: none; }
 .patent-gallery button { display: block; width: 100%; padding: 0; border: 0; background: transparent; color: inherit; text-align: left; font: inherit; cursor: zoom-in; }
@@ -70,7 +70,7 @@
 .patent-dialog::backdrop { background: rgb(0 0 0 / .65); }
 .patent-dialog-content { padding: 0 20px 20px; }
 .patent-dialog-toolbar { position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-block: 14px; background: #fff; }
-.patent-dialog-toolbar h3 { margin: 0; font-size: 15px; font-weight: 400; }
+.patent-dialog-toolbar h3 { margin: 0; font-size: 18px; font-weight: 400; }
 .patent-dialog-toolbar button { display: flex; align-items: center; gap: 12px; border: 0; background: transparent; padding: 6px; font: inherit; cursor: pointer; }
 .patent-dialog-toolbar button span { font-size: 26px; line-height: 1; }
 .patent-dialog-content > img { display: block; width: 100%; height: auto; }
@@ -98,6 +98,6 @@
   .bobii-patents-summary { display: block; }
   .patent-product-image { margin-block: 20px; }
   .patent-dialog-content { padding-inline: 10px; }
-  .patent-dialog-toolbar h3 { font-size: 12px; }
+  .patent-dialog-toolbar h3 { font-size: 14px; }
   .patent-dialog-toolbar button { font-size: 12px; }
 }

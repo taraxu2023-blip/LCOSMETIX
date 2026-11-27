@@ -6,22 +6,22 @@
 .about-content-section { padding-block: 65px; border-top: 1px solid var(--line); }
 .about-principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; margin-top: 52px; }
 .about-principles article { border-top: 1px solid var(--line); padding-top: 22px; }
-.about-principles h3, .about-capability-list h3, .about-services h3, .about-process-list h3 { font-size: 24px; line-height: 1.2; font-weight: 400; letter-spacing: -0.04em; margin-block: 14px; }
+.about-principles h3, .about-capability-list h3, .about-services h3, .about-process-list h3 { font-size: 28px; line-height: 1.2; font-weight: 400; letter-spacing: -0.04em; margin-block: 14px; }
 .about-principles article > p:not(.eyebrow), .about-capability-list p, .about-services p, .about-process-list p, .about-approach-intro { font-size: 14px; color: #73736a; line-height: 1.8; }
 .about-section-lead { margin-bottom: 40px; }
 .about-capability-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 64px; }
-.about-group-label { font-size: 11px; letter-spacing: 0.12em; margin-bottom: 22px; }
+.about-group-label { font-size: 14px; letter-spacing: 0.12em; margin-bottom: 22px; }
 .about-capability-list article { border-top: 1px solid var(--line); padding-block: 23px 18px; }
-.about-location-tag { color: #73736a; font-size: 12px; }
-.about-capability-list h3 { font-size: 23px; margin-top: 12px; }
+.about-location-tag { color: #73736a; font-size: 14px; }
+.about-capability-list h3 { font-size: 27px; margin-top: 12px; }
 .about-capability-columns .fine-print { line-height: 1.7; max-width: 390px; }
 .about-services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; margin-top: 56px; }
 .about-services article { border-top: 1px solid var(--line); padding-top: 22px; }
-.about-services h3 { font-size: 23px; }
+.about-services h3 { font-size: 27px; }
 .about-service-actions { display: flex; flex-wrap: wrap; gap: 20px 28px; align-items: center; }
 .about-process-list { list-style: none; margin: 0; padding: 0; }
 .about-process-list li { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 22px; border-top: 1px solid var(--line); padding-block: 24px; }
-.about-process-list li > span { padding-top: 6px; color: #73736a; font-size: 11px; letter-spacing: 0.12em; }
+.about-process-list li > span { padding-top: 6px; color: #73736a; font-size: 14px; letter-spacing: 0.12em; }
 .about-process-list h3 { margin-top: 0; }
 .about-process-list p { margin-bottom: 0; }
 .about-approach-intro { max-width: 390px; margin-block: 28px; }
@@ -32,17 +32,17 @@
 .about-integrated-grid article,
 .about-network-grid article { min-width: 0; padding-top: 22px; border-top: 1px solid var(--line); }
 .about-integrated-grid h3,
-.about-network-grid h3 { margin-block: 14px; font-size: 23px; line-height: 1.2; font-weight: 400; letter-spacing: -.04em; }
+.about-network-grid h3 { margin-block: 14px; font-size: 27px; line-height: 1.2; font-weight: 400; letter-spacing: -.04em; }
 .about-integrated-grid p,
 .about-network-grid p { color: #73736a; font-size: 14px; line-height: 1.8; }
 .about-global-headquarters { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; padding: 30px; background: #f8f8f6; border: 1px solid var(--line); }
 .about-global-headquarters > div { min-width: 0; }
-.about-global-headquarters h3 { margin-block: 14px; font-size: 29px; line-height: 1.15; font-weight: 400; letter-spacing: -.04em; }
+.about-global-headquarters h3 { margin-block: 14px; font-size: 34px; line-height: 1.15; font-weight: 400; letter-spacing: -.04em; }
 .about-global-headquarters p { color: #73736a; font-size: 14px; line-height: 1.8; }
 .about-global-headquarters ul { display: flex; flex-direction: column; justify-content: center; gap: 11px; margin: 0; padding-left: 19px; font-size: 14px; line-height: 1.7; }
 .about-network-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 30px; margin-top: 36px; }
 .about-network-grid .about-location-tag,
-.about-global-headquarters .about-location-tag { margin-top: 0; font-size: 11px; line-height: 1.6; overflow-wrap: anywhere; }
+.about-global-headquarters .about-location-tag { margin-top: 0; font-size: 14px; line-height: 1.6; overflow-wrap: anywhere; }
 @media (max-width: 900px) {
   .about-capability-columns { gap: 35px; }
   .about-principles, .about-services { gap: 22px; }
@@ -58,7 +58,7 @@
   .about-principles, .about-services { margin-top: 32px; }
   .about-section-lead { margin-bottom: 28px; }
   .about-capability-columns { gap: 30px; }
-  .about-principles h3, .about-services h3, .about-capability-list h3 { font-size: 24px; }
+  .about-principles h3, .about-services h3, .about-capability-list h3 { font-size: 28px; }
   .about-approach-intro { margin-block: 24px; }
   .about-focus-areas { margin-block: 22px; }
   .about-integrated-grid,
@@ -66,7 +66,7 @@
   .about-global-headquarters { grid-template-columns: minmax(0, 1fr); }
   .about-integrated-grid { gap: 22px; margin-top: 30px; }
   .about-global-headquarters { gap: 20px; padding: 22px; }
-  .about-global-headquarters h3 { font-size: 27px; }
+  .about-global-headquarters h3 { font-size: 32px; }
   .about-network-grid { gap: 22px; margin-top: 28px; }
 }
 
@@ -74,7 +74,7 @@
 .about-mission { padding-bottom: 64px; }
 .about-mission-layout { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 48px; padding: 24px; background: #f8f8f8; align-items: stretch; }
 .about-mission-copy { padding: 36px; background: #347f90; color: #fff; }
-.about-mission-copy h2 { margin: 0; padding-bottom: 22px; border-bottom: 1px solid #ffffff70; font-size: 32px; line-height: 1.2; font-weight: 500; letter-spacing: -.025em; }
+.about-mission-copy h2 { margin: 0; padding-bottom: 22px; border-bottom: 1px solid #ffffff70; font-size: 38px; line-height: 1.2; font-weight: 500; letter-spacing: -.025em; }
 .about-mission-copy p { margin: 20px 0 0; font-size: 16px; line-height: 1.6; color: #fff; }
 .about-leadership { min-width: 0; margin: 0; padding: 10px 18px; border: 1px solid #d5e3e6; align-self: center; }
 .about-leadership img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1.08; object-fit: cover; object-position: 50% 60%; }
@@ -84,13 +84,13 @@
 @media (max-width: 900px) {
   .about-mission-layout { gap: 28px; grid-template-columns: minmax(0, 1fr) 220px; }
   .about-mission-copy { padding: 28px; }
-  .about-mission-copy h2 { font-size: 29px; }
+  .about-mission-copy h2 { font-size: 34px; }
 }
 @media (max-width: 760px) {
   .about-mission { padding-bottom: 44px; }
   .about-mission-layout { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 18px; }
   .about-mission-copy { padding: 26px 24px; }
-  .about-mission-copy h2 { font-size: 28px; padding-bottom: 18px; }
+  .about-mission-copy h2 { font-size: 33px; padding-bottom: 18px; }
   .about-mission-copy p { margin-top: 18px; font-size: 15px; }
   .about-leadership { width: min(100%, 260px); justify-self: center; }
 }

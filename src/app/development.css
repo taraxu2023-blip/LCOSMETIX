@@ -12,7 +12,7 @@
 .development-services-grid article { min-width: 0; border-top: 1px solid var(--line); padding-top: 22px; }
 .development-services-grid h3,
 .development-process-list h3 {
-  font-size: 23px;
+  font-size: 27px;
   line-height: 1.2;
   font-weight: 400;
   letter-spacing: -.04em;
@@ -29,7 +29,7 @@
   border-top: 1px solid var(--line);
   padding-block: 24px;
 }
-.development-process-list li > span { padding-top: 6px; color: #73736a; font-size: 11px; letter-spacing: .12em; }
+.development-process-list li > span { padding-top: 6px; color: #73736a; font-size: 14px; letter-spacing: .12em; }
 .development-process-list h3 { margin-top: 0; }
 .development-process-list p { margin-bottom: 0; }
 .development-approach-intro { max-width: 390px; margin-block: 28px; }
@@ -43,6 +43,6 @@
   .development-section-lead { margin-bottom: 28px; }
   .development-services-grid { grid-template-columns: 1fr; gap: 20px; margin-top: 32px; }
   .development-services-grid h3,
-  .development-process-list h3 { font-size: 24px; }
+  .development-process-list h3 { font-size: 28px; }
   .development-approach-intro { margin-block: 24px; }
 }

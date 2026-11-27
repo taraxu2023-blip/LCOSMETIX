@@ -13,7 +13,7 @@
 .single-dose-project-links > p { color: #73736a; font-size: 14px; }
 .single-dose-project-links > div { display: flex; flex-wrap: wrap; gap: 22px 32px; margin-top: 22px; }
 .single-dose-samples-intro { max-width: 650px; margin-bottom: 44px; }
-.single-dose-samples-intro h2 { font-size: clamp(36px, 4vw, 54px); line-height: 1.08; letter-spacing: -.055em; font-weight: 400; margin: 20px 0 24px; }
+.single-dose-samples-intro h2 { font-size: clamp(42px, 4.72vw, 64px); line-height: 1.08; letter-spacing: -.055em; font-weight: 400; margin: 20px 0 24px; }
 .single-dose-samples-intro > p:not(.eyebrow) { color: #73736a; font-size: 15px; }
 @media (max-width: 760px) {
   .single-dose-page section[id],
