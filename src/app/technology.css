@@ -3,6 +3,10 @@
 .product-technology-reference h2 { font-size: clamp(30px, 3vw, 42px); font-weight: 400; line-height: 1.15; letter-spacing: -.05em; margin-top: 18px; }
 .product-technology-reference nav { display: flex; flex-wrap: wrap; gap: 16px 24px; margin-top: 22px; }
 .product-technology-reference nav a { font-size: 13px; scroll-margin-top: 150px; }
+.technology-structure .inner-split > img { display: block; width: 100%; height: auto; }
+.technology-section.technology-principles-section { display: block; }
+.product-detail #five-layer-structure,
+.product-detail #how-it-works { scroll-margin-top: 130px; }
 #single-dose-technology,
 #five-layer-structure,
 .technology-section { scroll-margin-top: 32px; }
@@ -49,6 +53,8 @@
 .technology-patents h2 { margin-bottom: 0; }
 .technology-patents .text-link { margin-top: 12px; }
 @media (max-width: 760px) {
+  .product-detail #five-layer-structure,
+  .product-detail #how-it-works { scroll-margin-top: 90px; }
   #single-dose-technology,
   #five-layer-structure,
   .technology-section { scroll-margin-top: 20px; }

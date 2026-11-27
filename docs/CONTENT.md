@@ -152,3 +152,5 @@ About 的使命愿景与 CEO 姓名/职务维护于 `src/data/about-profile.ts`�
 Product Innovations 菜单沿用 `/single-dose-technology`，优先展示与 BOBII 页共用的 13 个配方系列、23 个产品概念及开发支持/流程，下方保留原有技术资料。卡片与询盘共用 `src/data/concepts.ts`；页头文案维护于 `src/data/innovations.ts`。
 
 OEM / ODM Solutions 的六项服务、四步合作流程和项目规格表连续展示于询盘前。规格表由 `src/components/ProjectSpecifications.tsx` 共用，数据仍读取 `src/data/products.ts`，与 BOBII 详情保持一致。
+
+BOBII 页增加五层结构分解图、五项材料说明和三项工作原理，由 `SingleDoseTechnologySections.tsx` 与 Product Innovations 共同渲染，读取同一份产品和技术数据。BOBII 的结构/原理入口直接跳转本页对应区块。

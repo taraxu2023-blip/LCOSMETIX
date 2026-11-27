@@ -3,10 +3,11 @@ import { ArrowUpRight } from "@phosphor-icons/react/dist/ssr";
 import Footer from "../../components/Footer";
 import ProjectForm from "../../components/ProjectForm";
 import BobiiDevelopment from "../../components/BobiiDevelopment";
+import SingleDoseTechnologySections from "../../components/SingleDoseTechnologySections";
 import { productInnovationsCopy } from "../../data/innovations";
 import { getProductById, productHref } from "../../data/products";
 import { pageSeo } from "../../data/seo";
-import { technologyCompatibilityCopy, technologyPatentCopy, technologyPrinciples } from "../../data/technology";
+import { technologyCompatibilityCopy, technologyPatentCopy } from "../../data/technology";
 import { pageMetadata } from "../../lib/seo";
 import "./single-dose-technology.css";
 import "../concepts.css";
@@ -35,16 +36,7 @@ export default function SingleDoseTechnology() {
 
       <BobiiDevelopment productId={product.id} />
 
-      <section className="inner-container layer-section" id="five-layer-structure" aria-labelledby="technology-layers-heading">
-        <div className="inner-split"><div><p className="eyebrow">FIVE LAYERS / ONE STRUCTURE</p><h2 id="technology-layers-heading">Protection.<br /><span>Layer by layer.</span></h2><p>The shell combines polyethylene, bonding layers and an EVOH barrier. Final material grades and wall thicknesses are confirmed during project development.</p></div><img src={product.media.structure} alt="BOBII BALL five-layer shell exploded view" width="1834" height="1601" loading="lazy" /></div>
-        <ol className="layer-list">{product.layers.map((layer, index) => <li key={`${layer.material}-${index}`}><span>0{index + 1}</span><div><h3>{layer.material}</h3><p>{layer.description}</p></div></li>)}</ol>
-      </section>
-
-      <section className="inner-container technology-section" id="how-it-works" aria-labelledby="technology-principles-heading">
-        <p className="eyebrow">SINGLE-DOSE TECHNOLOGY</p>
-        <h2 id="technology-principles-heading">How it works.</h2>
-        <ol className="technology-principles">{technologyPrinciples.map((principle, index) => <li key={principle.title}><span>0{index + 1}</span><h3>{principle.title}</h3><p>{principle.description}</p></li>)}</ol>
-      </section>
+      <SingleDoseTechnologySections product={product} />
 
       <section className="inner-container technology-section" id="formula-compatibility" aria-labelledby="technology-compatibility-heading">
         <p className="eyebrow">YOUR FORMULA / OUR DEVELOPMENT PROCESS</p>

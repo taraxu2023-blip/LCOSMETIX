@@ -8,6 +8,7 @@ import ProjectForm from "../../../components/ProjectForm";
 import ProjectSpecifications from "../../../components/ProjectSpecifications";
 import Footer from "../../../components/Footer";
 import BobiiDevelopment from "../../../components/BobiiDevelopment";
+import SingleDoseTechnologySections from "../../../components/SingleDoseTechnologySections";
 import "../../concepts.css";
 import "../../development.css";
 
@@ -37,8 +38,13 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
       </section>
       <section className="inner-container product-benefits" aria-label="Product features">{productFeatures.map((feature, i) => <article key={feature.title}><span className="eyebrow">0{i + 1}</span><h3>{feature.title}</h3><p>{feature.description}</p></article>)}</section>
       {product.id === "bobii-ball" && <section className="inner-container product-technology-reference" id="single-dose-technology" aria-labelledby="product-technology-reference-heading">
-        <div className="inner-split"><div><p className="eyebrow">MATERIALS & FORMULA TECHNOLOGY</p><h2 id="product-technology-reference-heading">Single-Dose Technology.</h2></div><div><p>Explore the material structure, operating principles, formula evaluation and patent documentation behind the single-dose format.</p><nav aria-label="Explore Single-Dose Technology">{singleDoseMenu.links.map((topic) => <a className="text-link" key={topic.href} id={topic.href.split("#")[1]} href={topic.href}>{topic.label} <ArrowUpRight size={17} /></a>)}</nav></div></div>
+        <div className="inner-split"><div><p className="eyebrow">MATERIALS & FORMULA TECHNOLOGY</p><h2 id="product-technology-reference-heading">Single-Dose Technology.</h2></div><div><p>Explore the material structure, operating principles, formula evaluation and patent documentation behind the single-dose format.</p><nav aria-label="Explore Single-Dose Technology">{singleDoseMenu.links.map((topic) => {
+          const anchor = topic.href.split("#")[1];
+          const onThisPage = anchor === "five-layer-structure" || anchor === "how-it-works";
+          return <a className="text-link" key={topic.href} id={onThisPage ? undefined : anchor} href={onThisPage ? `#${anchor}` : topic.href}>{topic.label} <ArrowUpRight size={17} /></a>;
+        })}</nav></div></div>
       </section>}
+      {product.id === "bobii-ball" && <SingleDoseTechnologySections product={product} />}
       {product.id === "bobii-ball" && <BobiiDevelopment productId={product.id} />}
       <ProjectSpecifications product={product} />
       {related.length > 0 && <section className="inner-container"><h2>Related products</h2><div className="application-grid">{related.map((item) => <a className="text-link" key={item.id} href={productHref(item)}>{item.name}<ArrowUpRight size={18} /></a>)}</div></section>}

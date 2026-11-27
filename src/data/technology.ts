@@ -1,5 +1,12 @@
 // BOBII BALL technology content based on the supplied five-layer material record.
 // Material grades, performance and patent scope require project-specific review.
+export const technologyStructureCopy = {
+  eyebrow: "FIVE LAYERS / ONE STRUCTURE",
+  headline: { line1: "Protection.", line2: "Layer by layer." },
+  introduction: "The shell combines polyethylene, bonding layers and an EVOH barrier. Final material grades and wall thicknesses are confirmed during project development.",
+  imageAlt: "BOBII BALL five-layer shell exploded view",
+} as const;
+
 export const technologyPrinciples = [
   {
     title: "A co-extruded shell",
