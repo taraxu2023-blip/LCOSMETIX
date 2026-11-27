@@ -7,6 +7,7 @@ import ColorCollection from "../../../components/ColorCollection";
 import ProjectForm from "../../../components/ProjectForm";
 import Footer from "../../../components/Footer";
 import SingleDoseTechnologySections from "../../../components/SingleDoseTechnologySections";
+import BobiiPatents from "../../../components/BobiiPatents";
 
 export const dynamicParams = false;
 export function generateStaticParams() { return getPublishedProducts().map(({ slug }) => ({ slug })); }
@@ -36,11 +37,12 @@ export default async function ProductDetail({ params }: { params: Promise<{ slug
       {product.id === "bobii-ball" && <section className="inner-container product-technology-reference" id="single-dose-technology" aria-labelledby="product-technology-reference-heading">
         <div className="inner-split"><div><p className="eyebrow">MATERIALS & FORMULA TECHNOLOGY</p><h2 id="product-technology-reference-heading">Single-Dose Technology.</h2></div><div><p>Explore the material structure, operating principles, formula evaluation and patent documentation behind the single-dose format.</p><nav aria-label="Explore Single-Dose Technology">{singleDoseMenu.links.map((topic) => {
           const anchor = topic.href.split("#")[1];
-          const onThisPage = anchor === "five-layer-structure";
+          const onThisPage = anchor === "five-layer-structure" || anchor === "patents";
           return <a className="text-link" key={topic.href} id={onThisPage ? undefined : anchor} href={onThisPage ? `#${anchor}` : topic.href}>{topic.label} <ArrowUpRight size={17} /></a>;
         })}</nav></div></div>
       </section>}
       {product.id === "bobii-ball" && <SingleDoseTechnologySections product={product} showPrinciples={false} />}
+      {product.id === "bobii-ball" && <BobiiPatents />}
       {related.length > 0 && <section className="inner-container"><h2>Related products</h2><div className="application-grid">{related.map((item) => <a className="text-link" key={item.id} href={productHref(item)}>{item.name}<ArrowUpRight size={18} /></a>)}</div></section>}
       <section id="inquiry" className="contact-section inner-container"><ProjectForm productId={product.id} /></section>
     </main>

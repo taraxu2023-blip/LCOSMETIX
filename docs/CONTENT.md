@@ -8,7 +8,7 @@
 | 页面 | 地址与主要内容 |
 | --- | --- |
 | 首页 | `/`：次抛互动展示、颜色、结构概览与视频、应用方向、Latest News、询盘 |
-| BOBII BALL Technology | `/products/bobii-ball-single-dose-container`：八色与定制、五层结构与材料说明、配方及技术页入口和询盘 |
+| BOBII BALL Technology | `/products/bobii-ball-single-dose-container`：八色与定制、五层结构与材料说明、8 张专利证书、配方及技术页入口和询盘 |
 | Single-Dose Technology | `/single-dose-technology`：五层结构、技术原理、配方兼容、专利资料咨询和 Request Samples |
 | OEM/ODM Technology | `/oem-odm`：服务、应用、开发流程、BOBII 配方库入口和询盘 |
 | About Us | `/about`：公司定位、研发与供应链能力、全球职能、使命愿景、CEO 肖像、已确认统计和地图 |
@@ -156,3 +156,5 @@ OEM / ODM Solutions 的六项服务、四步合作流程和项目规格表连续
 BOBII 页保留五层结构分解图和五项材料说明，与 Product Innovations 共用 `SingleDoseTechnologySections.tsx` 和产品数据。按用户最新截图要求，BOBII 隐藏工作原理，并移除开发服务、合作流程、项目规格；其他页面的对应内容保留。结构入口跳转本页，工作原理入口跳转 Product Innovations。
 
 BOBII 页已移除产品创新介绍和完整配方卡片库，完整 13 系列/23 概念保留于 Product Innovations。BOBII 的配方探索按钮及 OEM/新闻配方入口统一指向 `productConceptsHref`；旧 BOBII `#product-concepts` 锚点保留在该探索按钮，便于旧链接继续使用。
+
+BOBII 的 `#patents` 展示 8 张原始证书、对应专利号和胶囊集合图，位于五层结构后、询盘前。证书与号码来自用户提供的《BOBII BALL微囊次抛产品介绍-20261111.pdf》第 13 页；图片提取后转换为 WebP 缩略图及查看图，内容未修改。数据维护于 `src/data/patents.ts`，点击证书可打开原生对话框，支持关闭按钮和 Esc。Product Innovations 原有专利资料咨询保留。

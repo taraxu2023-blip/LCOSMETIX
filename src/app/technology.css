@@ -52,6 +52,35 @@
 .technology-patents .inner-split { align-items: center; }
 .technology-patents h2 { margin-bottom: 0; }
 .technology-patents .text-link { margin-top: 12px; }
+.bobii-patents { padding-block: 65px; border-top: 1px solid var(--line); scroll-margin-top: 130px; }
+.bobii-patents h2 { margin: 24px 0 48px; font-size: clamp(36px, 4.6vw, 64px); font-weight: 400; line-height: 1.08; letter-spacing: -.055em; }
+.bobii-patents-layout { display: grid; grid-template-columns: 1.35fr 1fr; gap: 40px; align-items: start; }
+.patent-gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px 14px; margin: 0; padding: 0; list-style: none; }
+.patent-gallery button { display: block; width: 100%; padding: 0; border: 0; background: transparent; color: inherit; text-align: left; font: inherit; cursor: zoom-in; }
+.patent-gallery img { display: block; width: 100%; height: auto; aspect-ratio: 360 / 520; object-fit: contain; background: #faf8f1; border: 1px solid var(--line); }
+.patent-gallery button > span { display: flex; justify-content: space-between; gap: 6px; margin-top: 8px; color: #73736a; font-size: 10px; }
+.patent-gallery button:hover img { border-color: #73736a; }
+.patent-gallery button:focus-visible, .patent-dialog button:focus-visible { outline: 2px solid #4faaba; outline-offset: 5px; }
+.patent-number-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 0; margin: 22px 0; list-style: none; }
+.patent-number-list li { font-size: clamp(10px, 1vw, 13px); white-space: nowrap; }
+.bobii-patents .patent-progress { font-size: 13px; color: #73736a; }
+.patent-product-image { display: block; width: 100%; height: auto; margin: 20px 0; }
+.bobii-patents .text-link { font-size: 13px; }
+.patent-dialog { width: min(94vw, 900px); max-width: none; max-height: 92dvh; padding: 0; border: 0; background: #fff; color: #151515; }
+.patent-dialog::backdrop { background: rgb(0 0 0 / .65); }
+.patent-dialog-content { padding: 0 20px 20px; }
+.patent-dialog-toolbar { position: sticky; top: 0; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-block: 14px; background: #fff; }
+.patent-dialog-toolbar h3 { margin: 0; font-size: 15px; font-weight: 400; }
+.patent-dialog-toolbar button { display: flex; align-items: center; gap: 12px; border: 0; background: transparent; padding: 6px; font: inherit; cursor: pointer; }
+.patent-dialog-toolbar button span { font-size: 26px; line-height: 1; }
+.patent-dialog-content > img { display: block; width: 100%; height: auto; }
+@media (max-width: 1000px) {
+  .bobii-patents-layout { grid-template-columns: 1fr; }
+  .bobii-patents-summary { display: grid; grid-template-columns: 1fr 1fr; column-gap: 30px; }
+  .bobii-patents-summary > .eyebrow, .patent-number-list, .bobii-patents-summary > .patent-progress, .bobii-patents-summary > .text-link { grid-column: 1; }
+  .patent-product-image { grid-column: 2; grid-row: 1 / 5; margin: 0; }
+  .patent-number-list li { font-size: 12px; }
+}
 @media (max-width: 760px) {
   .product-detail #five-layer-structure,
   .product-detail #how-it-works { scroll-margin-top: 90px; }
@@ -62,4 +91,13 @@
   .technology-principles { grid-template-columns: 1fr; gap: 22px; }
   .technology-principles h3 { margin-top: 12px; }
   .technology-patents .inner-split { gap: 22px; }
+  .bobii-patents { padding-block: 44px; scroll-margin-top: 90px; }
+  .bobii-patents h2 { margin-bottom: 30px; }
+  .patent-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 16px; }
+  .patent-gallery button > span { font-size: 11px; }
+  .bobii-patents-summary { display: block; }
+  .patent-product-image { margin-block: 20px; }
+  .patent-dialog-content { padding-inline: 10px; }
+  .patent-dialog-toolbar h3 { font-size: 12px; }
+  .patent-dialog-toolbar button { font-size: 12px; }
 }
