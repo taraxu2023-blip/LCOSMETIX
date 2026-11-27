@@ -70,15 +70,15 @@
   .about-network-grid { gap: 1.375rem; margin-top: 1.75rem; }
 }
 
-/* Supplied mission/CEO reference: teal statement at left, portrait at right. */
+/* Mission and milestones use the site's neutral paper/ink palette. */
 .about-mission { padding-bottom: 4rem; }
-.about-mission-layout { display: grid; grid-template-columns: minmax(0, 1fr) 15rem; gap: 3rem; padding: 1.5rem; background: #f8f8f8; align-items: stretch; }
-.about-mission-copy { padding: 2.25rem; background: #347f90; color: #fff; }
-.about-mission-copy h2 { margin: 0; padding-bottom: 1.375rem; border-bottom: 1px solid #ffffff70; font-size: 2.375rem; line-height: 1.2; font-weight: 500; letter-spacing: -.025em; }
-.about-mission-copy p { margin: 1.25rem 0 0; font-size: 1rem; line-height: 1.6; color: #fff; }
-.about-leadership { min-width: 0; margin: 0; padding: 0.625rem 1.125rem; border: 1px solid #d5e3e6; align-self: center; }
+.about-mission-layout { display: grid; grid-template-columns: minmax(0, 1fr) 15rem; gap: 3rem; padding: 1.5rem; background: var(--soft); align-items: stretch; }
+.about-mission-copy { padding: 2.25rem; background: var(--paper); color: var(--ink); }
+.about-mission-copy h2 { margin: 0; padding-bottom: 1.375rem; border-bottom: 1px solid var(--line); font-size: 2.375rem; line-height: 1.2; font-weight: 500; letter-spacing: -.025em; }
+.about-mission-copy p { margin: 1.25rem 0 0; font-size: 1rem; line-height: 1.6; color: var(--muted); }
+.about-leadership { min-width: 0; margin: 0; padding: 0.625rem 1.125rem; border: 1px solid var(--line); align-self: center; }
 .about-leadership img { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1.08; object-fit: cover; object-position: 50% 60%; }
-.about-leadership figcaption { position: relative; width: 80%; margin: -1.25rem auto 0; padding: 0.625rem 0.375rem; background: #347f90; color: #fff; text-align: center; }
+.about-leadership figcaption { position: relative; width: 80%; margin: -1.25rem auto 0; padding: 0.625rem 0.375rem; background: var(--ink); color: var(--paper); text-align: center; }
 .about-leadership figcaption span { display: block; font-size: 1rem; line-height: 1.35; }
 .about-leadership figcaption span:first-child { font-size: 1.25rem; }
 @media (max-width: 900px) {
@@ -99,14 +99,14 @@
 .about-reception img { display: block; width: 100%; height: auto; aspect-ratio: 1; }
 .about-lead-copy > p:first-child { margin-top: 0; }
 .about-lead-copy > .text-link { margin-top: 0.5rem; }
-.about-milestones-header { padding: 2.625rem 2rem; background: #347f90; color: #fff; text-align: center; }
+.about-milestones-header { padding: 2.625rem 2rem; background: var(--soft); color: var(--ink); text-align: center; }
 .about-milestones-header h2 { margin: 0; color: inherit; font-size: clamp(2.375rem, 4.6vw, 4rem); line-height: 1.12; }
-.about-milestones-header p { margin: 1.25rem 0 0; color: #e0f0f3; font-size: 1.125rem; line-height: 1.6; }
+.about-milestones-header p { margin: 1.25rem 0 0; color: var(--muted); font-size: 1.125rem; line-height: 1.6; }
 .about-timeline { position: relative; max-width: 70rem; margin: 3.5rem auto 0; padding: 0; list-style: none; }
-.about-timeline::before { content: ""; position: absolute; top: 1.25rem; bottom: 1.25rem; left: 50%; width: 1px; background: #79b6c3; }
+.about-timeline::before { content: ""; position: absolute; top: 1.25rem; bottom: 1.25rem; left: 50%; width: 1px; background: var(--line); }
 .about-timeline li { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); padding-bottom: 2.625rem; }
 .about-timeline li:last-child { padding-bottom: 0; }
-.about-timeline li::before { content: ""; position: absolute; top: 1.0625rem; left: calc(50% - 0.375rem); width: 0.8125rem; height: 0.8125rem; border-radius: 50%; background: #347f90; box-shadow: 0 0 0 0.375rem #fff; }
+.about-timeline li::before { content: ""; position: absolute; top: 1.0625rem; left: calc(50% - 0.375rem); width: 0.8125rem; height: 0.8125rem; border-radius: 50%; background: var(--muted); box-shadow: 0 0 0 0.375rem var(--paper); }
 .about-timeline-entry { grid-column: 1; min-width: 0; padding-right: 3rem; text-align: right; }
 .about-timeline li:nth-child(even) .about-timeline-entry { grid-column: 2; padding: 0 0 0 3rem; text-align: left; }
 .about-timeline h3 { margin: 0; font-size: clamp(1.875rem, 3vw, 2.625rem); font-weight: 400; line-height: 1.2; letter-spacing: -.035em; }
